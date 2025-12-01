@@ -4,6 +4,756 @@
   
   
   <entry>
+    <title>十一月尾声</title>
+    <link href="/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E5%B0%BE%E5%A3%B0/"/>
+    <url>/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E5%B0%BE%E5%A3%B0/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚(今天)凌晨2点左右喝着拿铁咖啡看明眸直播，本来都脱了衣服躺下准备睡觉了，但是在B站上看了一些flutter教程，想着不使用WebView在移动端实现Yi’s Dynamic，我的构想越来越实际，索性就不睡了，穿衣起身取电脑。</p><p>构想将Dynamic数据保存在json文件中，包含动态正文，图片等信息，然后在应用中读取渲染。数据为先。我创建了一个GetDynamicInfo Python项目，使用BeautifulSoup解析本地html中的动态内容，由于需要不断调试HTML元素Class属性，判断是否存在元素，我后来使用ipynb来避免反复读取和解析不小的html文件。这样一干就到了早上9，10点钟，基本上得到了除评论内容的所有信息。</p><p>今天又是星期天，中午的没什么菜（咸豇豆、从姥爷家带回来的咸菜还有妈妈让爸爸买回来的烤鸭，不是之前的那一家，没有蘸料汤且烤鸭发腥，吃一半不想吃了。</p><p>Dynamic数据处理完就来到主要的Flutter应用开发了，在ChatGPT的帮助下，我改了几版，使用ListView build DynamicCardItem，还有ImgBox的排版与GridView导致的图片拉伸导致滚动受阻，处理assets&#x2F;photos下的图片由于文件名加载失败问题等小插曲。</p><p>吃完中饭，抽支烟，喝黑咖啡，由于熬夜通宵，不仅困，还心砰砰跳的厉害，手发抖，真有要猝死的感觉。</p><p>晚上5点多大致完成了实现了如下效果（图是第二天截的，顶部添加了每日一言和启动图）</p><p><img src="https://files.yaonas.space/dayone/2025/11/1dce481c78fcdc5166deb5657e4e572a.jpeg?oss_process=rt:fit" alt="1dce481c78fcdc5166deb5657e4e572a.jpeg"></p><p>下午5点多，肚子饿的咕咕叫，下楼，鸡蛋皮面妈妈只搞好一个鸡蛋皮，让我弄方便面吃，我煮了一包香菜面，配上鸡蛋皮，呼啦啦吃下肚。</p><p>吃完饭，刷刷抖音，7点多，沉沉睡去。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>奇梦-2025-11-29</title>
+    <link href="/2025/11/%E5%A5%87%E6%A2%A6-2025-11-29/"/>
+    <url>/2025/11/%E5%A5%87%E6%A2%A6-2025-11-29/</url>
+    
+    <content type="html"><![CDATA[<p>考试（月考，高考），语文作文题目吹牛（假如…)，小学同学</p><p>早上10点多被妈妈电话吵醒，10:50左右穿衣起床洗漱，第一次坐上爸爸的新车去姥爷家。</p><p>中午的菜有香辣花甲，酸菜鱼，猪头肉，牛头肉，红烧肉锅子，炒青菜等。</p><p>吃完饭在姥爷家门口晒个太阳听听歌。1点多回来。</p><p>回来就是更新WebStorm，配置Flutter环境，macOS Sonoma虚拟机修改虚拟磁盘类型为NVme并从50G缩减到40G，然后是配置序列号，model等。成功登陆AppleID和使用iCloud，只是Photos不知是存储空间不足还是什么原因导致无项目。一直忙到晚上9，10点多。</p><p>晚饭菜是中午带回来的花甲和酸菜鱼以及一盘炒青菜（菜杆极厚不好吃）。</p><p>忙完macOS虚拟机相关问题（XCode安装，IOS SDK， IOS Device Support，为Ark测试项目添加ICON）后就是在Honor 9X上运行Flutter项目，配置了gradle代理，下载依赖，造成了不小的空间占用，计划明天来处理一下。</p><p>接近凌晨1点了，抽支烟，睡觉。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-28</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-28/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-28/</url>
+    
+    <content type="html"><![CDATA[<p>早餐：疙瘩汤 早上在做Xcode真机调试成功构建Dynamic和Ark。</p><p>午饭没吃，洗个澡，睡一觉到下午5点左右吃切面。</p><p>晚上做MusicSync 控制台输出到RichTextBox，同时修复了Explorer窗口置顶问题。</p><p>然后在Ubuntu上安装Android Studio，搭建flutter环境，但是真机调试有问题。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-27</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-27/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-27/</url>
+    
+    <content type="html"><![CDATA[<p>早上6点入睡，直到下午2点多才醒，3点多下楼看到桌子上有一个青菜炒香菇及其他菜没有什么食欲，带一个橘子上楼吃。</p><p>4点左右下楼煮一包老母鸡汤方便面吃。然后做bt-docker container confirm弹窗收尾工作，顺利完成。在此期间还下载了macOS 14.7 镜像。</p><p>晚8点安装macOS后续都是XCode Swift测试。</p><p><img src="https://files.yaonas.space/dayone/2025/11/a022242314be189c90e34bc8533019a2.png?oss_process=rt:fit" alt="a022242314be189c90e34bc8533019a2.jpeg"></p><p>11:51了，睡觉。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-26</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-26/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-26/</url>
+    
+    <content type="html"><![CDATA[<p>晚上父母去了六安，我在做macOS系统和Xcode的安装，一下忙活到凌晨1，2点。</p><p><img src="https://files.yaonas.space/dayone/2025/11/8140a7909c533999ae0c9a11d9e42bb6.png?oss_process=rt:fit" alt="8140a7909c533999ae0c9a11d9e42bb6.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-25</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-25/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-25/</url>
+    
+    <content type="html"><![CDATA[<p>作息混乱，浑浑噩噩是这几天的状态，今日凌晨喝了一杯浓茶，用Honor 9X打王者，连创两个号都没有通过荣耀之证，白打10把，索性直接打排位了，“那年我双手插兜，不知道什么叫做对手”。一拿到关羽，不是顶级就是金牌。打到上午8点多。</p><p>洗漱下楼，没发现什么早餐吃，加方便面调料泡了一碗锅巴吃。</p><p>9点左右吃完上楼，困了，睡下去，到下午3，4点醒。完成昨日的Todo List，KWMusicDownloader使用ffmpeg转aqc到mp3时同时嵌入meta信息。为此还修改了SongInfo结构。</p><p>完成此任务后已经是饥肠辘辘，5点多下楼吃饭，是疙瘩汤，还有中午的菜土豆丝和昨日的红烧牛肉烫平菇。</p><p>吃完晚饭又是打王者到9点，又是浪费的一天。</p><p>现在已是26日的00:46分，半靠在枕头上，写下这个DayOne Entry，有点无所适从。脑子一片混乱，觉得有好多事没做（wordpress GSC收录，SEO优化，mediawiki分离，还有狗皮膏药bt-docker），但又觉得无从下手。不管了，一件事归一件事，先解决bt-docker吧，细分到ContainerEdit的确认dialog。</p><p>That‘s it。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-24</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-24/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-24/</url>
+    
+    <content type="html"><![CDATA[<p>大致完成了ContainerEdit模块，晚间同步了一下Synology Audio Station</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-23</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-23/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-23/</url>
+    
+    <content type="html"><![CDATA[<p>早上8点多醒，赖在床上，磨磨蹭蹭，直到9点40左右才洗漱完毕下楼。早餐是煎饼，面糊中加有火腿肠粒和韭菜。我加点火锅底料油用微波炉打热，囫囵吞枣般吃下去。</p><p>上楼没干什么事，就是刷刷抖音，改改ContainerEdit，房间寒冷，又极其犯困，脱掉衣服，钻进被窝，刷抖音刷着刷着就睡着了。</p><p>到下午2点左右才醒，下楼吃中饭，菜有胡萝卜火腿肠和酸辣土豆丝（虽然味道还行，但是炒的一点都不好看，土豆丝不够爽脆，斑斑点点的黑色锅灰附着其中）等。</p><p>下午的时光基本上都是在做ContainerEdit，在LimitOptions和LastTwoTextAreas中的value值使用computed与Form.xx实现双向绑定真是神来一笔。</p><p>5点多牛牛他们吃完饭，他上来问我要不要一起去六安，我犹豫不决，但还是决定不去。</p><p>下楼吃完饭，依然是疙瘩汤。吃完晚饭我早早洗漱上床看投影仪电视直播和明眸直播。</p><p>That’s it</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-22</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-22/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-22/</url>
+    
+    <content type="html"><![CDATA[<p>今天早上难得被闹钟叫醒，8:01关掉闹钟，却不受控制的又睡到早上9:40左右，房间内凛冽寒风让我畏惧，缩在被窝里刷抖音到11点左右。刷牙洗漱下楼，妈妈还没做菜呢。</p><p>上楼唤醒电脑，更新一下Ubuntu apt包，楼下的Wi-Fi又断连了，持续好长时间，所以再一次下楼，妈妈正在炸鸡柳和鸡腿。中午的菜就是这个和昨天的羊肉粉丝。一起来第一顿饭吃的有点油腻。</p><p>吃完饭的下午时光就是吃完最后一支中南海点5，然后用Honor 9x玩了三角洲行动和王者荣耀。到下午2，3点左右分析个bt get-list（container）的逻辑，其中CPU核数和内存用的分别是读取&#x2F;proc&#x2F;下文件和psutil，与我想的和之前用的大差不差。</p><p>再喝一瓶酸奶，困意袭来，挥散不去，脱下衣服，一觉睡到晚上7点半多，期间妈妈喊我吃晚饭将我叫醒一次。但我继续睡到现在。</p><p>写个DayOne That’s it</p><p>晚上吃个重新煮的疙瘩汤和一根香蕉就准备睡觉了。</p><p>今天没做什么事，浑浑噩噩过了一天。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-21</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-21/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-21/</url>
+    
+    <content type="html"><![CDATA[<p>这几日作息又有点不正常了，一觉睡到中午时分，刷牙洗漱下楼就直接吃中饭。菜是羊肉粉丝，粉丝是我现泡的，吃的时候还咬不动。</p><p>下午就是继续做bt-docker ContainerEdit模块，主要就是重现构造Form表单字段。</p><p>今天星期五，下午3点爸爸去六安接牛牛回来过周末。</p><p>吃完晚饭我早早躺在床上，刷抖音看了一个完整的熊出没变形记电影。直到晚上零点过后才入睡。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-20</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-20/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-20/</url>
+    
+    <content type="html"><![CDATA[<p>我在睡梦中醒来又想到了弈。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-19</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-19/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-19/</url>
+    
+    <content type="html"><![CDATA[<p>这几天的作息又有点颠倒的迹象，晚上基本上都是零点后睡觉，昨天晚上甚至到凌晨2点多才睡。</p><p>今天上午9点50几才醒，给手机充电，然后就是刷iPad，11点多洗漱下楼，父母早已从六安回来，妈妈已经在吃中饭了。</p><p>中午的菜有酸辣土豆丝，排骨汤，煎牛排，青菜萝卜锅子等。</p><p>吃完中饭上楼，受不了那个yaonas-homepage的ios设备WebGL实现LiquidGlass的效果bug，让ChatGPT改也没有改好，直接不区分设备类型了，统一使用svg遮盖层的实现方法了（尽管ios不支持，但至少比WebGL的一黑块强）</p><p>然后就是完成12号定的Todo List，为cloud-clipboard text信息添加日期记录，由于昨晚已经在分析过代码并做过注释，所以今天没花多少时间就实现此功能了。</p><p><img src="https://files.yaonas.space/dayone/2025/11/f8c4de66824a1a165848f17d5a4e6e47.jpeg?oss_process=rt:fit" alt="f8c4de66824a1a165848f17d5a4e6e47.jpeg"></p><p>下午3点之后就是继续开发bt-docker,不过是在Ubuntu上，将Laptop上的bt-docker项目复制一些，创建个git仓库，和dev分支就开始做ContainerEdit模块了，截至到晚上10点多，完成了之前就未完成MountedVolume el-form-item 和 另外一个Command form-item。</p><p>晚上吃的是疙瘩汤，牛排泡一些好吃些，没那么咸了。看到桌子上有两条速溶咖啡，妈妈说是她顺便买的。吃完饭，剃个头。</p><p>11点后看明眸直播到凌晨两点，然后就是打王者到4点多，沉沉睡去。</p><p>That’s it</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-18</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-18/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-18/</url>
+    
+    <content type="html"><![CDATA[<p>上午一觉睡到早上9点多，洗漱下楼都到中午时分了，直接吃中饭了，往大桌子上一看没什么菜，想吃方便面的，妈妈跟我说电饼档中煎了牛排，不算好吃，有点咸，但也勉强吃的下去。</p><p>断断续续耗时一星期，yaonas-homepage 开发告一段落（尽管IOS在LiquidGlass效果渲染上有一点Bug）</p><p>That’s it</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-17</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-17/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-17/</url>
+    
+    <content type="html"><![CDATA[<p>早餐依然是方便面还有泡锅巴。</p><p>一下午都是在打游戏（天气冷下来，Honor 9X 一阵子在充电时屏幕竟然可以点亮）。</p><p>今日大降温，下午来到后门阳台，寒风刺骨，下雪子了。屋外一片静谧，空无一人，像拥有整个镇。听着歌，抽着烟，闲适。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-16</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-16/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-16/</url>
+    
+    <content type="html"><![CDATA[<p>早上7点50几醒来，看看手机到8点左右，关个闹钟，洗漱下楼，早餐吃白胡椒猪肚方便面，这是我第一次吃这个口味的方便面，我的天，当我把粉包加入后，一股浓郁的猪大肠气味直冲天灵盖，搞不懂竟然有人喜欢这个味道，还有这个口味的方便面。没办法，煮都煮了，将就吃下，和螺蛳粉、臭豆腐一样</p><p>，闻着臭，吃着却没有什么怪味，味道中规中矩。</p><p>吃完早饭，去三楼楼梯，晒晒阳光，抽一支中南海。然后就开始一天的作业。Ubuntu虚拟机继续昨天的WebStorm安装（其实昨天通过App Center snap安装，但是与VSCode一样在分辨率2160x1440，Scale为150%时界面显示模糊，VSCode可以通过deb安装后，修改.desktop启动器参数（</p><p><code>--enable-features=WaylandWindowDecorations --ozone-platform-hint=auto</code>来设置Wayland渲染解决））而WebStorm下载网站只提供.tar.gz包，我解压缩至<del>&#x2F;Application&#x2F;WebStorm-2025.2&#x2F; 创建.desktop, exec为</del>&#x2F;Application&#x2F;..&#x2F;WebStrom-xx&#x2F;webstorm.sh 添加这些参数无法正常解析，最后还是通过snap安装，然后配置gnome-tweaks fonts scale 1.5 来变相的解决显示问题。</p><p>今天是星期天，中午菜只有买现成的酸菜鱼，和一碗蒸蛋，别无其他菜。我解决一大碗饭后结束战斗，吃的很撑。上楼抽支烟，放松放松眼睛。继续投入到home-page开发中（使用Ubuntu WebStorm）</p><p>一下午到晚上主要就是做 <strong>home-page</strong> 非GPU渲染的机器与使用WebGL的IOS的Liquid-Glass效果适配和动态背景图，搭配navBar和div.website_container背景颜色变化复用bt-docker的bt-switch3来控制主题颜色，但是全局documentStyle.filter来更改主题显得太死板，计划明日来手动控制变化趋势和范围。</p><p><img src="https://files.yaonas.space/dayone/2025/11/8b802c459f755b28e29e63d84a0959c5.png?oss_process=rt:fit" alt="8b802c459f755b28e29e63d84a0959c5.jpeg"></p><p>晚上吃切面，面是租房的奶奶擀的，很薄，没有嚼劲，还有香菜不是那种小叶香菜，根没去整根放入不好吃。浇头是中午剩的酸菜鱼。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-15</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-15/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-15/</url>
+    
+    <content type="html"><![CDATA[<p>这两天更新macOS 虚拟机真是竹篮打水一场空。</p><p>上午继续测试使用macOS 12 Monterey 虚拟机，像2160x1440分辨率显示元素太小，开启1280x960 HiDPI后 VSCode，Chrome，Jetbrains IDE等操作不流畅，最大的问题还是内存占用，使用XCode和Simulator build run Dynamic项目时和brew install node@24 make install 卡的跟屎一样，这些问题一点点耗光了我的耐心，我开始反问自己，既然之前都已经尝试过使用这个系统，为什么最后还是选择macOS Mojave呢，都相安无事干嘛手贱倒腾这么一遭，又是迁移macOS Mojave到PC，又是安装macOS Monterey，配置环境的。我想恢复原样，但是实在不想耗时好长时间重新把macOS Mojave移回来了，脑子一热，索性删除了macOS Monterey，这两天的所有操作都付之东流还白搭上一个PC上的macOS Lion虚拟机，且不知macOS Mojave移回来能不能恢复原样。创建个ubuntu24.04.3虚拟机来用吧。</p><p>中午菜有牛肉粉丝，和一盘炒胡萝卜配火腿肠和鸡蛋干。</p><p>下午就是来捯饬Ubuntu 24.04.3虚拟机和配置环境了，像什么JDK，maven，node， pnpm， python3，python3-env, python3-tk等，安装v2rayN，vscode，WebStorm等软件。</p><p><img src="https://files.yaonas.space/dayone/2025/11/7c5b129170b20dda3677a2091e9880e8.png?oss_process=rt:fit" alt="7c5b129170b20dda3677a2091e9880e8.jpeg"></p><p>晚上同样是吃饭。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-14</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-14/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-14/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚睡的真香，不过也夹杂着几个梦，有咖啡测评等元素，让我想到抖音博主“鸟哥来了”。7:50几一醒来就想看看虚拟机迁移传输结果怎么样了，急忙穿衣起床，去隔壁房间看电脑，看样子已经传输完成了，笔记本D盘空闲空间变为120G左右，PC 虚拟机文件夹下也多了一个106G的vmdk文件。我急不可耐的使用UFS Explorer打开vmdk文件，却吃惊的发现虚拟机120G的分区1 APFS（HFS +）文件系统变成RAW Partition了，在DiskGenius中同样无法读取文件。我立马慌了，难道在传输过程中出现IO错误导致数据丢失损坏吗？那样可亏大了。</p><p>肚子饿了，急忙洗漱下楼，早餐是两个包子，吃完上楼，急于恢复数据，最终在ChatGPT的指导下，使用R-Studio数据恢复终于可以正常看到分区1下的文件了，显示的是APFS文件系统，可能旧版UFS Explorer无法读取吧。</p><p>解决好这个问题，我轻松许多，抽一支烟。</p><p>中午的菜是一个牛肉锅子，烫了香菜和粉丝。</p><p>截止到下午3点多，我都在捣弄macOS Monterey虚拟机，分辨率，安装配置Python，Java环境，安装Brew，测试Java，Python项目等，昨天已经安装了Chrome和VSCode等。</p><p>之后的时间都是在接着做home-page项目，增加wordpress TopAuthor，顶部navBar及其websiteName液态玻璃效果等等。</p><p>晚上吃的是炒面，晚饭过后，父母的去六安了，我又一个人在家。</p><p>直到凌晨1点多，结束home-page本日开发，抽支烟，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-13</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-13/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-13/</url>
+    
+    <content type="html"><![CDATA[<p>早晨7点多醒来，刷到一个视频说是PC，手动配置引导，装黑苹果。我对目前VMware装的macOS Mojave 10.15 越来越不满意，所以直接创建了一个macOS Monterey虚拟机，一天都在做这个事。</p><p>早上下楼发现是早餐是疙瘩汤，不仅是剩的，冷的，还泡糊了，没有什么食欲。</p><p>上楼倒个垃圾，妈妈说给我搞包子吃，我就继续捣弄虚拟机了，一开始我怎么也找不到macOS，vmware-tools安装位置，好久才发现在&#x2F;Library&#x2F;Application Support&#x2F;下，由于主机磁盘空间限制，实在没办法进行压缩，索性将旧虚拟机扔到PC，重新创了。这是后话。</p><p>等一早上，妈妈也因为忙没有买包子，我上楼就干吃一包方便面了，中午的菜妈妈许是为了补偿买了烤鸭，但也只有这个菜和一盘青菜。晚上同样如此，且吃的是米饭。</p><p>吃完中饭爸爸去提车了，直到晚上6点左右才回来。</p><p>一下午到晚上都在虚拟机创建和迁移上耗着，网络原因也迟迟传输不好，还中断过一次。</p><p>8点多洗个澡，让电脑继续传输就睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-12</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-12/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-12/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚8点多就入睡了，一晚上都在做梦，变异，蜘蛛侠，上海，地铁这些元素。</p><p>早餐是一袋鲜虾鱼板方便面和一个荷包蛋。</p><p>早餐结束后更新一个Windows累计更新重启一下电脑，然后在ChatGPT的帮助下编写两个sh脚本用来一键启动Code-Server SSH，pm2 web服务和初始化PythonFlask项目环境。</p><p>看到Todo上有一个为yaonas.space创建网站聚合门户页面的任务就创建了yaonas-homepage项目，一天都在开发它，本来是在原生HTML、JS使用Vue的，看到WebStorm Vue语法高亮在HTML中表现不好，最后还是vite构建吧。</p><p><img src="https://files.yaonas.space/dayone/2025/11/3790f5ba12ba25ec3c42a8822482ef13.png?oss_process=rt:fit" alt="3790f5ba12ba25ec3c42a8822482ef13.jpeg"></p><p>中午饭菜有炒青菜，香菜花生米，剩的几块梅菜扣肉。</p><p>晚上吃的是切面，下楼吃面时，妈妈告诉我爸爸把车定了，我表示无感，只是可惜他把旧车抵押了。</p><p>晚上9:44分头疼欲裂，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-11</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-11/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-11/</url>
+    
+    <content type="html"><![CDATA[<p>本日双十一，昨晚11点多入睡，今早6点20左右醒了，应该是这几天睡的最香的一次。</p><p>躺在床上看看iPad和抖音，到7点50分，窗外阳光明媚，给妈妈打个微信语音聊天，问他们什么时候从六安回来，并让她给我带一份早餐（油条，胡辣汤，煎饺），得到他们已经在刚刚从六安走，她不打算给我带早饭的答复。</p><p>穿衣起床洗漱，洗个杯子，烧一壶水，整理打扫一下房间。美好的一天开始了。</p><p>早餐我就吃一点零食（瓜子仁饼，一块烤馍片，一袋豆子），吃完开始做PC iPad Todesk扩展屏尝试，虽然选择扩展模式但依然只能镜像投屏。询问ChatGPT给我推荐了Duet Display，但是Windows7 32bit的版本只能USB投屏，而我又没有USB-Lighting线。不了了之了。</p><p>上午继续做Bt-Docker ContainerEdit模块，重启规则，这真的算是一个大整合了，与之前的模块相比就是挺复杂的。</p><p><img src="https://files.yaonas.space/dayone/2025/11/27489e7da00d5a08f3df143228a22f02.png?oss_process=rt:fit" alt="27489e7da00d5a08f3df143228a22f02.jpeg"></p><p>中午的菜有炒青菜，炒四季豆，以及昨日的炒藕片和梅菜扣肉（新炒的菜每一个我喜欢吃的，不下饭）。</p><p>吃完饭喝点茶，去三楼楼梯上抽一支中南海点5。</p><p>下午的大部分时间还是在写ContainerEdit，是网络，挂载&#x2F;映射配置。</p><p>晚上我吃的是自己做的疙瘩汤，还是自己做的喧软，入味，好食。然后让妈妈磨一壶紫薯红枣豆浆。</p><p>吃完饭，去后门阳台，喝着豆浆，吸一支烟，风有点大，烟我抽一半，风抽一半。有点冷，回房间，吃一截甘蔗，看着明眸直播。早点休息了。</p><p>That’s it</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-10</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-10/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-10/</url>
+    
+    <content type="html"><![CDATA[<p>清晨5点左右醒来，早餐是疙瘩汤，我表示口味太过单调。</p><p>屋外一片大雾，真是少见，难得觉得有点苍凉。问苍茫大地，谁主沉浮？</p><p><img src="https://files.yaonas.space/dayone/2025/11/18a6da27a7bab4bbb1c30851ea62e02d.jpeg?oss_process=rt:fit" alt="18a6da27a7bab4bbb1c30851ea62e02d.jpeg"></p><p>中午的菜有梅菜扣肉，炒藕片和炒青菜。</p><p>下午5点左右，父母开车去六安了。我在家煮方便面（黑胡椒牛排面）和几块梅菜扣肉吃。</p><p>晚上8点40左右拉肚子，上完厕所买了两包中南海点5。</p><p>接下来的晚间时间都是刷手机。11点左右腹胀，想吐。忍住这种感觉入睡了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-09</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-09/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-09/</url>
+    
+    <content type="html"><![CDATA[<p>早上5点多醒来，8点多下楼，早餐是煎饼。</p><p>一上午在做ContainerEdit的PortTable。</p><p>中午没什么菜，一盘芹菜炒豆干没味（锅气），吃完一碗饭又煮了一包香菜牛肉方便面吃下。</p><p>下午就是打游戏，继续完善PortTable。</p><p>晚上吃的是切面。就是如此。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-08</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-08/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-08/</url>
+    
+    <content type="html"><![CDATA[<p>作息正常的一天。早上5点03分想来，上个厕所继续回到床上，花半个多小时写个DayOne。然后又重新安装上王者，打游戏到早上8点左右。</p><p>洗漱下楼发现并没有什么早饭可吃，小电饭煲煮了一锅粥，卖相不佳，不想吃。妈妈起来迟了，还没有做。我就上楼拿一包老坛酸菜牛肉面然后让妈妈煮一个鸡蛋，我来煮方便面吃。</p><p>吃早餐过程中，妈妈又说这说那的，烦人！吃完早餐我上楼继续打游戏到上午10点多。不想玩了，卸载掉。</p><p>继续bt-docker项目，今天在做ContainerEdit TabPanel。需要用到&#x2F;btdocker&#x2F;image&#x2F;image_list接口，就改进CommonRequest createRequest，饭后Promise&lt;T〉，当然这是后话，我到下午5点左右才完成这些。</p><p>中午的菜有炒青菜白菇，酸辣土豆丝（竟然加了大蒜叶，味道也淡，难吃）。昨日的一点牛肉及火锅底料等。</p><p>午饭过后，刷抖音到下午1点多，有点困，脱衣服躺在床上，继续刷抖音，iPad看柯南，调整网络ipv6等到4点左右。</p><p>晚餐是疙瘩汤，依旧老三样调味。吃的挺撑。</p><p>吃完晚饭用投影仪听音乐，看明眸直播到7点多，然后继续写ContainerEdit，截止到晚上9点30分，只完成前三个el-form-item，不过首次使用el-autocomplete，挺顺利的。</p><p>就这样吧，有点困，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-07</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-07/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-07/</url>
+    
+    <content type="html"><![CDATA[<p>11月这几天，第一次正常一天吃三顿饭了，哈哈😆</p><p>昨天晚上睡到午夜十二点就醒了，虽然明知看看抖音，玩玩手机更加不可能睡着了，但还是控制不住的打开手机。凌晨两点多时，发觉窗外雨淅淅沥沥，房间空寒，又想抽烟了。欲穿衣起身拿笔写文，不巧这两天拉肚子，肚子疼，急忙下楼拿包纸，去上厕所。在此期间，写个DayOne。</p><p>之后就一直刷视频到早上8点左右，洗漱下楼。</p><p>早餐是昨晚没吃的疙瘩汤，我倒到锅里重新煮了一下，加点火锅底料等调料，一如既往的味道。</p><p>吃完饭上楼，继续做Hexo-Blog的music-widget优化，依然攻克audio无法通过control快进的问题（一快进就从头开始播放），看到ChatGPT指出的几种原因之后我想很可能是mp3 media source本身的问题，比如chunked，m3u8流Range请求头，一看其请求头确实为chunked，而hexo server也不支持range，将mp3资源链接换为github pages上资源就解决快进的问题了。</p><p>11点多接近12点，妈妈打我电话，告诉我姥爷来了，喊我下去吃饭，中午的菜只有两个锅子，红烧牛肉和猪肉萝卜，牛肉里没烫火锅丸子，而是千张，香菇和菠菜。我吃一碗饭，一个包子就上楼了。</p><p>下午的时间我继续写music- widget，美化progressBar，player-cover还有添加currentTime与duration文本，利用帧同步（requestAnimationFrame）与节流文本更新优化性能等内容。</p><p><img src="https://files.yaonas.space/dayone/2025/11/309d21a7ecc4570c087efa8e28a1f87c.jpeg?oss_process=rt:fit" alt="309d21a7ecc4570c087efa8e28a1f87c.jpeg"></p><p>下午3点多结束了music- widget的本次更新，提个commit，自动deploy一下，算是完成了11月1号定的Todo。</p><p>晚上吃的是切面，牛肉里烫了火锅丸子，就是这样。</p><p>7点多，我困的昏昏欲睡，看着明眸直播，控制不住，闭上眼睛没一会就睡着了😎</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-06</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-06/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-06/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚打游戏到11点入睡的，一觉睡到清晨4:50几分，睡眠时间只有5，6个小时，明明前日通宵，白天又一天没睡，不禁感叹“年岁渐长，睡眠渐短”！</p><p>刷刷抖音，玩玩云游戏到早上8点多穿衣洗漱下楼。</p><p>早餐有稀饭配咸豇豆，猪肉芹菜包子和豆浆。由于口渴，我喝了两碗豆浆，吃了两个包子结束早餐，吃的挺撑。</p><p>泡了一杯绿茶上楼，茶叶是前几天妈妈应我的要求从姥爷家带回来的，新茶很香。上楼打开PC，USB连接Honor 9X，adb devices依然为空，打开设备管理器发现缺少ADB Interface驱动（Windows 7没有自带安装），下载安装好驱动，解决了好几天前的只能Wi-Fi连接adb的问题。scrcpy显示操作也很流畅了。舒服。</p><p>接着就是为Hexo Blog的music- widget优化，添加mediaSession Info，卡在进度条调整。后续也询问ChatGPT，用它给出的示例创建单html页面测试可以正常拖动进度条，调整音频快进，audio control也可以调整。但music-widget就不行。计划创建music-widget单页面做测试。</p><p>中午的菜有炸豆皮卷香菜，炒青菜，红烧鱼。还有一锅胡辣汤。我吃了一大碗胡辣汤和一点炸香菜。</p><p>下午就是打打游戏，刷刷抖音。无聊且缺少做事的热情，想必是寒冷和没有咖啡，香烟。</p><p>到下午接近3点时，坐在床上，又困又冷，衣服也没脱，躺到在床上，盖个被子就睡过去……😂</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-05</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-05/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-05/</url>
+    
+    <content type="html"><![CDATA[<p>接下半晚，依旧到早上7点起床下楼，看到桌子上有昨晚我未吃的切面。我加开水重新煮了一下，加点鸡精，南德调味料就吃了，还有把昨天的麻婆豆腐打热，就着面吃。</p><p>一天还是在无所事事中度过，基本上就是打游戏。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-04</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-04/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-04/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚依旧通宵，凌晨1点计划看个电视，用投影仪重温了《那些年，我们一起追的女孩》，一下就看到凌晨3点40几了。之后又看了大半集的《爱情公寓》，搞到4点多。</p><p>早上7点就起床下楼了。妈妈正在炒饭，这次的炒饭看起来还不错，饭一粒粒的，鸡蛋也不腥。我吃了半碗就没有了，还没有吃饱，上楼拿一包藤椒牛肉方便面煮着吃。</p><p>吃完早餐，跟妈妈说中午我想吃麻婆豆腐，豆腐是那种块状的，不用细碎。泡一杯茶上楼了。</p><p>这几日都是在娱乐中度过，不是刷抖音就是玩塞尔达还有王者。</p><p>中午如愿有麻婆豆腐，但是没放花椒和红油（豆瓣酱），不麻不辣，反正吃的还行。</p><p>半下午又挨不住了，睡下，一觉睡到晚上9点左右，没有下楼吃饭了。想要继续入睡，然后睡到11点多。看看王牌关羽的直播，刷抖音，又到天亮了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-03</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-03/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-03/</url>
+    
+    <content type="html"><![CDATA[<p>从今日零点开始，创建了一个新王者号，打了27把，从青铜打到钻石四，打到早上7点多。</p><p>洗漱下楼，吃个没加什么调料的疙瘩头作为早餐，吃的挺少，感觉就像没吃。</p><p>吃完早餐上楼，来启动个电脑，Synology NAS，一阵头晕目眩，熬不住脱衣睡觉了，刚脱完衣服，该死的Windows更新自动重启了电脑，导致NAS强制关机。</p><p>一觉睡到晚上7点多，用iPad刷刷抖音，到8点多了。</p><p>下楼吃饭，菜有芹菜香干（香干又换成散装的了，碎碎的，不好看也不好吃），西红柿炒鸡蛋，排骨汤等。没有什么食欲。</p><p>上楼拿一包金汤肥牛方便面（上次吃这种口味的还是在23年去北京回来时买的），煮个鸡蛋（水煮蛋还是煮不好，好多碎渣，浮末），加几块年糕，一点挂面和香菜，方便面的米醋加多了，有点酸，这些东西大杂烩起来乱糟糟的，不清爽，香菜味也让整锅面味道怪怪的，此种口味方便面也没有辣味，难吃，但吃的很撑。</p><p>吃完晚饭，妈妈上楼让我帮爸爸写个农村老家户户通水泥路的申请表，推脱不掉，就帮她写了。</p><p>之后不知忙些什么，更新个Windows，重启NAS，更新CloudDrive2，星空云套件，测试CloudFlare Audio Station连通性等就到凌晨1点多了，写个DayOne，看个电影，睡觉吧。</p><p>真的急需调整作息。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-11-02</title>
+    <link href="/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-02/"/>
+    <url>/2025/11/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-11-02/</url>
+    
+    <content type="html"><![CDATA[<p>又是一个通宵，这几日作息完全颠倒了。</p><p>昨晚玩塞尔达通宵，到早上9点多，洗漱下楼，今天是星期天，早餐是买的粉丝馅饼，我用微波炉打热吃下，算作早餐。问妈妈中午有什么菜，得知是回锅肉，香菜花生米，萝卜锅子等。</p><p>熬到中午时分，下楼一看，只有一个萝卜锅子。难受，吃一点零食饼干上楼睡觉了。</p><p>一觉睡到晚上9点多，下楼吃饭，有剩的切面，还有晚上炒的火锅肉，我重新煮了切面，加上之前剩的红烧牛肉方便面调味料就着回锅肉吃下。</p><p>之后的晚间时间还是打游戏，塞尔达和王者。</p><p>真是散漫。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>十一月首记</title>
+    <link href="/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E9%A6%96%E8%AE%B0/"/>
+    <url>/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E9%A6%96%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<p>十一月首日，白日的大部分时间我都在睡梦中度过，继清晨5点多入睡后，我一觉睡到下午5，6点多，中途被闹钟吵醒过几次，但是没有在意，就睡这么长时间了，完了，生物钟又不好调整过来了。</p><p>下午5点多醒来后，就听到妈妈喊我，想必是到了吃晚饭的时间了。穿衣洗漱下楼。晚上吃的是切面，菜有烤鸭。我吃了一碗切面，虽然没有吃饱，但是吃的很香。</p><p>饭后，写个DayOne Entry，同步一下Hexo Blog。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>十月末记-2025-10-31</title>
     <link href="/2025/10/%E5%8D%81%E6%9C%88%E6%9C%AB%E8%AE%B0-2025-10-31/"/>
     <url>/2025/10/%E5%8D%81%E6%9C%88%E6%9C%AB%E8%AE%B0-2025-10-31/</url>
