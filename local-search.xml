@@ -4,6 +4,756 @@
   
   
   <entry>
+    <title>今日小记-2025-12-30</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-30/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-30/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚一宿没睡，忙活着SendyDynamic 动态正文content的textSelection，contextMenu，交互操作，干到清晨6点多，却不是那么困。</p><p>早上7点40分左右洗漱下楼，妈妈正在煮鸡蛋下挂面，做早餐，我自然是不吃的，将昨天的疙瘩汤加点开水煮一下，调料就是鸡精，南德调味料，配以蒸香肠，早餐就是这个加一碗豆浆，吃的很撑。应该是豆浆一气喝下肚的原因。</p><p>吃完早饭，想着迁移Github secondary账号上的Hexo-Blog static 仓库到SendyYao账号下，所以就开始给Code-Server添加新的Remote URL，修改GPG Key添加多个邮箱，写个DayOne Entry，我还以为今天就是2025最后一天，明天就是元旦了呢。看个日历才反应过来12月大，明天还有一天。马上同步一下Hexo-Blog，迁移一下仓库吧。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-29</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-29/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-29/</url>
+    
+    <content type="html"><![CDATA[<p>忙来忙去，watermelonCartoon 在Ubuntu测试，apt安装python3-selenium连带安装chormium snap包，我终止下载，清理缓存，改用python3-venv，pip，轮到打开NAS Docker Selenium Hub发现ip封锁，现在知道应该是ssh终端的原因，但是当时就是替换frpc配置，给nas.yaonas.space添加https啊，费不少时间可以通过https连接nas了，宝塔多了一个这个站点成总17个，为多凑一个，又创建chatview站点，这是一个node项目网站，又是费不少时间，像是配置后端打包路径啊，前端分段chunck打包和动态引入hljs缩减index.js体积啊，终于chatview站点又可顺利访问了。发现即使为nas配置了https，还是会封锁本机IP，又是到cloudflare上创建安全防火墙规则，只要主机名等于nas.yaonas.space且IP归属地不为中国就被block，实际访问却发现都访问不了了，最终才想起cloudflare代理的站点只有几个端口可以选择，5001端口自然无法访问，于是乎就又配置站点nginx 代理规则，443端口代理到本地5001端口，顺利访问nas，但是audio station自动是添加5001端口的，我需要显式指定端口为443，很不优雅，这是早就发现的问题了，无需多说。</p><p>刚刚又尝试SSH连接Windows默认使用pwsh终端（直接在cmd执行pwsh命令就行），最开始本来在ubuntu clone bt-docker开发一会看个电视睡觉的，现在WatermelonCartoon还没测试完。</p><p>5，6点用投影仪看完一集名侦探柯南就睡觉了，一觉睡到下午4点左右，醒来又是窝在被子下，拿iPad刷抖音，刷Github，看tray-chrome项目的一些issue。</p><p>到接近5点左右，看到iPad屏幕油腻腻的，手指印横七竖八的，十分难受，注意到房间也是十分杂乱，床前桌子由于昨晚看投影仪看到桌子上的电视机挡住了投影就拿下电视机，桌面一览无遗，黑乎乎的，我用纸随便擦擦，却只能擦掉浮灰。</p><p>肚子有点饿了，去刷牙洗漱下楼，直接就吃晚饭了，菜有妈妈烧的酸菜鱼烫金针菇和豆芽，昨日的蒸香肠，青菜等。这次妈妈搞的酸菜鱼味道很行，自从某一次吃到酸菜鱼中的鱼鳞，我对妈妈做的酸菜鱼印象就一直不好。</p><p>吃完晚饭上楼，正式打扫房间卫生，把床前桌子好好的用牙刷蘸牙膏刷一遍，又用抹布擦，一下子干净多了。之后又是把房间东西好好整理一下，台式电脑清灰，理线，外设擦灰，扫地，铺床，擦设备显示屏和眼睛，忙活到晚上8点左右，房间总算整洁，看着舒服了。</p><p>打扫完卫生，开始做今日的TODO，首先是fetch，merge tray-chrome，合并远程更改到main，dev分支，处理冲突，重新打包，新功能广告拦截，FluentOverlay滚动条，Settings Window全部都顺利添加，发现一个问题，在我10月份自己修改添加的动态tray-icon之后，打包后程序大小从2.x M一下增大到15.x M，不知是否是 HtmlAgilityPack的引入还是其他打包配置问题。</p><p>感到9，10点，这第一个TODO算是完成了，接下来的时间就是处理SendyDynamic 在iPad上从后台启动自动更新渲染视图的Bug，打开项目，直觉告诉我是ContentView的<code>onChange(hSize) &#123; updatePlatform() &#125;</code> 问题，去掉之后，确实可以修复这个bug，想必是切后台或进入后台（实际证明是进入后台发生时）导致hSize变化吧。解决完这个问题我本可以直接进入到好久未碰的bt-docker开发，然而却按耐不住继续开发Text的交互操作功能，想着简单的加个textSelection和contextMenu，结果忙活了一晚上，处理各种问题，像是什么手势识别啦，长按动画啦，点击事件被阻止啦，把我和ChatGPT都累的够呛。在30号清晨6点多，提了两个commit，push到github，算是结束了bug修复和动态正文交互操作。</p><p>又是一宿未睡。Life is hard，doesn’t seek what you get.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-28</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-28/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-28/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚搞到凌晨4点多入睡，9点多被妈妈在房间晒被子的声音吵醒，迷迷糊糊闭上眼睛想要继续睡，但又不怎么睡得着了，拿起手机打开GitHub，不知怎的想到看看tray-chrome最新Activity，新增了几个feat，诸如Settings Form，黑白主题，广告拦截，Fluent滚动条之类。</p><p>磨蹭到10点多快到11点洗漱下楼，直接就吃中饭了，（起床也是因为闻到中饭，火锅酱料味，下去才知道香味应该不是来自妈妈做的菜）菜是炖青菜锅子，红烧牛肉，昨晚讲好的蒸香肠也没蒸。（还是这个星期二那天留的，爸爸还特地说留到星期天吃，我还奇怪，星期天不是才刚过么，哪知他说的是这个星期天）中午没什么菜，没有胃口，就吃半碗饭，还剩了半碗，菜就吃一点牛肉里的粉丝和平菇。</p><p>吃完午饭上楼，继续昨晚的Typecho样式修改，忙到晚上8点左右，算是填完了24年4月份埋下的技术债，那时图简单，将.main-content下的一个个元素都加上left样式，而现在直接设置width为clac（100% - 390px），再margin-left 390px就有比较干净的视图，单page下也不会出现偏移。本次修改主要是实现之前临时与ChatGPT聊天得到的效果，就此完成Focus-Mode下的Canvas粒子网络和流星效果。</p><p><img src="https://files.yaonas.space/dayone/2025/12/414485a69a79cc78d8c07697fef89765.jpeg?oss_process=rt:fit" alt="414485a69a79cc78d8c07697fef89765.jpeg"></p><p>下午4点多帮妈妈收被子，晚饭吃的是买的过桥米线。好食😋</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-27</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-27/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-27/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵，还是睡不着，凌晨2点多给WatermelonCartoon添加一个pickSeries，封装获取m3u8源的操作，直接可使用downloadWithMediaGo.py下载影视。忙完看看电视到清晨5，6点了。早上8点多给妈妈打电话，询问早餐，她把昨晚买的炒面炒一下给我吃，好食😋，炒面有鸡蛋，洋葱丝，青菜，香肠等配料，吃完炒面还喝了一碗红枣豆浆，吃的挺撑。</p><p>吃完上楼，吹会空调，烧个热水，吃饭时得知父母中午要去姥爷家吃饭，我也就到9点左右睡下了。</p><p>一觉睡到下午4点多，刷会抖音，磨蹭到5点30之后，下楼吃完饭，是疙瘩汤，没有香肠，调料放点味精，南德，火锅底料，口感，味道未免有点单调。</p><p>晚饭后，使用iflow给bt-docker创建README.md，LICENSE并commit，没什么问题，之后又分批次add，commit到最后告诉我几个文件与项目无关，没有跟踪，我只好让它add并rebase添加到某个commit，结果不知是它操作问题，还是我打断有误，最后把文件搞丢了，还恢复不好，我又误操作git reset –hard，慌了，求助GPT，好在通过IDE local history恢复，之后就是手动添加并rebase，来回修改README和LICENSE内容，修改commit Date，折腾到晚上9点多，算是全部push到github仓库了。</p><p>之后就是本地Typecho的样式简单修改（Focus Mode），看看电视。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-26</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-26/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-26/</url>
+    
+    <content type="html"><![CDATA[<p>元旦一天天逼近，我也该将2025 Summary提上日程。</p><blockquote><p>一天过了一天，我的日记却病怏怏</p></blockquote><p>今天一觉睡到下午2点多，赖在床上不愿起来，房间太冷了。</p><p>我刷会抖音，打开投影仪，继续看昨晚还剩的一集柯南，看完之后，磨磨蹭蹭都到下午4点左右了，穿衣洗漱下楼，中午的菜有胡萝卜火腿肠和香肠，虽然都挺爱吃的，但是未免有点单调，我倒一杯水就上楼。</p><p>唤醒电脑，开始昨晚开启的西瓜卡通爬虫，简单的requests请求会导致400 Bad Request，可能检测到非浏览器环境或Cookie失效。但是用selenium加一层伪装就可轻易得到pageSource，忙活到晚上9点多，大体爬虫逻辑都写完了，从获取名侦探柯南日语版详情页开始，获取pageSource到解析剧集，得到title和chapter_id，通过chapter_id，拼接得到播放页url，在for循环打开selenium webdriver的标签页，获取元素中嵌套的iframe的src，内嵌播放页，从src中获取vid，m3u8源路径也是通过vid拼接来的。最好就是调用MediaGo API下载视频。That’s it.等到哪天有时间再进一步封装，使用selenium hub node，计划任务等。</p><p>晚上5点多吃完饭，本来是吃炒面的（妈妈把炒面都买回来了），大姨也在我家吃，就一起吃了切面。香肠有点咸了，但是麻辣的，口味还行。</p><p>现在10点左右，发现iPad SendyDynamic显示bug，从后台打开打开后，视图可能变成PhoneView，同时InfoList会重新load，我也定了一个TODO，有时间再修复。看会电视，睡觉。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-25</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-25/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-25/</url>
+    
+    <content type="html"><![CDATA[<p>中午12点多被妈妈叫醒，她没有随爸爸去合肥。</p><p>今天一整天都在编译ffmpeg+openssl，群晖DSM限制太多，不是没有Clang环境就是glibc版本低，改来改去还是不行，我还是在docker上使用ffmpeg吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-24</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-24/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-24/</url>
+    
+    <content type="html"><![CDATA[<p>早上8点多，妈妈将我喊醒，问我去不去合肥，他们要去合肥进货，我也不不知怎么想的，答应去的挺干脆。赶忙穿上外出的衣服（这个月基本上在家都是穿的睡衣，又保暖又方便），给手机充会电。收到一则邮件，是阿里云域名的续费挺醒，看看日期，确实已经到24号了，还有1个月时间。</p><p>我穿好衣服洗漱，刷牙时想着域名续费和话费流量问题，有点不怎么想去合肥了，这时妈妈又催我快点，我决定不去了，他们也因为早上去的时间迟了没去。</p><p>早上9点左右，我吃一碗疙瘩汤作为早餐，然后上楼，给macOS虚拟机又分配10G的硬盘空间，之后就是捯饬Ubuntu虚拟机。配置C环境，安装gcc，gdb，vscode，v2rayN等。</p><p>中午的菜有青椒肉丝和蒸香肠。两个菜都挺合我胃口。</p><p>下午我就简单测试C环境，写几个小demo程序，鸡兔同笼，使用curl和cJSON，获取dynamicAPI 信息并解析等。然后就是美化ubuntu，终端配置oh-my-posh，安装gnome-tweak，仿macOSBigSur主题，macOS风格窗口ToolBar Button，登陆界面自定义图片等。</p><p>晚上吃的是切面，吃了一碗半，依旧吃的很香。</p><p>吃完晚饭，我将被子又从主卧移到隔壁房间，消消食，补个DayOne Entry。</p><p>That’s it.</p><p>MediaGo安装</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-23</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-23/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-23/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵，前半夜做了Synology NAS AudioStation音乐同步，实现高并发异步爬取Music，实测25首音乐，共80MB左右可在5s内爬完。后半夜就是SendyDynamic的开发，本来只是完成TODO清单上的主题配置任务，在调试过程中发现ImageLoader的相关bug，日志爆炸，事件丢弃，还是大量的并发重复请求，就pref: optimize netwwork image loading and unify adaptive theme colors在修改完成commit &amp; push to github并打了一个Tag和发布个Release后发现iPhone布局有问题，是NavigationView的锅，又是配置双View，忙活到中午。真是废寝忘食，乐此不疲啊。</p><p><img src="https://files.yaonas.space/dayone/2025/12/0daaa8d9f9c988f8dd98294436a547f2.jpeg?oss_process=rt:fit" alt="0daaa8d9f9c988f8dd98294436a547f2.jpeg"></p><p>早晨想到洗漱下楼吃早饭都到9点多了，自然没有吃的，妈妈也忙，我索性准备睡觉不吃了，但还是放不下SendyDynamic，忍受着饥饿继续开发，渐渐的也不饿也不困了了。</p><p>中午吃中饭挺早的，没到11点就吃了，中午的菜有红烧牛肉烫胡萝卜，蒸香肠，昨日的土豆丝等。匆匆吃完上楼，到中午12点多算是完成了双View布局，也在iPhone和iPad上测试通过。就再次commit，push，tag，release。目前版本为v0.1.1。</p><p>今天想必是做了不少事，有点兴奋，通宵一夜又能狂干一天。</p><blockquote><p>呼啦圈也没问题，我真的羡慕我自己。</p></blockquote><p>下午愈战愈勇，继续做ChatGPT- Archive响应式布局，使用iflow为这个项目创个README.md和MIT LICENSE，创建两个commit就push到github新仓库了，然后在imac-pro上clone并开发，体验还是一如既往的一言难尽，虚拟机macOS+VSCode &#x3D; 操作卡顿，输入延迟。不过还是在晚上9点多完成了响应式布局任务，feat(ui): add responsive layout, fix cross-platform path issues, and back-to-top button。</p><p>晚上吃的依旧是中午的饭菜。</p><p>晚上9点多，我又删除了11月15日前后安装的ubuntu 22.04.3虚拟机，下载同版本的iso文件重新安装，只为压缩之前prelocated的vmdk硬盘。10点左右完成安装，我也倒头就睡下了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-22</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-22/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-22/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>看微风吹过田野</p></blockquote><blockquote><p>听细雨打湿泥泞</p></blockquote><blockquote><p>时间总漫不经心</p></blockquote><blockquote><p>模糊着我的曾经</p></blockquote><blockquote><p>想看到最初的梦想</p></blockquote><blockquote><p>最真的眼睛</p></blockquote><blockquote><p>怎么就离开，怎么才明白</p></blockquote><blockquote><p>一切不再</p></blockquote><blockquote><p>我逆流时光而来</p></blockquote><blockquote><p>想看到花谢花开</p></blockquote><blockquote><p>想看到我曾经拥有美好的年代</p></blockquote><blockquote><p>我逆流时光而来</p></blockquote><blockquote><p>只看到沧海桑田</p></blockquote><blockquote><p>看到美丽的时光开始变坏</p></blockquote><blockquote><p>所以我独自看海却留下空白</p></blockquote><p>这几天还是颠倒的作息，晚上躺在床上缩在被子里刷抖音，白天又昏昏欲睡（就是睡上一整天），感觉一天天过去，没干到啥事情。</p><p>昨天晚上又打了几把王者，进入游戏才发现上次登录还是在12月2日，这个月我基本上都是埋头于SendyDynamic和FlutterDynamic项目上，不仅bt-docker没怎么碰，连打王者都想不起来了，根本提不起兴趣，自然也想不到。</p><p>不过一打还是打了两三个小时，感到清晨5点多了。</p><p>自然又是作息颠倒的睡上一天。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-21</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-21/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-21/</url>
+    
+    <content type="html"><![CDATA[<p>今日冬至，昨晚依旧失眠到今天早上6点多才睡着。一觉睡到下午2点左右，看到微信上妈妈给我发的三条信息，告诉我他们去六安了，家里留了二姑奶给的炸鸡腿和姥爷做的炸物，中午用微波炉打热吃。</p><p>我穿衣起身洗漱，看了看姥爷做的炸的，有狮子头，糍粑，芋头丸子等，但没发现炸豆腐干子，不怎么想吃。就吃了半个冷的糍粑（懒得都不想打热吃）。</p><p>下午3点左右给妈妈打个电话，问他们什么时候回来，巧合的是她刚好回来了。</p><p>下午忍受着饥饿，开始做Flutter Dynamic轮播图，父母很忙，晚上6点还没吃，菜就搞个青菜豆腐。我饿的受不了，极不开心，等到7点左右，妈妈吃饭时，我才煎了她从六安带回来的香肠，煎的时候很香，很强烈的五香粉味。妈妈帮我和好面，我搞疙瘩头吃的，满满一小锅，加点南德料，味精和火锅底料，虽然有点口味单调，但还是吃的很撑。</p><p>8点左右吃完饭，继续轮播图的开发，因为github仓库有例子，没费什么精力，晚上10点多就做好了，但是切换图片时动画太突兀，GPT帮我套个Animation。之后就是commit 改动，push到github啦</p><p><img src="https://files.yaonas.space/dayone/2025/12/0844915d81c65188b7cdd5c5c4ee4a42.jpeg?oss_process=rt:fit" alt="0844915d81c65188b7cdd5c5c4ee4a42.jpeg"></p><p>That’s it. Caillo！🐣</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-20</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-20/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-20/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚8点多在阳台喝点浓茶，抽支烟，加上夜间临睡前一直在忙活ChatGPT-Archive，零点躺在床上，十分清醒，睡不着了。在某个网站上看到Markdown代码块macOS样式，索性就穿衣起身继续美化ChatGPT-Archive，大差不差的仿了Shiki的效果。忙活到凌晨四点左右。</p><p>然后还是睡不着，将Todo List Not Planed两项（91cg api分析和Flutter Dynamic开屏滑动图提上日程），首先做91cg api分析，它是SSR网页，数据全嵌入在HTML元素中，像Article下的图片和Banner图片都是经过CrytoJS，AES加密的base64，我在zzz.js经过混淆的js中找到解密逻辑，然后本地调试，正常获取了base64解密过后的内容，并成功保存图片，尝试用Python进行实现，忙活到早上9点。</p><p>早上没什么吃的，只有黑米粥，我忍受着饥饿继续尝试解密，都还是偏移问题，iv和key，熬到11点左右吃中饭，中午的菜是牛肉烫鹌鹑蛋火锅丸子，昨天的芹菜香干等，我吃完上楼。</p><p>困的受不了，躺床上没一会就睡着了，一觉睡到下午5点多，吃个晚饭，继续逆向分析解密，在网络资源中找到一段decryptjs函数，包含了iv和key，喂给ChatGPT，Python总算可以直接不借助node运行js来解密了。我愈战愈勇，一股脑写了HTML解析，获取article相关信息，通过aiohttp，异步多进程得到30多张（一页）的图片。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-19</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-19/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-19/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚接近凌晨一点才入睡，今天直到中午才醒，穿衣洗漱下楼吃饭都到下午1点左右了，菜有芹菜香干，蒸香肠，西红柿鹌鹑蛋豆皮搓肉汤，我打热饭菜加点酱就匆匆吃完。</p><p>吃完饭继续昨晚的ChatGPT-Archive项目，忙到晚上11点左右达到下图效果。</p><p>晚上本来是吃疙瘩汤的，但是妈妈把中午的汤一并煮了，我自然不吃了，依旧吃的中午的饭菜。</p><p>That’s it。</p><p>可能ChatGPT-Archive作为一个小项目，Koa框架练手，我也不想在维护优化了，明天继续bt-docker吧。</p><p><img src="https://files.yaonas.space/dayone/2025/12/0647e5c9339b7618d100af1416eab7f9.jpeg?oss_process=rt:fit" alt="0647e5c9339b7618d100af1416eab7f9.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-18</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-18/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-18/</url>
+    
+    <content type="html"><![CDATA[<p>继续开发SendyDynamic，实现Switch User的功能</p><p>That’s it</p><p><img src="https://files.yaonas.space/dayone/2025/12/ab5912369b7ab22226a9e5bc043ae35a.jpeg?oss_process=rt:fit" alt="ab5912369b7ab22226a9e5bc043ae35a.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-17</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-17/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-17/</url>
+    
+    <content type="html"><![CDATA[<p>WordPress新建之前的一篇文章《归家小记》，处理Bing Web Master 阻止Tag，Archive页面。</p><p>init Flutter仓库并push到github远程。</p><p><img src="https://files.yaonas.space/dayone/2025/12/aa72a820989ac4471b7d59276fd09545.jpeg?oss_process=rt:fit" alt="aa72a820989ac4471b7d59276fd09545.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-16</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-16/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-16/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚零点左右入睡，凌晨接近3点就醒了，想必是睡眠饱和了，我还以为一觉睡到天亮呢。</p><p>凌晨3点左右醒来，不想睡也睡不着了，半卧在被褥里，打开投影仪，再看一遍《霸王别姬》，看到后半段，愈发觉得世态炎凉。看到6点左右，再度躺下，想继续睡下，但是刷着抖音虽然有点困但还是睡不着。7点零二分爸爸起床下楼，我赖在床上直到8点初，给妈妈打个电话，问她什么时候回来，说是下午，让她带一盒立顿红茶和咖啡，她推推拖拖。</p><p>早上吃的是最后一箱方便面中的最后一袋方便面，是金汤肥牛口味的，用电饼档煎个鸡蛋，煮着面泡一两片炸面片，稀里糊涂吃下肚，上楼，抽一支烟。</p><p>今天一上午都是做SendyDynamic的公网API，给Synology NAS Web做反向代理，想必是WebStation的原因，本来很简单的一个https反代，就是忙活半天还是400错误，没办法，直接使用TCP type，不过最后还是套上了一层的TLS的。</p><p>中午没有什么菜，妈妈也没有回来，没有食欲，没吃。下午继续SendyDynamic 的开发，canReachLoaclAPI方法构造，AppState全局Environment变量，.task(id: appState.apiReady)，异步等待，忙到晚上5点左右。</p><p>妈妈在5点30左右到家，自然没有给我带立顿红茶，真是火大。晚上吃的是疙瘩汤和肉丸子，吃撑了，吃完就马上投入到SendyDynamic的git commit，创建SendyDynamic仓库，肚子有点疼。</p><p>搞到晚上9点左右，达到下图效果，今天搞的腰酸背疼。That’s it.</p><p><img src="https://files.yaonas.space/dayone/2025/12/1a20bf1c148b6387ad7708ce16e11cef.png?oss_process=rt:fit" alt="1a20bf1c148b6387ad7708ce16e11cef.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>月半小记-2025-12-15</title>
+    <link href="/2025/12/%E6%9C%88%E5%8D%8A%E5%B0%8F%E8%AE%B0-2025-12-15/"/>
+    <url>/2025/12/%E6%9C%88%E5%8D%8A%E5%B0%8F%E8%AE%B0-2025-12-15/</url>
+    
+    <content type="html"><![CDATA[<p>今天没干什么事，昨晚又是一夜通宵，早上8点前下楼，早餐是炒饭，加有青椒肉丝，香肠，炒的还是一塌糊涂，连成一团，还咸。</p><p>吃完早饭，切一个橙子上楼，抽着烟，吃着橙子。</p><p>上午主要就是修改dynamicInfoYao.json，将头像文件打包到app中，填补一些缺失的内容，然后SendyDynamic移除昨晚做的获取Wi-Fi SSID相关无效代码，写个canReachLocalAPI方法。就是这样。</p><p>中午的菜有肉丸子，西红柿炒鸡蛋（我下去一看就没有食欲，西红柿不红，鸡蛋发白）还有煎鱼和青菜豆腐锅子，没有食欲，随即上楼。</p><p><img src="https://files.yaonas.space/dayone/2025/12/05638f31584be6401db28d2aea25924e.jpeg?oss_process=rt:fit" alt="05638f31584be6401db28d2aea25924e.jpeg"></p><p>下午一点左右，又冷又饿又困，熬不下去了，抽支烟，沉沉睡去。</p><p>晚上8点醒来，看微信消息得知妈妈去了六安，我只好自己烧了一锅疙瘩汤吃，配有煎香肠，疙瘩汤面粉没掌握好量，剩了倒掉半碗。</p><p>吃完晚饭，我有点困，没什么做事的兴致，洗洗睡吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-14</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-14/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-14/</url>
+    
+    <content type="html"><![CDATA[<p>今天是星期天，昨晚通宵，黎明的房间极其寒冷，室外温度低至零下2，3摄氏度，我手脚冰凉，难以入睡。凌晨3，4点一个个想法冒出，学学Swift语法糖，与ChatGPT聊天，计划给SendyDynamic添加git版本控制，毕竟经过几次开发迭代，功能越来越多，程序越来越复杂，先commit一下最近版本，后续慢慢补历史。</p><p>早上7点多还在刷抖音，爸爸来我房间开窗通风，冷风呼呼往房间灌，我忍不住大发一顿牢骚。</p><p>7点半沉沉睡去，夹杂着一些梦，一觉醒来，许是睡迷糊了，我还以为又是一个早上，一看时间，下午4点多，依旧寒冷，我窝在被子下，看手机。5点一刻，妈妈打我微信电话，喊我下楼吃饭，我磨磨蹭蹭6点才穿衣起身洗漱下楼，自然少不了妈妈对我不按时作息一起吃饭的抱怨。</p><p>晚上的菜是胡萝卜木耳炒火腿肠，青椒炒肉丝，仅剩一点的羊肉粉丝和昨日的香肠。我吃完一碗饭和早上的早餐，一个茶叶蛋和一小块肉馅饼。</p><p>晚饭结束，泡一杯茶上楼，自然少不了一支烟，吃好喝好就开始昨晚的计划，给SendyDynamic init git仓库，顺便修改了github 主账号username，2，3年没改过了，当初还是创建账号以QQ号作为username，越看越不顺眼。然后就是gpg配置，基本上都是homebrew安装，但需要安装CLT（Command Line Tools），由于一些原因，我只好以GPG Tool dmg安装，之后自然就是init仓库，配置gitignore，带签名commit，无需多言。</p><p>晚上8点多，继续着手开发SendyDynmaic，首先修复imgList.count为5时，imgBox排列bug，再就是获取Wi-Fi SSID来切换Dynamic API了，磨磨蹭蹭忙活到零点，才得知在iOS14+ 没有 Access Wi-Fi Information的 Capability了，索性采取ChatGPT的建议fallback不局限于ssid来判断是否是家庭Wi-Fi了，判断能否访问内网NAS Dynamic API不是更简单直接吗。</p><p>凌晨1点多，写个DayOne，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-13</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-13/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-13/</url>
+    
+    <content type="html"><![CDATA[<p>又是一觉睡到下午2，3点，这几日作息真有够人受得。</p><p>今天还是在做SendyDynamic，为SwitchUser加入逻辑控制，下午吃完饭就是解析DynamicYao网页，获取dynamicInfoYao.json，将资源和json文件都放在nas上了，SendyDynamic不打包这些臃肿的资源。当然少不了Image资源路径的判断和获取，干到凌晨多。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-12</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-12/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-12/</url>
+    
+    <content type="html"><![CDATA[<p>今日双十二，购物平台活动没怎么注意，倒是在Epic喜加一领取到原价348元的霍格沃滋之遗游戏，短时间内是没资格玩了。</p><p>今天给SendyDynamic侧边栏添加一个Switch User UI，还没有实际逻辑控制。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-11</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-11/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-11/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚（今天凌晨）是在外屋房间睡的，虽然2点左右就上床了，但还是想着一些计划比如Sendy Dynamic增加切换QQ动态主的功能，然后找Scrcpy for ios，之前也找过一次，Sideload安装上无法使用，想必是版本太低了。这次我直接在AppStore上找，找到Scrcpy Remote，但是要22元，我只是测试，也不长期使用，没想到作者大好人在Github上也有仓库，可能不是AppStore最新版吧，不过好在我下载了仓库的最新版ipa，安装到iPhone上可以正常使用，完美。就这样直到凌晨3，4点才入睡。</p><p>中午12点左右妈妈上来喊我去吃中饭，但我还是想喝可乐，直到下午2点才下楼吃饭，菜有酸辣土豆丝，回锅肉，胡萝卜木耳等。我用微波炉加热饭菜，许是饿了，吃的狼吞虎咽。</p><p>吃完饭抽支烟，刷会抖音，开始继续Flutter Dynamic项目的开发，忙活到凌晨1点左右，增加了SendyDynamic同款的Sidebar 月份索引。其中CustomScollView widget让我折腾好久，又是创建让性能损失的GlobalKey，又是获取位移总高度，最后才得知，其只渲染可见区域的DynamicItem导致_itemKeys.length才为8，换成ScollablePositionedList.builder才让问题简单化。同时规范项目结构，添加models。</p><p><img src="https://files.yaonas.space/dayone/2025/12/839ddd363ba2c75ac8a88cffed8bb7a2.jpeg?oss_process=rt:fit" alt="839ddd363ba2c75ac8a88cffed8bb7a2.jpeg"></p><p>晚上我6点多才吃晚饭，父母早已吃完，把碗都刷完了，我依旧打热冷掉的饭菜吃下。</p><p>就是这样的一天。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-10</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-10/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-10/</url>
+    
+    <content type="html"><![CDATA[<p>凌晨3点的阳台，弥漫着刺骨的寒意。一支中南海点5，淡淡的，轻柔的，压不住，也睡不着。</p><p>一个接一个的想法，念头冒出来，定下一个接一个的Todo。</p><p>一夜通宵，3点多从阳台回来，打开电脑想做点事，但最后还是玩了《塞尔达·王国之泪》，由于是10月底新建的profile，新的存档，就把地上剩下的5座左右的瞭望塔全给开了，地下也开了几个树根。玩到早上8点多，接近9点。打个电话给妈妈，让她给我带点早餐吃，得知他们要到10点多才回来，爸爸车与别人的车发生剐蹭等。</p><p>9点左右下楼，煮一包泡面吃，是番茄牛腩口味的，同时用电饼档煎了一个鸡蛋和一点香肠。</p><p>上午10点多困的不行，就睡下了。在此之前写了一个Dynamic的Drawer Sidebar demo。</p><p>下午4点多一觉睡醒想喝可乐。磨磨蹭蹭到晚餐时间，晚餐是切面，由于我没有及时吃，妈妈已经把面盛起来了，我又重新煮一下吃掉。</p><p>晚上就是正式为Flutter Dynamic添加Sidebar，首先配置安卓buildTypes，为release版本签名和给debug版本添加.debug后缀的包名，让两版本同时在Honor 9X设备共存。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-09</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-09/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-09/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚上又是一个通宵，忙Sendy Dynamic Swift项目到凌晨1点多，到隔壁房间睡觉，坐在床上，用iPhone向投影仪投屏看抖音，然后就是用Honor 9X打王者，这一打就不可收拾，干到了早上6点多接近7点了。妈妈早上起来看我房间灯还亮着进来说我一顿。</p><p>7点50左右吃早饭，吃的是烫饭配香辣菜和十个饺子。吃完早饭上楼，clone一下在抖音是看到的基于React+Tree.js 实现的通过手势控制的圣诞树图片记忆项目，仓库为<a href="https://github.com/yftan/christmas-tree.git">yftan&#x2F;christmas-tree.git</a>，clone下来，npm安装依赖，替换一下图片，简单测试一下，有大致框架，但浏览器根本没有弹出摄像头授权，有点犯困，删除了项目，睡觉去了。在此之前还找一下浏览器没弹出摄像头授权的原因，Chrome显示默认静止，搜索相关网页发现可能是http不安全和非localhost地址的原因。（下午询问ChatGPT得知可以通过flag unsafely-treat-insecure-origin-as-secure添加地址来解决）</p><p>一觉睡到中午12点多，磨磨蹭蹭下午2点多下楼吃饭，中午的菜有宫保鸡丁，青菜豆腐锅子等，我吃了半碗饭加四个饺子。</p><p>吃完饭上楼，继续找可用的christmas-tree项目，找到一个Stars比较多的原始项目<a href="https://github.com/moleculemmeng020425/christmas-tree.git">moleculemmeng020425&#x2F;christmas-tree.git</a>，clone下来同样的安装依赖，替换图片，用localhost:5173访问，可以正常使用了。但是localhost只能本机访问啊，局域网设备怎么办呢，当然是加https，于是乎我就一阵忙活openssl生成自签证书，域名为*.xuyao-laptop.local,然后vite配置https，终于可以通过https在局域网设备访问Christmas-Tree了，iPad可能WebGL渲染能力不足，极其卡，在iPhone上就是十分流畅了。</p><p><img src="https://files.yaonas.space/dayone/2025/12/202fc6b2f2e7bc8208f1ef58b4503cb4.png?oss_process=rt:fit" alt="202fc6b2f2e7bc8208f1ef58b4503cb4.jpeg"></p><p>晚上父母去了六安，我一个人在家，7点多外出散步，接近9点回来，吃了点饺子和中午剩的宫保鸡丁。写个DayOne Entry。 That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-08</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-08/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-08/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到中午12点多，穿衣洗漱捯饬一下就到1点左右下楼了，中午的菜有土豆丝，昨天的蒸香肠，蒸虾米，还有一袋香辣菜，想必是昨晚提到说今天早上想吃稀饭配香辣菜，但是早上我没有起来，实际上早上也没搞稀饭。</p><p>我盛了一碗饭，加点菜和火锅底料油用微波炉打热就吃下去，很香。</p><p>一下午基本上都在做DynamicInfo附加信息，手动构造AttachInfo.json，从之前的一张张动态截图中找通过网页解析的Info没有的条目，还要一张张裁剪配图，忙活一下午，新增10项DynamicInfo Item。</p><p>晚上吃的是煎饺子，馅是芹菜肉的，有点咸，不过还是好吃的，有肉味。我吃了10几个饺子，半碗饭。饭后又吃了一个猕猴桃。</p><p>晚饭过后就是将AttachInfo和配图放到NAS服务器上，Flutter Dynamic项目loadAttachInfo将附加信息嵌入到infoList根据dateTime进行排序。在此期间顺便看看明眸回归直播。之后就是Swift的SendyDynamic，忙活到凌晨1点多，达到预期效果并顺便修复了一下ImageBox的图像排列和大小问题。</p><p>That’s it。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-07</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-07/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-07/</url>
+    
+    <content type="html"><![CDATA[<p>早上9点多醒来，10:50几才洗漱下楼，自然没有早餐可吃，索性等到中午中饭早饭一起吃了。</p><p>在此期间我为服务器上的WordPress站点的Tag，Date等页面添加noindex标注。</p><p>中饭没什么菜，昨日的三河小炒，蒸香肠。</p><p>下午没干什么事，更新个Windows Preview更新，没感觉到什么新内容。DISM清理空间，修复镜像。</p><p>4点左右开始做SendyDynamic 侧边栏导航快速定位到DynamicItem。</p><p>晚上吃的是切面条。</p><p>忙活到凌晨1点算是实现了侧边栏导航。</p><p><img src="https://files.yaonas.space/dayone/2025/12/14b657c82bb87f2e7079f5c901701619.jpeg?oss_process=rt:fit" alt="14b657c82bb87f2e7079f5c901701619.jpeg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-06</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-06/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-06/</url>
+    
+    <content type="html"><![CDATA[<p>早上8点多醒，听到楼下妈妈在做炒饭声。9点左右下楼，让妈妈搞吃的，本来准备做疙瘩汤的，但是最后决定带两个包子吃。直到10点多才买回来，还是两个粉丝包。</p><p>今天做昨晚的设想，在IOS端同样做一个非flutter和WebView应用，取名为SendyDynamic，一天都在做这个。</p><p>SendyDynamic全面使用Swift开发，我搞的焦头烂额，中午饭都没及时吃（虽然也还是不饿，10点多吃两个粉丝包），直到下午两点多才吃，菜是新炒的三河小炒。</p><p>晚上吃的是疙瘩汤。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-05</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-05/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-05/</url>
+    
+    <content type="html"><![CDATA[<p>昨天中午喝着咖啡抽烟后嗓子就不太舒服，晚上临睡前又加重不适了。</p><p>今天早上10点左右醒来，嗓子涩疼还有点犯困，不想起来了就这样迷迷糊糊醒了睡睡了醒直到下午5点多。（下午1点左右又醒来一次，刷刷抖音又睡着了，做了几个梦）。</p><p>醒来后下楼冲了一杯盐开水漱口，没有缓解嗓子疼。然后就是打扫一下房间卫生。将被子挪到隔壁房间。</p><p>晚上吃的是饭，菜有三河小炒（有点太油），昨天的一个肉丸子以及剩的一点火腿。</p><p>吃完后打开XCode，为Dynamic应用添加LaunchScreen启动图。</p><p>8，9点早早上床，看会投影仪电视吃个猕猴桃。10点左右又饿了，用开水泡了一包方便面吃，吃完又感觉有点胀，不太舒服。</p><p>想睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-04</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-04/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-04/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚基本上又通宵了，直到今天早上5，6点才入睡，忙些什么呢？是12月1号的Todo List其中一条，为Flutter Dynamic应用添加评论信息，虽然有ChatGPT帮我分析评论结构和解析以及Flutter的buildComment很快，但还是忙了一晚上</p><p><img src="https://files.yaonas.space/dayone/2025/12/e2cbd0e6c2000ead52a0ab38b7878718.png?oss_process=rt:fit" alt="e2cbd0e6c2000ead52a0ab38b7878718.jpeg"></p><p>临睡前又想到PowerShell加载天气数据慢，就创了一个和风天气API账号，JWT Token验证，真正获取到数据后我又觉得没什么必要了。</p><p>早上6点多入睡，一觉睡到下午1点左右，躺床上刷刷抖音，浑身酸痛不想起来，磨磨蹭蹭到3点才穿衣起身洗漱下楼，看桌子上的菜有肉丸子，炒生菜，昨天的鸭血粉丝和香菜花生米等。我看到墙上挂着两个大馒头，取一个切成片然后和之前的烤鸭卷饼以及火腿用电饼档煎着吃，同时还有两个肉丸子及其他配菜。</p><p>吃完饭上楼，看看视频，抽完最后一支华子，然后就将昨晚导出的Flutter Dynamic apk传到PC上adb 安装到honor 9x，打开却发现NavBar标题下方的每日一言没有了，才得知没有在manifest中添加网络权限，修改好再重新打包，恢复正常了。</p><p>再之后就是开发bt-docker，复制一个BtNetTable组件命名为BtComTable为Storage，LocalImage页面做适配。</p><p>5点左右打包Vite前端项目到Python Flask后端项目，添加一下相关路由，（Pycharm的服务器同步上明明显示没有差异，等我到NAS上一看Templates文件夹还是空的，总是报FileNotFound，浪费不少时间）前后端不分离了。</p><p>晚上吃的是疙瘩汤，我罕见的没有加味精，南德调味料和火锅底料，配置花生米吃着寡淡的原味疙瘩汤（下午3点多才吃完饭，一点不饿，吃的并不香，对味道也没什么追求了吧）。</p><p>晚上头晕乎乎的，今天就这样吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-03</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-03/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-03/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚7点多入睡，一觉睡到今早8点多，断断续续做几个梦。9点左右下楼，自然没有什么吃的，我泡一杯茶上楼，1号早上的方便面面饼还剩一大半，就着茶接着吃了几口，又是不怎么饿了。</p><p>然后就是做bt-docker的ContainerProxy模块的收尾部分，我搞得有点厌烦，多写了一个dockerView Storage，千篇一律。还是Network的结构。</p><p>晚上继续捣鼓折腾macOS 14.7.2虚拟机，根据ChatGPT的教导重构了Dynamic项目，现在代码健壮性提升一个层次，ViewController生命周期也更加合理，不会出现之前被系统杀后台WKWebView销毁导致重新打开出现渲染失败卡在灰白屏了。同时添加了iPhone的App一系列icon，通过sideloadly侧载安装Payload.ipa到iPhone上。</p><p>在此之后我发现Photos没有项目的问题系统可用空间不足导致的iCloud暂停同步（尽管还有10多G的可用空间依然无法同步，询问ChatGPT证实我的“阈值”判断）通过删除XCode iPad 17.5.2设备支持文件增加本机存储可用空间来成功开始同步相片，但依然不是长久之计，我只好增大虚拟磁盘容量，兜兜转转还是来到50G，之前就是因为想要缩减容量从50G到40G不惜重新安装macOS 14.7.2，现在还是回到原点。对了，在此期间我还更新了一下macOS系统到14.8.2，但macOS26的更新提示和小红点无法去除，有点难受。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2025-12-02</title>
+    <link href="/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-02/"/>
+    <url>/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-02/</url>
+    
+    <content type="html"><![CDATA[<p>早餐：两个肉包子，一碗沙汤。</p><p>上午做公交车回来的，在毛坦厂来优品买一点咖啡。</p><p>中午菜有昨天的牛肉和现炒的土豆丝。</p><p>下午ChatGPT帮我生成一篇文章来。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>十二月首记-引子</title>
+    <link href="/2025/12/%E5%8D%81%E4%BA%8C%E6%9C%88%E9%A6%96%E8%AE%B0-%E5%BC%95%E5%AD%90/"/>
+    <url>/2025/12/%E5%8D%81%E4%BA%8C%E6%9C%88%E9%A6%96%E8%AE%B0-%E5%BC%95%E5%AD%90/</url>
+    
+    <content type="html"><![CDATA[<p>由于昨晚早早入睡，今天早上7点多就从噩梦中惊醒，下半身子都滚到床下了。</p><p>没急着起床，而是打开抖音，还没刷两个视频，就刷到一个短剧《我爸二婚，校花妹妹助我走上人生巅峰》看着种短剧就不能带脑子，于是我摘了脑子下了红果短剧花费2，3个小时看完了整部剧，毫无营养，就是看得爽。</p><p>10点多把房间打扫一下，下楼由于没有早餐，我上楼吃几口方便面面饼就着茶没那么饿了。抽一支烟。</p><p>中午的菜有红烧牛肉等。</p><p>下午在做Hexo同步，3点多完成这一任务，妈妈喊我去六安。我阴差阳错去了。</p><p>晚上是在六安吃的咸挂面。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>十一月尾声</title>
     <link href="/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E5%B0%BE%E5%A3%B0/"/>
     <url>/2025/11/%E5%8D%81%E4%B8%80%E6%9C%88%E5%B0%BE%E5%A3%B0/</url>
