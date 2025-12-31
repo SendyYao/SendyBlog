@@ -9,8 +9,37 @@
     <atom:link href="https://blog.yaonas.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>WhisperYao&#39;s Diary</description>
-    <pubDate>Tue, 30 Dec 2025 10:11:16 GMT</pubDate>
+    <pubDate>Fri, 02 Jan 2026 15:56:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>2025-最后一记</title>
+      <link>https://blog.yaonas.space/2025/12/2025-%E6%9C%80%E5%90%8E%E4%B8%80%E8%AE%B0/</link>
+      <guid>https://blog.yaonas.space/2025/12/2025-%E6%9C%80%E5%90%8E%E4%B8%80%E8%AE%B0/</guid>
+      <pubDate>Wed, 31 Dec 2025 15:52:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description></description>
+          
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>今年的最后一天了，我竟是被折腾的如此狼狈不堪。</p><p>一觉睡到上午10点多，洗漱下楼捯饬捯饬就直接吃中饭了，菜有排骨汤烫火锅丸子，前日的酸菜鱼还剩一点，还有香肠等。</p><p>吃完饭我就准备洗个澡，可惜太阳能水不怎么热了，让爸爸开热水器他又嫌费电。洗不成澡了，一下子把我的计划全打乱了。</p><p>换件衣服直接开始写《2025 Aunnul Summary》了，这一下就不眠不休的干到1号早上，我觉得应该还是写的太细致了。</p><p>晚饭都来不及吃，晚上爸爸把牛牛和奶奶从六安接回来。</p><p>街上有摔炮声，远处也有烟花爆竹声此起彼伏。年味就这么来了。</p><p>2025年就这样，在我写总结时结束了。</p>]]></content:encoded>
+      
+      
+      <category domain="https://blog.yaonas.space/categories/Life/">Life</category>
+      
+      
+      <category domain="https://blog.yaonas.space/tags/Diary/">Diary</category>
+      
+      
+      <comments>https://blog.yaonas.space/2025/12/2025-%E6%9C%80%E5%90%8E%E4%B8%80%E8%AE%B0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>今日小记-2025-12-30</title>
@@ -560,35 +589,6 @@
       
       
       <comments>https://blog.yaonas.space/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-12/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>今日小记-2025-12-11</title>
-      <link>https://blog.yaonas.space/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-11/</link>
-      <guid>https://blog.yaonas.space/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-11/</guid>
-      <pubDate>Wed, 10 Dec 2025 17:03:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description></description>
-          
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>昨晚（今天凌晨）是在外屋房间睡的，虽然2点左右就上床了，但还是想着一些计划比如Sendy Dynamic增加切换QQ动态主的功能，然后找Scrcpy for ios，之前也找过一次，Sideload安装上无法使用，想必是版本太低了。这次我直接在AppStore上找，找到Scrcpy Remote，但是要22元，我只是测试，也不长期使用，没想到作者大好人在Github上也有仓库，可能不是AppStore最新版吧，不过好在我下载了仓库的最新版ipa，安装到iPhone上可以正常使用，完美。就这样直到凌晨3，4点才入睡。</p><p>中午12点左右妈妈上来喊我去吃中饭，但我还是想喝可乐，直到下午2点才下楼吃饭，菜有酸辣土豆丝，回锅肉，胡萝卜木耳等。我用微波炉加热饭菜，许是饿了，吃的狼吞虎咽。</p><p>吃完饭抽支烟，刷会抖音，开始继续Flutter Dynamic项目的开发，忙活到凌晨1点左右，增加了SendyDynamic同款的Sidebar 月份索引。其中CustomScollView widget让我折腾好久，又是创建让性能损失的GlobalKey，又是获取位移总高度，最后才得知，其只渲染可见区域的DynamicItem导致_itemKeys.length才为8，换成ScollablePositionedList.builder才让问题简单化。同时规范项目结构，添加models。</p><p><img src="https://files.yaonas.space/dayone/2025/12/839ddd363ba2c75ac8a88cffed8bb7a2.jpeg?oss_process=rt:fit" alt="839ddd363ba2c75ac8a88cffed8bb7a2.jpeg"></p><p>晚上我6点多才吃晚饭，父母早已吃完，把碗都刷完了，我依旧打热冷掉的饭菜吃下。</p><p>就是这样的一天。</p>]]></content:encoded>
-      
-      
-      <category domain="https://blog.yaonas.space/categories/Life/">Life</category>
-      
-      
-      <category domain="https://blog.yaonas.space/tags/Diary/">Diary</category>
-      
-      
-      <comments>https://blog.yaonas.space/2025/12/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2025-12-11/#disqus_thread</comments>
       
     </item>
     
