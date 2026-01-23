@@ -2259,6 +2259,7 @@ input[type=checkbox] {
 }
 .cal-prev,
 .cal-next {
+  display: none;
   position: absolute;
   top: 9px;
   width: 9px;

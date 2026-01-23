@@ -330,7 +330,10 @@
               var index = count.keys[0];
               var cLink = $('<a>').attr('href', current.posts[index].link).attr('title', current.posts[index].title).html(day++);
               if (current.posts[index].background) {
-                cDay.css('background-image', `url(${current.posts[index].background})`)
+                cDay.css(
+                  'background-image',
+                  `url(${settings.ossHost}${current.posts[index].background})`
+                )
                 cDay.attr('hasBackground', '')
                 cLink.attr('removeTransition', '')
               }
@@ -379,7 +382,8 @@
     weekOffset: 0,
     single: true,
     root: '/calendar/',
-    url: '/calendar.json'
+    url: '/calendar.json',
+    ossHost: 'https://files.yaohub.com'
   };
 
 }(jQuery));
