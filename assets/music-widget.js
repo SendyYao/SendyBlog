@@ -9,7 +9,7 @@ function initMusicWidget(SongString) {
     document.getElementById("mj-img").src = Song[2];
     document.getElementById("share").href = `https://kuwo.cn/search/list?key=${Song[0]}`
 
-    audioLoad("https://hexo.yaonas.space" + Song[3])
+    audioLoad("https://hexo.yaohub.com" + Song[3])
     updateMediaInfo()
 
     progressBar = document.getElementById('progress-bar');

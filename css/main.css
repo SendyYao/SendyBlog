@@ -1301,6 +1301,97 @@ i.iconfont {
     margin: 0.25rem 0;
   }
 }
+.alert {
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+}
+.alert.content blockquote,
+.content .alert {
+  border-left: 4px solid #0078d4;
+  padding: 1em 1.5em 1em 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+.alert::before {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: block;
+  letter-spacing: 0.15em;
+}
+body.night .alert,
+body.night .content .alert,
+body.night .alert.content blockquote,
+body.night .content .alert blockquote {
+  background-color: #373d48 !important;
+  border-color: #434a56 !important;
+}
+.alert-note {
+  border-color: #0078d4 !important;
+  background: #f3f6fb !important;
+}
+.alert-note::before {
+  content: "📝  NOTE";
+  color: #0078d4;
+}
+.alert-warning {
+  border-color: #e0a800 !important;
+  background: #fffbe6 !important;
+}
+.alert-warning::before {
+  content: "⚠️  WARNING";
+  color: #e0a800;
+}
+.alert-tip {
+  border-color: #28a745 !important;
+  background: #e6ffed !important;
+}
+.alert-tip::before {
+  content: "💡  REFERENCE";
+  color: #28a745;
+}
+.alert-important {
+  border-color: #d63384 !important;
+  background: #f3f6fb !important;
+}
+.alert-important::before {
+  content: "❗  IMPORTANT";
+  color: #d63384;
+}
+.alert-caution {
+  border-color: #fd7e14 !important;
+  background: #fff5e6 !important;
+}
+.alert-caution::before {
+  content: "🔥  CAUTION";
+  color: #fd7e14;
+}
+.alert-info {
+  border-color: #17a2b8 !important;
+  background: #e6f7ff !important;
+}
+.alert-info::before {
+  content: "ℹ️  INFO";
+  color: #17a2b8;
+}
+.alert-success {
+  border-color: #28a745 !important;
+  background: #e6ffed !important;
+}
+.alert-success::before {
+  content: "✅  SUCCESS";
+  color: #28a745;
+}
+.alert-error {
+  border-color: #dc3545 !important;
+  background: #ffe6e6 !important;
+}
+.alert-error::before {
+  content: "❌  ERROR";
+  color: #dc3545;
+}
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
 #valine.v[data-class=v] .vinput,
@@ -1403,7 +1494,8 @@ figure.highlight td.code > pre {
 .markdown-body {
   font-size: 1.2rem;
   line-height: 1.6;
-  font-family: "楷体", "楷体_GB2312", "STKaiti", "华文楷体", "BiauKai", "DFKai-SB", serif;
+  font-family: "LXGW Wenkai Screen";
+  overflow-wrap: break-word;
   margin-bottom: 2rem;
   color: var(--post-text-color);
 }
