@@ -782,9 +782,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body p:not(#Song-Name,
-body #Song-Artist) {
+body p:not(#Song-Name):not(#Song-Artist) {
   text-indent: 2em;
+}
+body .note p:not(#Song-Name):not(#Song-Artist) {
+  text-indent: 0;
 }
 body a {
   color: var(--text-color);
