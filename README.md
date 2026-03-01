@@ -45,7 +45,7 @@ These files are ready-to-serve static assets.
 🌍 Live Website
 The blog is available at:
 
-👉 https://hexo.yaonas.space/
+👉 https://hexo.yaohub.com/
 
 🚀 Deployment Workflow
 Write posts and edit content in the Hexo source repository
