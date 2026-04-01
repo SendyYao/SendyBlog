@@ -9,14 +9,14 @@
     <atom:link href="https://hexo.yaohub.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>WhisperYao&#39;s Diary</description>
-    <pubDate>Sat, 28 Feb 2026 15:08:00 GMT</pubDate>
+    <pubDate>Wed, 01 Apr 2026 08:07:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>今日小记-2026-02-28</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-28/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-28/</guid>
-      <pubDate>Sat, 28 Feb 2026 07:08:00 GMT</pubDate>
+      <title>今日小记-2026-03-31</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-31/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-31/</guid>
+      <pubDate>Tue, 31 Mar 2026 11:47:08 GMT</pubDate>
       
         
         
@@ -28,7 +28,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今天是2月的最后一天，我还是一早9点左右醒来就打起了游戏，依旧王者80星左右没有多少进展。中午家里有来人吃饭，我窝在床上打游戏，左岚清和牛牛到我房间来问我去不去他家。</p><p>下午1点左右我下楼吃午饭，菜有牛肉，土豆丝，青菜豆干之类。</p><p>依旧是打了一下午的游戏，晚上去了霍山左岚清家吃饭，给了我200元红包。吃完饭，去了霍山县市区文庙附近买了一碗酸辣粉和若干小炸，是用我的红包现金付的款，30元吃的，剩下70元给了妈妈。</p><p>晚上打游戏到凌晨，睡觉了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今日是3月的最后一天，清晨5点左右从梦中醒来，刷刷视频，打几把游戏，没有继续睡下去了。</p><p>7点多起床下楼，嗓子涩疼，没有早餐可吃，吃几块锅巴糊弄着。</p><p>上午打打游戏，给Wordpress一篇文章中的图片无效src做一下修改。</p><p>中午12点左右下楼，妈妈一个菜还没有烧好，看起来也没有什么我想吃的菜(比如黄鳝煮豆腐锅子，炒包菜)，加上早上就没吃，饿的实在难受，妈妈等着锅烧菜，我就急忙煮了一锅清水挂面吃，调料也依旧是老三样。</p><p>下午继续努力适配Wordpress外网访问，比如文章内图片src替换。目前已知问题是login模块失效。</p><p>晚上多了一盘炒土豆丝，还是不想吃饭，又下了一锅挂面吃，有香肠，煎鸡蛋，包菜。满满一大碗，吃的很撑。</p><p>吃完晚饭，喝一袋板蓝根，看看明眸直播，写个DayOne，有点困，想睡觉了💤</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -37,15 +37,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-28/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-31/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-27</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-27/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-27/</guid>
-      <pubDate>Fri, 27 Feb 2026 07:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-30</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-30/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-30/</guid>
+      <pubDate>Mon, 30 Mar 2026 11:46:00 GMT</pubDate>
       
         
         
@@ -57,7 +57,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今日是正月十一，没什么好说的，就是打游戏，这个年假，我的时间都是被游戏占据。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今天正式恢复www.yaohub.com网站的访问，首先是home-page，这个子站点放在Netlify托管，然后创建CloudFlare Worker，绑定www域名，通过request url.pathname route做请求代理转发。之后就是使用CloudFlare Tunnel内网穿透本地Synology NAS的Wordpress和MediaWiki，绑定到main.yaohub.com域名。</p><p>中午的菜有芹菜炒豆干，炒包菜，没什么锅气和麻辣味，吃的不是很香。</p><p>晚上吃的是妈妈下的挂面，虽然是清水挂面，但是饿了，吃的也挺香。吃完晚饭，妈妈叫我洗碗，我偷懒加之这几日的饮食实在难熬，我强硬的拒绝。</p><p>今天就是这样了。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -66,15 +66,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-27/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-30/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初十小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%8D%81%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%8D%81%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Thu, 26 Feb 2026 10:04:05 GMT</pubDate>
+      <title>今日小记-2026-03-29</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-29/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-29/</guid>
+      <pubDate>Sun, 29 Mar 2026 11:42:00 GMT</pubDate>
       
         
         
@@ -86,7 +86,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>早上5点多醒来一次，看个时间，继续蒙头睡下去，到8点左右醒来，刷回视频，关个闹钟，打起了游戏，一下打到早上10点左右，他妈的没上一颗星，洗漱下楼，自然没有早饭可吃，吃几个杏仁坚果，本来准备再吃一个橙子的，但是喝几口可乐，橙子切了又不想吃了。</p><p>上楼整理个房间，扫个地，冲壶咖啡，继续打起了游戏，打到下午4点左右，在一场队友东皇明演局举报之后的对局就是把把金牌，打到69星了。许是喝了咖啡，或是长时间的打游戏，我的手又是发麻了，全身发热，心率失常，有点颓废。</p><p>等到晚上5点多，吃完饭，中午家里有来人吃饭，菜有爸爸买的酸菜鱼，芹菜，蒜苗火腿肠之类。</p><p>吃完晚饭，照例抽一支烟，上个厕所，写点DayOne，马上洗个澡。</p><p>That’s it.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今天周日，奶奶和牛牛昨天下晚坐公交车从六安回来。</p><p>中午没什么菜，有炒猪血，鸡烧毛豆，还有卤牛肉（隔壁买的，比较腥，不好吃），没有一个我想吃的菜，中午就是下挂面吃的，就是清水挂面，没有香肠和煎蛋，调料只有简单的盐，猪油，南德，火锅底料。</p><p>晚上吃的是妈妈煮的白米粥，加了小黄米，汤比较粘稠，加点火锅底料和香肠，很好吃。下晚时分，爸爸又送奶奶和牛牛去六安了。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -95,15 +95,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%8D%81%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-29/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初九小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B9%9D%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B9%9D%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Wed, 25 Feb 2026 10:03:00 GMT</pubDate>
+      <title>今日小记-2026-03-28</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-28/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-28/</guid>
+      <pubDate>Sat, 28 Mar 2026 09:17:21 GMT</pubDate>
       
         
         
@@ -115,7 +115,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>一晃眼，日子来到初九，一天过了一天，我的日记却病怏怏。</p><p>时间还是被游戏消磨。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今天是周六，早上7点被闹钟准时叫醒，醒来还是打了几把游戏，又开了一个新号，体验皮肤打青铜局。打到8点左右。</p><p>洗漱下楼，看到桌子上有一个韭菜粉丝饼和一个茶叶蛋，终于吃到馅饼了，可惜没有肉饼。吃完早餐，抽一支烟，喝一瓶牛奶。</p><p>上午还是没干什么事，就是打游戏。中午的菜只有一个炒青菜，蒸咸肉，还有卤菜（卤千张和豆干），没什么胃口，不想吃。吃了一个苹果。</p><p>下午打起了巅峰赛，3连败，不想玩了，又卸载了游戏。3点左右下楼煮了一锅挂面吃，有煎荷包蛋，香肠，以及酱油豆干。吃完饭，泡一杯茶，抽一支烟。</p><p>继续为Typecho内网穿透站点做适配，处理$picture_list中的图片域名动态替换。写个DayOne。</p><p>That’s it.</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -124,15 +124,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B9%9D%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-28/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初八小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AB%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AB%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Tue, 24 Feb 2026 10:02:00 GMT</pubDate>
+      <title>今日小记-2026-03-27</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-27/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-27/</guid>
+      <pubDate>Fri, 27 Mar 2026 09:06:00 GMT</pubDate>
       
         
         
@@ -144,7 +144,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今天中午我和妈妈去酒店喝喜酒，是孩子吃喜蛋。下午楼下陪读来了，妈妈去接。爸爸和奶奶牛牛去了霍山左岚清家拜年，然后又去了大舅奶家吃饭。</p><p>下午的时间还是打游戏，巅峰赛5连胜，差点又达到1600了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>一觉睡到早上6点多，刷刷视频，打几把游戏就到7点多了。起床洗漱下楼，早餐是我自己做的挂面配煎荷包蛋，调料有火锅底料，椒盐等。面快要煮熟时没有煤气了。这时大概时上午8点，父母从六安回来了。</p><p>吃完早饭，喝瓶牛奶，抽一支烟，由于VPN问题，我上午没干什么事，简单修改一下Typecho，为穿透站点做部分适配。就是打游戏了。</p><p>中午的菜有昨日的芹菜炒肉，炒菠菜，炸鸡腿。吃完午饭，我和妈妈去了姥爷家，妈妈要帮别人理发。没玩什么，下午2点左右回来。下午的时间基本上就是打王者巅峰赛了，上了几十分。</p><p>晚上吃的是粥，两个炸鸡腿。</p><p>That’s it.</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -153,15 +153,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AB%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-27/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初七小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%83%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%83%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Mon, 23 Feb 2026 10:01:00 GMT</pubDate>
+      <title>今日小记-2026-03-26</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-26/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-26/</guid>
+      <pubDate>Thu, 26 Mar 2026 04:26:20 GMT</pubDate>
       
         
         
@@ -173,7 +173,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今日初七，不知道写些什么了。</p><p>晚上被游戏耽误，也没有去三老爷家吃饭。也不知道某些人是否去。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>昨晚凌晨3点多醒来，想要继续睡的，但是睡不着，就看看视频，打打游戏。到早上6点半左右又有点困了，睡个回笼觉，7点多被闹钟吵醒。起床洗漱下楼。</p><p>刚好看到妈妈买完馒头回来，早餐就是粥配馒头香肠和一小点麻球。是我满意的一餐。</p><p>吃完抽支烟雷打不变，之后的时间就是继续借助CloudFlare Tunnel穿透NAS上的code-server和wikiJS服务。同时也打了几个小时的游戏。临吃午饭时，铺个隔壁房间的床单，套个被套，扫个地，整理个房间。</p><p>中午的菜有昨日的牛肉烫了点土豆丁，海带排骨汤，芹菜炒肉。我吃了一碗饭和半个馒头。</p><p>吃完午饭，抽支烟，又打起了游戏，一下就打到下午3点多了。抽支烟，写个DayOne。</p><p>晚上部署个Navidrome服务，并进行内网穿透。</p><p>That‘s it.</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -182,15 +182,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%83%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-26/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初六小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AD%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AD%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Sun, 22 Feb 2026 02:56:00 GMT</pubDate>
+      <title>今日小记-2026-03-25</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-25/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-25/</guid>
+      <pubDate>Wed, 25 Mar 2026 04:25:00 GMT</pubDate>
       
         
         
@@ -202,7 +202,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>转瞬来到初六，今天没到哪里去，我早上起来就打起了游戏，打到上午10点多，听到楼下有人在我家吃饭，索性等到人吃完，到下午一点左右才洗漱下楼，吃点奶奶炸的火腿肠，鸡柳之类，菜还有皮蛋和羊肉锅子，吃点剩的一点饭，喝一碗早上的豆浆，吃的很撑。</p><p>下午父母和牛牛陪亲戚去东石笋玩。我和奶奶在家，我找可乐途中找到两条香烟，普皖和黄金叶乐途短支，拿下来两包。</p><p>抽一支烟，开始开发SendyDynamic的ImageBox的图片长按弹出菜单保存图片的功能。做到卡在webp格式图片不支持直接保存。</p><p>晚上去了孟锦城家吃饭。遇上了李静雯，真是好久没见。怎么说呢。嗯，一副大家闺女范，鼻子高挺，亭亭玉立，沉默寡言，我真是喜欢。我又想起某年大雪，那年初二，我们一家在杨文仙街道家吃饭的一些场景。</p><p>就是这样。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>早上依然7点多洗漱下楼，早餐依然是妈妈正在做的挂面，连续几天早上早餐都是挂面，我无法再忍受，发了不小脾气。可惜面粉妈妈直到今天还没有买，也没有火锅底料酱。最终早餐我还是以干嚼锅巴配南德调味料，椒盐与剁椒酱戏弄过去。</p><p>今天是爸爸的生日，中午妈妈终于听从了我的要求，菜有浇汤锅巴（锅巴是早上大姨娘带来的，汤汁有洋葱，牛肉汤，牛肉粒），红烧牛肉烫平菇锅子，炒生菜。锅巴浇汤锅巴很香，牛肉里也加了火锅底料，因为早餐没有吃什么，还有中午的菜也很合胃口，我吃的很香，可以算是这几天我吃的最香的一顿饭。</p><p>下午的时间我继续部署score-system站点，同样的流程，不过是整理了一下NAS MySQL数据库，iTab数据库中的web_student和ScoreUser表我移到Score数据库中了，这样就需要修改Mapper还有getTables接口对Tables中以&quot;Score_&quot;开头的字符串进行过滤。</p><p>做完这些事我控制不住再度下载安装了《王者荣耀》，打几把巅峰赛。</p><p>晚餐是小米粥配馒头，同样吃的很香。吃完晚饭，有点困，又打起了游戏，到接近9点多睡觉了。一觉睡到凌晨3点多。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -211,15 +211,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%85%AD%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-25/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初五小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%94%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%94%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Sat, 21 Feb 2026 02:47:00 GMT</pubDate>
+      <title>今日小记-2026-03-24</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-24/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-24/</guid>
+      <pubDate>Tue, 24 Mar 2026 04:25:00 GMT</pubDate>
       
         
         
@@ -231,7 +231,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今天还是继续和爸爸，牛牛去石河那边拜年，比如溪德江家，李静雯家，给了牛牛一个400元红包，应该是准备分成两个的，之后又去了但家庙那边许璐家，牛牛一路人来疯，咋咋呼呼吵死了，真是令人讨厌。中午也是在那里吃饭的。</p><p>吃完饭，溪斌表叔让我给他注册Google账号，由于节点问题，一直没有搞好，之后李从荣喊我去打牌，我答应表叔回家用电脑微信联系帮他弄。</p><p>在和李从荣，许璐他们打牌过程中，我感到窘极了。头疼，昏昏沉沉。跟随爸爸先行回家了，回到家我就开始帮表叔做Google账号，但手机验证，给他发信息不回也就不了了之了。</p><p>晚上一家去了溪德江家吃饭，我头疼加之正在打游戏，就一个人在家了，下点挂面吃，配着可乐，惬意极了。</p><p>That’s it.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>早上7点多洗漱下楼，看到妈妈正在做早餐，下挂面，其中还加入了水煮蛋，一看就没有食欲。我还是想吃肉馅饼和茶叶蛋。上楼回到房间，看看CloudFlare DNS记录。爸爸早上一起来就到我房间找那条香烟，我则看看MSN新闻，抽一支烟，最后那条烟还是被他找到。</p><p>下楼自己做早饭，还是煎荷包蛋，香肠挂面，香肠放的有点多，面吃起来有点咸了，调料就是南德、鸡精、椒盐。没有火锅底料辣味，吃起来很不得劲。吃的很撑。吃完早餐就坐在台阶上抽一支烟，喝着水和咖啡。</p><p>之后妈妈到我房间来清理零食饼干盒和塑料袋，我予以阻拦，浪费不少时间。上午刷刷抖音视频就过去了。</p><p>中午的菜有酸辣土豆丝和炒包菜，口味比较清淡，没有辣味，加上早上吃的迟和重口味，没有什么胃口，吃的不是很香。</p><p>下午的时间就是着手iTab站点的部署，在NAS Docker CodeServer中运行iTab-Interface，使用supervisor管理进程，使用CloudFlare <a href="http://xn--Tunnelitab-api-lz9vk00bih4lemyau04g.yaohub.com">Tunnel穿透代理到itab-api.yaohub.com</a>。至于静态itab.yaohub.com前端则是托管在Netlify上。这其中自然少不了SpringBoot application.yml，Mapper修改等。</p><p><img src="https://files.yaohub.com/dayone/2026/03/cf883e40920078c5a68a9c9521bd91d7.png?oss_process=rt:fit" alt="cf883e40920078c5a68a9c9521bd91d7.jpeg"></p><p>晚上依然是中午的菜，多了一截蒸香肠，没有什么胃口，加之又十分困，上楼到我隔壁房间衣服都没有脱就睡着了。父母打算去六安，但是因为忙就没有去了。晚上6点多一觉睡到10点多。</p><p>That‘s it.</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -240,15 +240,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%94%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-24/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初四小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%9B%9B%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%9B%9B%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Fri, 20 Feb 2026 02:42:00 GMT</pubDate>
+      <title>今日小记-2026-03-23</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-23/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-23/</guid>
+      <pubDate>Mon, 23 Mar 2026 14:53:46 GMT</pubDate>
       
         
         
@@ -260,7 +260,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今天是初四，因为晚上有人在我家吃饭，所以早上只有爸爸和牛牛出去拜年了。</p><p>我待在家还是选择游戏来填充我的时间。晚上八角塘那边亲戚分两拨人在我和大姥家吃饭，我打着游戏，等到人吃完后才下楼吃饭，菜挺丰盛，感觉比年夜饭更丰盛，好吃，有土豆丝，莴笋炒火腿肠，炸鸡腿，虾，皮蛋，酒鬼花生，羊肉锅子之类，喝着雪碧，吃的很香。牛牛和他们一起去吃烧烤了。</p><p>就是这样。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>凌晨3点醒来，睡不着了。起床喝咖啡，抽烟。刷视频。</p><p>早上7点洗漱下楼，想吃肉馅饼和茶叶蛋。没有挂面，妈妈去买。早餐是荷包蛋挂面。</p><p>上午Cloudflare Tunnel穿透ImageProxy服务，上大号厕所。</p><p>泡茶，冲咖啡。看柯南。抽烟。</p><p>中午爸爸从六安回来，他炒了两个菜。没有胃口吃完午饭。</p><p>打游戏。妈妈上楼找东西。晚上没吃。就是干吃锅巴配剁椒酱。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -269,15 +269,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E5%9B%9B%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-23/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初三小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%89%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%89%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Thu, 19 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-22</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-22/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-22/</guid>
+      <pubDate>Sat, 21 Mar 2026 19:28:31 GMT</pubDate>
       
         
         
@@ -289,7 +289,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>今天是初三，继续跟随父母，牛牛和奶奶去八角塘那边拜年，在此之前先去了大姥家，大姥给我和牛牛分别200元红包，之后妈妈回家，我们去了孙代平家拜年，依然给我和牛牛一人一个红包，但不知什么原因，我的红包是一个空的，牛牛的红包有200元，许是装错了，奶奶这样说。</p><p>再之后又去了王家湾杨文仙家。给牛牛一个红包。后来爸爸和牛牛又去了黄启蒙家，我和奶奶在下面等着。</p><p>等了20分钟左右爸爸接到孙代平电话叫我们中午去他家吃饭。于是乎我们就回家接上妈妈一起去他家吃饭了。</p><p>中午吃饭没什么好说的，值得一提的是其中的米很好吃（粒粒分明，硬）。</p><p>下午爸爸带上牛牛去了霍山那边的六万情峡玩，我觉得没什么好玩的就和奶奶跟随大姑爹车回来了。妈妈回到毛坦厂去超市买菜，我和奶奶因为没有卷门钥匙就去了大姥家，妈妈从超市回来，一起回家，妈妈竟然也没有钥匙，我们三人只好继续去绕毛坦厂走上一圈去了大润发，世纪华联超市继续买点菜，买了火腿肠，皮蛋之类的，我买了一瓶水溶C和土豆粉打算放在羊肉火锅里烫着吃。</p><p>买完东西回家依然被困在门口进不去，好在隔壁邻居刘爷爷有钥匙帮我们打开了。</p><p>回到家继续打起了游戏，一天就这样过去了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>早餐 鸡汤方便面和挂面，上午清理阳台污泥，洗衣服。</p><p>中午菜有麻婆豆腐和紫菜汤。这次麻婆豆腐是按照我跟妈妈说在抖音上看到的炒法，一块块的豆腐，样子倒是那么回事，但是没有加豆瓣酱和花椒，没有麻辣味，不怎么好吃。</p><p>下午睡觉。</p><p>晚上想吃米线，没吃饱。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -298,15 +298,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%89%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-22/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初二小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%8C%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%8C%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Wed, 18 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-21</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-21/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-21/</guid>
+      <pubDate>Fri, 20 Mar 2026 18:53:00 GMT</pubDate>
       
         
         
@@ -318,7 +318,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>初一过去，初二接踵而至，今天开始正式拜年走亲戚，早上7点多在爆竹声中醒来，洗漱完毕，吃早餐，早餐是面叶子，配有羊肉汤。</p><p>吃完早餐，冲一壶咖啡，换上大衣，跟随父母及牛牛去了姥爷家，在途中用蓝牙连接爸爸的车机，播放音乐给他们听。</p><p>走几处亲戚，喝了一杯杯茶水，之后爸爸去了八角塘拜新灵，我和妈妈搭乘张车李车去了东河口那走上一圈又回到姥爷家，中午在姥爷家吃饭，遇到成松老表，喊他一声。</p><p>下午的时间我基本上都是打游戏，打王者5V5匹配，提高一下关羽评分以及胜率。</p><p>晚上又去了姥爷家上面的那户早上我们第一家去的亲戚家吃饭，菜有点咸，以至于刘先露一吃完饭出来就吐糟难吃。</p><p>折腾到晚上8点多才回到家。</p><p>初一就这样结束了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今天星期六，昨晚基本上又是刷了大半夜的抖音短视频，早上7点多，那是又困又饿，再过一会儿，我就是24小时没有吃过一顿正餐了。行尸走肉般下楼，爸爸已经在工作，来到厨房，空无一人，妈妈还没有起来，自然没有任何早餐可吃，吃点开心果上楼，带着饥饿，不甘地入睡。</p><p>一觉睡到下晚5点左右，被妈妈叫醒，让我起床下楼吃晚饭，询问有什么菜时，她支支吾吾，说有海带西红柿蛋汤，皮蛋等菜，没有任何想吃的菜，责怪她没有什么菜还把我喊醒，大骂一顿之后忍着饥饿，又迷迷糊糊半睡半醒中度过一段时间。</p><p>晚上7点多，熬不过饥饿，下楼，看到桌子上一小碗海带西红柿蛋汤，一小碟糖蒜，没有什么油香的炒菜或麻辣的锅子，即使饥饿又没有吃的欲望。桌子上还有一个菠萝，用水果刀切下四分之一，没一会儿就吃下肚了，酸甜多汁，真好吃，睡醒起来吃上一块，真是惬意。想继续吃点开心果，但发现已经被妈妈拿起来了。找点糖果，发现两条新一品黄山烟，拿出来一条，拆开一包，抽上一支。还是饿，下楼解冻一根香肠，下一碗挂面吃，还放了点胡萝卜。</p><p>吃完上楼，洗个澡，冲壶咖啡，时间就到晚上9点多了。抽支烟，看会iPad视频，躺下准备睡觉。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -327,15 +327,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%BA%8C%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-21/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>初一小记</title>
-      <link>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%80%E5%B0%8F%E8%AE%B0/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%80%E5%B0%8F%E8%AE%B0/</guid>
-      <pubDate>Tue, 17 Feb 2026 13:19:05 GMT</pubDate>
+      <title>今日小记-2026-03-20</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-20/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-20/</guid>
+      <pubDate>Thu, 19 Mar 2026 19:10:00 GMT</pubDate>
       
         
         
@@ -347,7 +347,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>一觉睡到中午时分，直接就洗漱下楼吃饭了，全部是昨日的剩菜，加之没有什么胃口，吃半碗饭吃不下了。</p><p>下午几乎全部的时间都在打游戏。</p><p>晚上我吃的是面叶子，本来我是和妈妈说想吃切面的。</p><p>晚间时间还是被游戏占据，打到了荣耀王者50星了。</p><p><img src="https://files.yaohub.com/dayone/2026/02/26f988aee66b406ca840d5313928c13e.jpeg?oss_process=rt:fit" alt="26f988aee66b406ca840d5313928c13e.jpeg"></p><p>就是这样，明天应该要开始拜年了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今日是农历二月初二，俗称“龙抬头”，父母很忙，昨晚依旧是通宵，但是我决定今天白天不再睡觉，调整好作息。</p><p>早餐是妈妈下的挂面，没有香肠，调味也只是我后来放的一点火锅底料，鸡精和辣椒面等，味道实在是单调。早上的时间还是在打游戏，因为困，状态不佳，也干不了什么事，中午12点过后，我打起了巅峰赛，输输赢赢，但是后几把都是连跪，还被队友指责，气得我大骂“斯蒂芬”。打了两个小时，下午两点下楼吃饭，父母忙，没有什么菜，真的是一个炒菜都没有，还是昨日晚上的空心蘑菇炒肉，没有食欲，看到厨房案板上有一根火腿肠，吃掉大半根。</p><p>下午4点给妈妈打电话说晚上想吃面条，她以”忙“的理由拒绝，又困又饿又气，睡觉，一觉睡到晚上8点多，晚餐的菜仅仅多了一盘莴笋炒火腿肠，火腿肠还没有几片，我又不想吃了，打开一带开心果，吃了不少。</p><p>上楼继续打游戏，周五挑战赛3四连跪，还被队友骂，不想玩了，直接卸载了游戏。</p><p>晚上忍着饥饿，又睡不着，刷了大半夜的抖音短视频。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -356,15 +356,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E5%88%9D%E4%B8%80%E5%B0%8F%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-20/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>除夕快乐</title>
-      <link>https://hexo.yaohub.com/2026/02/%E9%99%A4%E5%A4%95%E5%BF%AB%E4%B9%90/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E9%99%A4%E5%A4%95%E5%BF%AB%E4%B9%90/</guid>
-      <pubDate>Mon, 16 Feb 2026 02:46:22 GMT</pubDate>
+      <title>今日小记-2026-03-19</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-19/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-19/</guid>
+      <pubDate>Wed, 18 Mar 2026 19:23:00 GMT</pubDate>
       
         
         
@@ -376,7 +376,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>本日除夕，淫雨霏霏。我到早晨9点左右才被妈妈喊醒。</p><p>早餐吃的是面叶子，吃个橙子，10点左右和爸爸牛牛一起去老家贴对联。</p><p><img src="https://files.yaohub.com/dayone/2026/02/64d4138961ac442237e83a1a42b749ee.jpeg?oss_process=rt:fit" alt="64d4138961ac442237e83a1a42b749ee.jpeg"></p><p>中午的菜有6个锅子，若干炒菜，炸物。比如羊肉火锅丸子，猪大肠锅子，基围虾炒年糕（其中加了白糖提鲜，我不甚喜欢）</p><p>下午因为一些原因，我们一家都没有去上坟祭祖。</p><p>我打了一下午的游戏。父母及奶奶牛牛去姥爷家玩去了。</p><p>晚上牛牛把投影仪拿下来看春晚，我看了一两个节目，没什么意思。吃一个卤茶叶蛋，继续上楼打游戏了。</p><p>到凌晨3点左右才睡。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>又是作息颠倒的一天，早上8点多入睡，下晚5点左右醒来，直接吃晚饭了，菜有昨日剩的一点酸菜鱼菜橛子，一盘新炒的空心蘑菇炒肉。没干什么正事。浪费一天</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -385,15 +385,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E9%99%A4%E5%A4%95%E5%BF%AB%E4%B9%90/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-19/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-15</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-15/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-15/</guid>
-      <pubDate>Sun, 15 Feb 2026 05:26:27 GMT</pubDate>
+      <title>今日小记-2026-03-18</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-18/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-18/</guid>
+      <pubDate>Tue, 17 Mar 2026 18:31:00 GMT</pubDate>
       
         
         
@@ -405,7 +405,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>下午一点妈妈给我转了100元应该算做过年的红包。冲一个话费。买一个梦寐以求的关羽皮肤，真是帅啊</p><p><img src="https://files.yaohub.com/dayone/2026/02/018485023cb7c1d916063b04c2cca6e0.png?oss_process=rt:fit" alt="018485023cb7c1d916063b04c2cca6e0.jpeg"></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>许久未曾握笔，今夜心血来潮像写些只言片语，亦算作1月末我写下的《凌晨，年关将近的无所适从》一种回应。</p><p>今年春节，觉得有点平淡，尽管我尽可能的去拜年，跑东跑西，游戏将春节假期的大部分时间占据，这不，直到今天晚上我才打上王者百星，我感到这才是一种解脱，一种放松。另一方面，春节期间，汪东基本上没有像去年除夕那日中午到我房间来，我还冲了一壶咖啡与其喝，与李从容的交流亦只有寥寥数语。在大量的时间用来打王者后，即使元宵节早已过去，年假结束这半个月以来，迟迟找不回状态，只有打王者上百星这一执念。同时15日服务器到期这一事件常常敲击我，感到无所适从，窘迫，而直到昨日服务器关服后，我倒觉得又有一种解脱，不怎么着急迁移和购买新服务器了。</p><p>这不，今日上午我就悠闲地嗑瓜子，喝着牛奶看电视剧。下午还因为冷或困或更确切的无所适从睡了大半下午。</p><p>如今，晚间饭后我再次打起了游戏，总算达到了百星，我就轻松到心血来潮写下这些了，今后亦可切换重心了。</p><p>说回《凌晨，年关将近的无所适从》中提到的“今年新年初五是否还会有同样的感受呢，即使我现在早已做好了心理建设和预期”。</p><p>先说答案：初五还是太早了，因为今年年假大部分时间被游戏占据，加之初五还有较强的年味，还有没有像去年一样在此节点看到抖音上在大众复工复业浪潮下的热点“充电器一拔又是一年”的感叹，因此当时我并没有想到这件事，即使当时想到了，我想也不会有太多感伤。</p><p>然而，这种时过境迁带来的极致的空虚感在元宵节之后得以显现，愈演愈烈，即使做足了心理建设和预期还是无济于事。</p><p>半个多月过去了，这种无所适从又开始显现，就是这样。</p><p><img src="https://files.yaohub.com/dayone/2026/03/8c0279ef6792119a3b81409e62640516.png?oss_process=rt:fit" alt="8c0279ef6792119a3b81409e62640516.jpeg"></p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -414,15 +414,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-15/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-18/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-14</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-14/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-14/</guid>
-      <pubDate>Sat, 14 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-17</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-17/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-17/</guid>
+      <pubDate>Tue, 17 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -434,7 +434,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>昨晚躺在床上，到凌晨5点左右才睡着，一觉睡到上午9点多。一起床腰酸背痛的，上个厕所手臂全身发麻，感觉头晕沉沉的。</p><p>洗漱下楼，10点多了，菜有一个牛肉土豆锅子和另外一个锅子，以及昨日的香肠，芹菜酱干等。牛肉里没烫多少粉丝（这还是我让奶奶马上烫的），盛一碗饭，菜不是很下饭，还剩一小碗没有吃完。</p><p>吃完饭上楼，去后门阳台晒晒太阳，吃一个橙子。针对我最近几日的作息，活动与饮食导致的糟糕的身体状态（手臂发麻，有气无力，头晕），帮妈妈去晒个被子，套个被套累的气喘吁吁的，上气不接下气。问Deepseek和ChatGPT帮我分析一下，应该是电解质神经紊乱，缺钾。</p><p>下午1点左右送奶奶去诊所挂水，回到家打起了游戏，一次五连胜的巅峰赛，又把昨天5连跪掉到1400的积分打到1500了。</p><p>下午3点左右接奶奶回来，之后5点又是收被子，来来回回跑了好几趟，真是累死了。</p><p>接下来开始吃晚饭，依旧是中午的饭菜，但是牛肉里已经没有粉丝了。就着奶奶下午买回来的酱干吃了一碗饭。</p><p>晚间时间还是继续打游戏，开始练马超，我在娱乐模式下打的还行，一到排位就是0-11，唉，玩不下去。牛牛从六安回来（今天他和大姨夫他们去六安喝喜酒去了），给我带点面包，巧克力之类的零食吃。</p><p>晚上11点多睡觉了，本来是想等到零点关羽年限皮肤上架的，结果直接睡着了。</p><p><img src="https://files.yaohub.com/dayone/2026/02/d89dbaa0bf85a9e75fe7cb0a92157faa.jpeg?oss_process=rt:fit" alt="d89dbaa0bf85a9e75fe7cb0a92157faa.jpeg"></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>昨晚后半夜通宵打游戏，之前都打到99星了，想冲个百星，但是一局局的机制局耗尽了我的心力，打到今日清晨5点多段位不升反降到93星。</p><p>我又困又累，手指涩疼，躺下，沉沉睡去。</p><p>一觉睡到下午4点左右，听到楼下黄奶的声音，妈妈送一双拖鞋等相关事。收到UCloud的邮件，今天上午10点服务器正式关服了。</p><p>洗漱下楼，桌子上摆放的菜有酸辣土豆丝，炒小青菜，蒸豆腐，还有一高压锅的鸡汤，有一个鸡腿。夹点菜，盛一碗饭和一个妈妈下午从姥爷家带回来的蒿子粑粑，用微波炉加热吃下。</p><p>吃的有点撑，抓一把妈妈从姥爷家带回的话梅瓜子上楼，继续打起了游戏，打到晚上7点左右，又降到90星了，真是心力交瘁，我想上个百星之后摆脱过年后的散漫状态与长时间的游戏，东想无西想的干事，真是难受。作息也是混乱。</p><p>晚8点左右下楼吃晚饭，不是很饿，按部就班夹点菜，夹点火锅底料微波炉加热再吃，菜加的有点多，饭比较油和咸，还剩小半碗吃不掉了。</p><p>吃完饭，上楼喝一瓶牛奶,刷会抖音，睡下了。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -443,15 +443,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-14/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-17/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-13</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-13/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-13/</guid>
-      <pubDate>Fri, 13 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-16</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-16/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-16/</guid>
+      <pubDate>Mon, 16 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -463,7 +463,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>又是打着游戏一夜通宵，手臂发麻，状态极差，早上8点多，我脱衣准备睡觉，却听到奶奶的呕吐生，不知又是怎么了。</p><p>躺在床上，明明很困，但头疼欲裂，睡不着，只好起来，洗漱下楼，吃个橙子。妈妈已经做好了早餐，他妈的挂面里还是放了米饭在一起煮，我只好一点点夹起来面条，加入开水作为汤底，依旧加入老三样调味料，味道大差不差。</p><p>我答应妈妈过年期间帮她买买东西，洗洗碗，让她过年给我转红包充话费（其实我想买关羽的那个年限皮肤）</p><p>吃完饭后上楼，给奶奶倒一杯水，继续打游戏到中午时分，中午还是没有什么菜，吃不下去，睡觉了。</p><p>一觉睡到下午4点左右，感觉最近睡眠有够差的，多梦易醒，睡眠浅。</p><p>今一天还是没做什么事，就是打游戏。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>这几天的作息实在难熬，头疼。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -472,15 +472,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-13/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-16/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-12</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-12/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-12/</guid>
-      <pubDate>Thu, 12 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-15</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-15/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-15/</guid>
+      <pubDate>Sun, 15 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -492,7 +492,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>一觉睡到早上十点左右，洗漱下楼，奶奶让我骑电瓶车送她去八角塘老家拿鱼，她给我煮年糕做早餐吃。</p><p>吃完一小碗年糕送奶奶去老家，本来我准备送去就回来的，结果被老家中的亲戚喊住，我只好留下了，牛牛也跟在一起去，别人给我一个耙耙柑吃，我给了牛牛，他吃了一口就说酸，扔到车上去了。经过漫长的等待，恼人的客套问候，在12点左右终于回来了，之后去取个咖啡快递，冲了一壶咖啡。</p><p>打开电脑，看一下系统更新结果，发现资源管理器的删除文件确认对话框UI变了。之后清理个缓存，开个NAS和iMac。准备着手SendyDynamic图片长按ContextMenu 保存图片的功能开发。</p><p>之后继续打起了游戏，巅峰挑战赛就是直接三连跪，之后更是输两把，直接从1500掉到1400了。</p><p>晚上还是通宵打游戏，口渴没水，喝咖啡却越喝越渴。难受。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今日我的服务器正式到期，还没有什么举措。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -501,15 +501,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-12/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-15/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-11</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-11/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-11/</guid>
-      <pubDate>Wed, 11 Feb 2026 15:41:27 GMT</pubDate>
+      <title>今日小记-2026-03-14</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-14/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-14/</guid>
+      <pubDate>Sat, 14 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -521,7 +521,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>又是打了一天的游戏，早餐有豆浆和疙瘩汤，他妈的，疙瘩汤里竟然加了米粒，有够可以的，所以还是和昨天一样，喝了两碗豆浆，吃点小零食。</p><p>打游戏到中午时分，看楼下没什么菜，直接睡觉了，一觉睡到晚上7点左右，下楼煮锅咸挂面吃。</p><p>上楼换床床单，继续打游戏。</p><p>就是这样了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今日周六，昨晚后半夜通宵开了一个小号打游戏，打到中午时分，还是只有星耀5，唉，机制罢了。中午没有什么菜，奶奶炒了一个土豆丝，但我没有怎么吃。</p><p>晚上下一碗面吃。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -530,15 +530,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-11/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-14/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-10</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-10/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-10/</guid>
-      <pubDate>Tue, 10 Feb 2026 08:07:33 GMT</pubDate>
+      <title>今日小记-2026-03-13</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-13/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-13/</guid>
+      <pubDate>Fri, 13 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -550,7 +550,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>昨晚一觉睡到凌晨2点就醒了，然后就是打游戏，今天一天还是强忍着睡意打了一天游戏。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>今天是星期五，下午爸爸去了六安，晚上把奶奶和牛牛接回来过周末。</p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -559,15 +559,15 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-10/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-13/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>今日小记-2026-02-09</title>
-      <link>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-09/</link>
-      <guid>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-09/</guid>
-      <pubDate>Mon, 09 Feb 2026 04:00:00 GMT</pubDate>
+      <title>今日小记-2026-03-12</title>
+      <link>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-12/</link>
+      <guid>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-12/</guid>
+      <pubDate>Thu, 12 Mar 2026 04:00:00 GMT</pubDate>
       
         
         
@@ -579,7 +579,7 @@
       
       
       
-      <content:encoded><![CDATA[<p>一晚通宵未睡打游戏，早上7点多下楼，奶奶在下饺子，我跟她说我要吃面条。然后我又自己打了一壶豆浆。</p><p>上楼，妈妈让我试一下她买的大衣，我拆开了快递，试穿一下，颜色比我想的灰色（其实是卡其色）更深。其他的我也讲不出所以然了。</p><p>早餐就是一碗咸挂面面条和一碗豆浆，豆浆加的水有点多，比较淡了。</p><p>上午着手写对联窄边，裁剪，写了好几份，都不是比较好看。内容是“海到尽头天作岸，山登绝顶我为峰”。之后就是解决Wordpress文章页多meta description的问题。</p><p>中午迟迟没有开饭，强撑着睡意打了游戏，不知不觉打了一下午，中饭自然就是没吃了。</p><p>到晚上6点左右下楼吃饭，依旧是煮的咸挂面，还有一个煎鸡蛋。依旧是漫漫一大碗，吃的很撑。</p><p>晚上9点左右睡觉了。</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>依旧是打打游戏，看看电视，度过一天</p><p><img src="https://files.yaohub.com/dayone/2026/03/8a1c4441109da2d56bbf4d2f82cf08bc.jpeg?oss_process=rt:fit" alt="8a1c4441109da2d56bbf4d2f82cf08bc.jpeg"></p>]]></content:encoded>
       
       
       <category domain="https://hexo.yaohub.com/categories/Life/">Life</category>
@@ -588,7 +588,7 @@
       <category domain="https://hexo.yaohub.com/tags/Diary/">Diary</category>
       
       
-      <comments>https://hexo.yaohub.com/2026/02/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-02-09/#disqus_thread</comments>
+      <comments>https://hexo.yaohub.com/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-12/#disqus_thread</comments>
       
     </item>
     
