@@ -4,6 +4,756 @@
   
   
   <entry>
+    <title>四月末记-2026-04-30</title>
+    <link href="/2026/04/%E5%9B%9B%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-04-30/"/>
+    <url>/2026/04/%E5%9B%9B%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-04-30/</url>
+    
+    <content type="html"><![CDATA[<p>本日是2026年四月的最后一天，马上就是五一小长假了。昨天晚上9点多就上床睡觉，结果没睡到几个小时到凌晨2点多就醒了，上个厕所结果继续还是睡不着，就这样刷刷手机，看一集柯南就到早上6点左右了。</p><p>洗漱下楼没看到妈妈，想必又是去早起散步了。我随即就倒杯水上楼唤醒电脑，打开Android Stuido和项目。没一会儿肚子饿的咕咕叫，下楼看到妈妈正在吃炒饭，早饭就是一碗咸菜炒饭配酱和一碗豆浆。</p><p>吃饱喝足上楼抽一支烟，继续开发DS Player，一上午主要就是解决PlaylistFragment下Playlist Container Item点击事件无法正常响应触发进入对应的ContainerFragment。经过一通排查发现是其父类ContentFragment的mContainerClickCallback被绑定到了默认的sDummyCallback，是当时急着恢复在onCreate以下代码的添加的原因。</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">if</span> (!::mContainerClickCallback.isInitialized) &#123;<br>    mContainerClickCallback = sDummyCallback <br>&#125;<br><br></code></pre></td></tr></table></figure><p>修复这个问题后顺利进入ContainerFragment又是发现lateinit变量mContainerClickCallback没有赋值就引用的崩溃，是newInstance中ContainerFragment()，没有传入callback参数。在此之后就是优化一下项目代码update visibility calls from raw integers to View constants，修复HomeActivity中handelBack和showPlayerChooser bug。</p><p>上午11点多下楼准备吃午饭，看到桌子上没什么菜，一盘炒青蚕豆和青椒炒白豆干。都没有我爱吃的菜，不想吃了。上楼，想这三天的DS Player改动，git commit改怎么拆分，有点无所适从。看天气温度虽然有20摄氏度，我还穿了毛衣，依然有一股寒意裹挟着身体，有点困又冷，脱掉衣服，想着躺一会。</p><p>不知怎么就睡着了，一觉睡醒，半天才想起是下午睡着了，看看时间和日期是30号晚上接近9点。</p><p>明天就开始五一长假了，我上个厕所下楼，妈妈在外面忙，爸爸想必是接奶奶回来了。来到厨房，没什么吃的，还是中午的饭菜。找到一箱旺旺大礼包。过年的时候还在感叹现在过年送的礼好像都没有这个了。</p><p>拿一包螺旋形像薯条的零食和一瓶果冻就上楼了。接下来几个小时到凌晨零点半都是在分步提交DS Player改动并push到github远程仓库，一点点add -p实在是太折磨了，以后开发可要开发或修改完一个模块就commit。最终分成6个commit。</p><p><img src="https://files.yaohub.com/dayone/2026/04/d137541780cd84de2696832ab9d733ef.jpeg?oss_process=rt:fit" alt="d137541780cd84de2696832ab9d733ef.jpeg"></p><p>晚上10点多奶奶回来了，零点半之后看会抖音视频，抽一支烟就脱掉衣服准备睡觉了，结果不出所料就是睡不着，听一个多小时的音乐到4点左右起床上厕所。写起了DayOne。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-29</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-29/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-29/</url>
+    
+    <content type="html"><![CDATA[<p>四月接近尾声，今天早上6点半左右洗漱，想喝咖啡，磨完咖啡豆才下楼。</p><p>早餐是妈妈散步回来带的一个青菜馅包子和大米粥，吃一个包子和一碗稀饭粥，半饱不饱。</p><p>吃完早餐，感觉血糖急速上升，一阵晕眩，发困。烧一壶水，冲咖啡。之后就是喝着咖啡抽一支烟。继续开发DS Player，正式开始替换DS Audio默认歌词滚动组件DynamicLyricListView/Adapter为LyricViewX，首先就是创建lyricviewx_fragment布局，之后我有分心看看Google Search Console关于我的网站收录情况。又是唤醒台式电脑，打开音箱听音乐，嗯，有低音炮听张国荣的《拒绝再玩》、《暴风一族》带感多了。在此之后顺便同步下载一下备忘录中记录的音乐到NAS，这次直接使用酷我音乐和GD音乐台网站下载歌了，而不是KWMusicDownlaoder，有几首flac格式音乐。这样一上午的时间就过去。</p><p>中午的菜是爸爸烧的，有西红柿鸡蛋肉片汤（酸酸的还挺好喝，如果鸡蛋花打漂亮一点，不放肉片，我肯定直接喝一碗），黄瓜炒火腿肠，咸肉炒千张皮（有点咸了），昨晚的龙虾。总体滋味还不错，挺下饭的。</p><p>吃完午饭，抽一支烟，继续开发DS Player，创建PhonelyricViewXFragment，照葫芦画瓢，之后为配置DaggerInjector…… 在LyricViewX不显示问题上卡了很久，最后还是发现PhonelyricViewXFragment在loadLyric成功后没更新modeLyricView，导致一直不显示。忙到下午5点多，吃晚饭，吃的是鸡蛋皮手擀面，吃的挺香。</p><p>到晚上7点多，算是基本实现了DS Player替换默认的歌词组件，也支持拖拽滚动歌词快进了。发现了PlaylistFragment点击PlaylistItem无法进入二级菜单了，不知怎么回事。找时间再做修改。</p><p>8点多花个半个小时写个DayOne，马上抽支烟，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-28</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-28/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-28/</url>
+    
+    <content type="html"><![CDATA[<p>昨天晚上9点多就在隔壁房间上床睡觉了，结果睡眠又过饱和，睡了3个多小时到12点就醒了，继续也是睡不着了，回到自己房间抽半支烟，刷刷视频，</p><p>到早上7点多洗漱下楼，妈妈正在炒饭，我问他早上吃什么，她给我一碗玉米糊，我比较饿还有点困，没什么推脱就加点咸菜和龙虾酱还有一个肉丸子吃下去了，饱腹感很差，吃完还有点想吐。</p><p>吃完早餐上楼抽一支烟，打开电脑，清理一下缓存垃圾，以及修改一下虚拟内存，继续开发DS Player，首先是优化Gradle依赖包，Glide和Fresco图像加载包同时存在，我简单分析一下看到只有SongListActivity中使用Glide，于是决定就保留Fresco，之前使用Glide修改歌曲cover改为使用`CoverUriLoader().with(xx).load(songItem)的方式。</p><p>兜兜转转到中午11点左右，妈妈上来喊我问我去不去姥爷家吃饭，我感到疑惑没什么事为什么去姥爷家吃饭，她说不忙，顺便送菜籽，爸爸开车带我们去。我犹豫思考了一下就跟去了。在路上买了一份烤鸭到那里吃。</p><p>在姥爷家吃完饭到下午1点多就回来了，没什么好说的。从姥爷家回来我就极其的犯困，定个30分的闹钟，想简单睡个午觉到结果就一觉睡到晚上9点多了。</p><p>在下午妈妈答应我晚上做手擀面也没做，是煮的饭吃的，菜有炒青菜，龙虾等。我不太想吃，让妈妈给我下一锅疙瘩头吃，她都准备睡觉了，自然没有答应，我只好自己做，刚开始还挺好的，结果不知怎么搞得我犯贱想吃水煮蛋，结果鸡蛋没怎么煮熟，软不拉几的，蛋壳也不好剥。连带着心急下面，煮成一锅浆糊。加点调料，吃上几口，不想吃了。气的我也不收拾了，剩的疙瘩汤就直接放在桌子上，锅里的也不盛了。</p><p>10点左右外出买香烟，来回走了几趟，还是没有中南海点5，无奈还是选一包普皖。回来继续开发DS Player，实现了SongListActivity下使用CoverUriLoader动态加载歌曲Cover，PlayerActivity也迎来改进，支持直接从SongListActivity选取歌曲并播放，而不是之前固定的@raw/song.mp3的资源,使用loadLyric加载动态歌词，playMusic通过url播放歌曲。</p><p>凌晨一点多，抽一支烟，睡觉了，但还是睡不着，刷刷视频，看一集《名侦探柯南》，放大音量从4点多5点多听了一个多小时的音乐。又通宵到清晨了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-27</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-27/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-27/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚感觉是熬穿了，24小时没睡，到深夜11点多还是睡不着，测试之前的2 Port VGA Switcher笔记本和台式电脑公用一个显示器方案（其实就是省了来回用一根VGA线连接这两者），唤醒台式机，打开音箱听听音乐。</p><p>到12点多才入睡。一觉睡到中午12点多，结果睡眠作息没调整过来，又回到原点了，白熬一白天没睡。</p><p>醒来后就起床洗漱下楼，喝水，吃两个橘子，直接吃午饭了，菜有蒸肉丸子，酸辣土豆丝和西红柿炒鸡蛋，还有前天的咸菜。都是我爱吃的菜。盛一碗饭，夹点菜，还有一点炒龙虾酱（这次酱是甜鲜的，没什么辣味），用微波炉加热后就吃完了午餐。</p><p>吃完饭上楼，喝喝咖啡抽一支烟。DS Player的开发到了一个里程碑，下一步就是修复部分Fragment下返回逻辑bug，补全SongItem 二级操作菜单实际逻辑，比如评分和下载，还有默认DS Audio Lyric Fragment转为LyicViewX实现。</p><p>我决定init一个git仓库并上传到Github，于是接下来就是修改local.properties，添加NAS登录信息，在Common.kt中的getSID等方法使用BuildConfig.NAS_SID替代之前的直接写的静态常量值。然后就是创建git仓库、github仓库，让ChatGPT帮我生成一份README，提交并推送到目前进度的所有源代码到Github上。今天并没有其他实际开发工作。计划优化dependencies，比如当前同时使用了Fresco和Glide图像加载库。</p><p>下午5点下楼吃晚饭，妈妈正在煮疙瘩汤，我疑惑明明有菜却不吃饭，她说她们忙没来得及煮饭。疙瘩汤里还有后面奶奶给的馄饨，但我并不吃。</p><p>疙瘩汤里我后来还是放了龙虾酱，很好吃，吃了一碗半，很撑。</p><p>吃完上楼，抽一支烟，这几天电脑高强度运行，今天关个机，让它休息一下，我就看看明眸直播抽支烟。到隔壁房间继续看。有点发困，下楼拿个苹果和橘子上来吃。看直播到9点左右，直接睡觉了。</p><p>睡到半夜就醒了。刷刷抖音，写个DayOne。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-26</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-26/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-26/</url>
+    
+    <content type="html"><![CDATA[<p>今天是星期天，昨晚依旧是通宵开发DS Player，新增(Abstract)RemoteControllerService修复了App下播放器音量之前只有dialog而没有实际调整的问题。</p><p>早上7点多洗漱下楼，奶奶已经做好了早餐，有炒饭，豆浆和摊韭菜鸡蛋煎饼。我喝了一碗半豆浆，又吃了一大块煎饼（调味用了南德和昨天烤鸭的蘸汤），算是结束早餐。</p><p>上楼冲一壶咖啡，喝着咖啡，照例饭后抽一支烟，快哉快哉。</p><p>有点困，精神萎靡，但还是强打起精神，熬一天来调整作息。缓缓神继续开发DS Player，目前需要处理的是LyricFragment，歌词高亮不起作用，反复调试PlayerFragment，PhoneLyricFragment及DynamicLyricListView和DynamicLyricListAdapter，还有LyricUtils，都找不出一个所以然来，还冒出一个新问题，Common下getDSaudioAppFolder在歌曲播放中被反复调用，一秒三四次，不知怎么脑子抽了把Common.kt替换为原版反编译得到的Common.java，问题还是依旧，通过调用堆栈可以看出是PlayingStatusManager中saveStatus不断写入当前播放进度信息的问题，还有PlayerFragment中PlayingStatusManagerProvider.get()每次调用都返回一个新单例。找到问题原因就很好解决了。</p><p>到11点多下楼吃饭，菜有炒龙虾，炒青菜，咸菜，鲫鱼汤，昨日的烤鸭等。龙虾没怎么进味，也不辣不太好吃。</p><p>下午继续熬着开发DS Player，搞一下午，终于解决了LyricFragment歌词不高亮的问题，原来是PlayerFragment中loadLyric onComplete setAdapter ChatGPT当时给我转的时候误以为是setter，写成了.adapter = xx 导致根本就没有调用这个方法，自然也就无法正常工作了。在这期间GPT带我走了不少弯路，最后还是我返璞归真一步步看链路调用才找到调用的。</p><p>晚上爸爸送奶奶和牛牛回六安，我又是最后吃饭，虽然没什么我喜欢吃的菜，但架不住饥饿，还是加点龙虾酱就吃完一碗饭。</p><p>刷刷抖音视频，不知忙了些什么。就到深夜10点多了，困，头疼欲裂。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-25</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-25/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-25/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵开发DS Player到今天上午7点多，上个厕所洗漱。感到十分饥饿，打个电话给妈妈，问她什么时候回来，得知还要一个小时到家，牛牛和奶奶也要回来，想让她带早餐也不现实了。</p><p>下楼，发现小桌子上有爸爸买回来剩的一个韭菜粉丝馅饼和茶叶蛋，微波炉大热饼就吃吃下去，真是舒坦。</p><p>吃完早餐上楼，抽一支烟，发困，头晕。想到今天是星期六，就强忍着睡意，又下回来王者，玩起了小号，体验关羽皮肤，拿了几把金牌和顶级。</p><p>一直打到中午11点多，妈妈给我发信息让我下去吃饭。中午的菜有烤鸭和凉拌海带丝，还有炒莴笋片，基本上都是我爱吃的。</p><p>吃完午饭又打起了游戏，渐渐的觉得没有意思。</p><p>下午1点左右，奶奶让我骑车带她八角塘砍竹子，我头晕站都站不稳别说骑车了，就不答应。去后门阳台抽一支烟。也改变主意想去八角塘玩玩，睡睡吊床，看看书，晒晒太阳，调整作息。给她说喊李从荣让他带你去，我一个人骑车跟去。</p><p>结果我换好衣服等了很长时间李从荣都没来，我又犯困了，衣服都没脱在隔壁房间躺下就睡过去。</p><p>晚上8点左右在梦中醒来，又梦见了弈，语文课上我在写日记，同桌杨鑫诚说他可以让我打喷嚏，刚说完我就打个打喷嚏，我感到神奇，问他怎么回事，他示意我看弈，我转头看去，看到弈正在抿嘴偷笑，杨鑫城说弈想我了让我打喷嚏（有这么一说）。我感到快活极了。——大致就是这么一个梦境，真是温馨。又想到初二那一次高放和我就眼镜一事看到弈偷笑的一事。唉，时光一去不复返。</p><p>醒来起床穿衣下楼，吃完饭，还是中午的菜没什么好说的。</p><p>晚9点左右，开启了一晚的工作，继续开发DS Player</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-24</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-24/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-24/</url>
+    
+    <content type="html"><![CDATA[<p>在虚幻的梦境中醒来，忽然想起此刻我正在六安三十一楼的书房床上，天色还未大亮，急忙拿起手机想看看现在的时间，殊不知手机已经低电关机，从口袋取出充电器，却怎么也找不到插座，无奈只好猜测着当前的时刻，估摸着已经是清晨5点有余了。无法继续入睡，在床上辗转反侧着。</p><p>又过去了十几分钟，屋外传来叽叽喳喳的鸟叫声，也有不知什么机器的轰鸣声，我更加肯定已经是清晨了。不久听到隔壁房间妈妈也已经醒来了。我穿衣起身，穿好鞋子。去大厅看到刚好快到6点钟，给手机充电，随即去厕所洗漱。</p><p>6点20左右，奶奶起来烧水，父母也起来了。由于爸爸急着回家并顺便去跑滴滴，我和他早饭都没吃就出发了。坐在车上才想起我的眼镜忘记带了，在爸爸接上货物就马不停蹄的回去，让妈妈送来眼镜，拿上后就回毛坦厂了。</p><p>8点半左右回到家，早饭是爸爸给我带的一个韭菜粉丝包。回到楼上房间，刷刷视频，抽两支烟，开始继续开发DS Player，SeekBar的种种问题（始终无法触发onMetadataChanged 设置SeekBar max值，进度异常），SongDetails在切歌后不更新，没什么头绪，只能继续翻反编译代码，一遍遍比对，我有点倦了。</p><p>中午12点多下楼，桌子上有爸爸炒的两盘菜，西红柿炒鸡蛋和大辣酱炒莴笋，没什么胃口。不知不觉到下午1点多，有点困了，想着浅浅睡个午觉，定一个一个半小时的闹钟，结果一觉就睡到了5点多……</p><p>起来感到十分饥饿，给妈妈打个电话问她什么时候回来，得到明天早上才回来的答复，想让她给我带点吃的计划也落空了。下楼煮一锅疙瘩头吃，还有酸菜鱼调料中的酸菜，虽然没有火锅底料酱，但吃起来味道也不错。</p><p>吃完晚饭，时间就快到7点了，抽支烟。继续为努力处理DS Player的已知问题，一点点补充之前遗漏的HomeActivity中的初始化逻辑，主要是PlayerControlHelper中的setControlPanel, bindControl。又是循环相互调用，多次setControlPanel导致App卡死。ChatGPT一步步给我处理方案……解决一个问题又冒出新的问题。</p><p>我不眠不休死磕着，发现PlayerFragment可能在onDestoryView后，PlayerHelperControl还是旧的playerFragment，我在onDestoryView中释放并在PlayerHelperControl重新new PlayerFragment，这样以来在切歌后也可以正常更新底部Main_Control的歌曲信息。还是决定补全Dagger，比如PlayerFragment本来是DaggerDiagFragment，当时为了方便快速实现与测试就改成DialogFragment，还有ContentFragment本来继承DaggerFragment，我就改成了Fragment。现在改好后，终于解决了SeekBar进度异常和FileSongFragment下SongDetails不更新的问题了。</p><p>凌晨3点多继续全面转向Dagger，App转为DaggerApplication，配置DaggerApplicationInjector，在各个Service，Fragment中inject PlayingStatusManager，PlayingQueueManager等等。</p><p>忙活到25号7，8点，又是一个通宵！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-23</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-23/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-23/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚依旧通宵开发DS Player，晚上11点多，我感到十分饥饿，对香烟的渴望无法抑制。不知什么一股力量驱使着我穿鞋下楼，冒着饥寒和小雨骑着电瓶车去超市买两袋方便面和一包普皖。</p><p>买完东西回到家，烧一壶水，泡一包方便面吃，抽一支烟。继续开发着DS Player，有了不小的进展，完成了PlayerFragment，首次实现App内在音乐列表下点击播放NAS上的歌曲。我想这也是我愈战愈勇，想趁热打铁，填饱肚子，抽抽烟，通宵开发的原因。</p><p>时间过得很快，不知不觉到了今天上午7点多，发现DS Player SeekBar和底部MainControl SongDetails更新有若干问题。</p><p><img src="https://files.yaohub.com/dayone/2026/04/7798aeb24efc19b01753c97ceedbca47.png?oss_process=rt:fit" alt="7798aeb24efc19b01753c97ceedbca47.jpeg"></p><p>洗漱下楼，早餐有妈妈做的疙瘩汤，她说和后面奶奶学的，很像胡辣汤，上面还有鸡蛋花，卖相不佳，不怎么想吃，但是架不住饥饿，放点南德调味料和龙虾酱就开吃，真是饿了，这疙瘩汤滋味还不错，我吃完一碗又吃一碗，吃饱了肚子才心满意足的上楼。</p><p>想接着解决上面提到的DS Player问题，但经过不断的埋点调试，我始终找不到解决方案，PlaybackService和AndroidService东拼西凑不少，根本就不完整，反编译Kotlin协程代码复原也不是很容易。我感到困了。</p><p>11点多到隔壁房间重新安装上王者荣耀，打了几把，一路连胜4，5把上到了最强王者，又开了两把巅峰赛，最后一把被暴打，气得我又不想玩了，又是卸载了游戏</p><p>下午1点多，熬不住了，躺下睡觉。一觉睡到晚上6点左右被妈妈喊醒，告诉我他们要去六安了，晚餐是疙瘩汤放在桌子上。不知怎么的，我就喊住妈妈说我也要去。她也答应让我去了，于是我就急忙穿衣起床，收拾个东西，不过也就是带个手机，充电器，耳机，打火机和香烟。下楼吃个疙瘩汤就随他们出发了。</p><p>一路上聊聊天，8点左右就到了六安。牛牛和奶奶已经睡觉了，妈妈帮我在书房铺好被褥，9点多我就躺下，准备睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-22</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-22/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-22/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>只是因为在人群中</p></blockquote><blockquote></blockquote><blockquote><p>多看了你一眼</p></blockquote><blockquote></blockquote><blockquote><p>再也没能忘掉你容颜</p></blockquote><blockquote></blockquote><blockquote><p>梦想着偶然能有一天再相见</p></blockquote><blockquote></blockquote><blockquote><p>从此我开始孤单思念</p></blockquote><p>一觉睡到上午11点左右，起床洗漱下楼看到妈妈正在烧中饭，看到有白豆腐干，猪肉，芹菜等食材。倒杯水上楼，不知干些什么事。12点多直接就是吃午饭了，菜有三河小炒，韭菜炒豆腐，还有袋装的酱油干，由于没什么辣味的菜，我吃的不是很香。</p><p>下午的时间就是写写DS Player，没什么大的进展，不过也一直在忙。</p><p>晚上依旧是中午的饭菜，没什么好说的，因为忙着没有及时吃完饭，轮到我最后吃时，基本菜都是渣子了。</p><p>晚上还是通宵。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小記-2026-04-21</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%A8%98-2026-04-21/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%A8%98-2026-04-21/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵，凌晨3点左右翻来覆去睡不着，索性穿衣起来继续开发DS Player，一日未睡，寫完DS Player 5個Fragment。</p><p>早上接近9点下楼，没给我留什么早餐，用微波炉打热两个半蒿子粑粑，加点南德料和龙虾酱吃掉。</p><p>上午的时间还是继续开发DS Player，虽然很困，都强忍着不睡。</p><p>中午没什么菜，只有一盘包菜之类和前日的梅菜扣肉，早餐吃得迟，没有胃口就没有吃了。一天废寝忘食的开发着DS Player，加入补全多个Fragment（ContainerFragment， HomePageDefaultGenreFragment， RadioFragment等等）修改FileSongListAdapter，在FileSongFragment中音乐列表中的音乐Cover有之前统一的R.drawable.icon_music图标转为各自的cover，还设置了圆角，好看多了。</p><p><img src="https://files.yaohub.com/dayone/2026/04/75d3b0bba0886f8555f2ab790624837e.png?oss_process=rt:fit" alt="75d3b0bba0886f8555f2ab790624837e.jpeg"></p><p>感觉还剩MediaBrowserHelper，Player播放器逻辑及相关Fragment就大致完成了。</p><p>下午4点多给妈妈打电话，说晚上我想吃面或疙瘩头，她说学后面租客奶奶做的疙瘩头，我不知道什么样子，随她做了。</p><p>晚上5点多下楼吃饭，疙瘩头简直就是一锅面糊，极其粘稠没有汤，上面还打了鸡蛋，哎，真是难吃，吃的不痛快。</p><p>晚上9点左右，又困又饿，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-20</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-20/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-20/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到了下午1点，洗漱下楼直接就是吃午饭了，中午的菜有昨日的梅菜扣肉，芹菜豆干等，盛一盘子饭夹点菜微波炉打热就吃下去。</p><p>下午的时间就是在刷视频和开发DS Player中度过。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-19</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-19/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-19/</url>
+    
+    <content type="html"><![CDATA[<p>又到了星期天，由于昨晚睡的迟，准确来说应该是今天清晨6点多才睡，一觉醒来看时间已经是中午12点左右了。</p><p>中午的菜有梅菜扣肉，以及一两个炒菜。</p><p>下午继续开发DS Player，4点多牛牛和奶奶坐公交车回六安了。晚上我吃的是手擀切面，加点梅菜与肥肉，还有龙虾酱还是很好吃的，吃了两碗面，有点撑。</p><p>晚上依旧到凌晨1，2点才睡。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-18</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-18/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-18/</url>
+    
+    <content type="html"><![CDATA[<p>今天是星期六，昨天周五晚上爸爸把奶奶和牛牛从六安接回来了，早上9点多牛牛就到我房间把我给吵醒了。看看时间，就穿衣起身洗漱下楼。</p><p>早餐是两张韭菜煎饼，加点酱还是挺好吃的，还有一碗豆浆，可是不知是不是水放少了，豆浆成了豆渣糊。</p><p>吃完早餐，照例抽一支烟，肚子有点疼，去上个厕所。想到今天是周六，又下回来王者荣耀，用小号体验生日皮肤，用马超打了几把黄金局。没什么意思。</p><p>中午的菜倒是挺丰盛的，但是感觉都不太好吃，有芹菜豆干肉丝，西红柿炒鸡蛋，排骨汤等，菜都是奶奶做的，我不能接受的是西红柿炒鸡蛋里竟然放了韭菜。早上吃的迟，又比较多，中午没什么胃口，就不吃了，吃点牛牛的零食，薯条和妈妈从六安带回来的半个菠萝。</p><p>下午的时间还是继续开发DS Player。晚上依旧吃的是中午的菜。没什么好说的。</p><p>晚间12点左右关灯准备入睡，但就是睡不着，刷刷抖音和YouTube，然后就是听音乐，折腾到清晨5点多才入睡。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-17</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-17/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-17/</url>
+    
+    <content type="html"><![CDATA[<p>昨天熬了一天，晚上9点终于算早的入睡了，是在隔壁房间睡的，一觉睡到早上8点左右，被楼下大姨和爸爸的谈话声吵醒。拉拉扯扯菜。躺在床上刷刷抖音磨蹭到9点左右洗漱下楼。</p><p>妈妈昨天下午到六安去了，爸爸在忙，自然没有早餐吃了。小桌子上还有几块凤梨，把它们吃了。忍受不住饥饿，决定下挂面吃，调料有香辣龙虾酱，南德，鸡精。香料有花椒等。配有早上大姨送来的腌蒜头。</p><p>吃完早餐，看着王者马超教学视频抽一支烟。投入到工作中，迟迟进入不了状态，大早上的就有点犯困了，还有VPN的问题。索性就喝喝茶，下个云王者，打几把训练营，也都是玩的马超。</p><p>中午爸爸依然没炒什么菜，连饭都没煮，不知道吃什么的。上楼抽一支烟，继续刷视频，重新下回来王者，打一把马超排位，不会任何操作被打成0-8，没意思，气得我直接刚下回来又卸载了。</p><p>接下来的时间就是继续开发DS Player，补全DataSource Vo。</p><p>下午4点多打妈妈电话，问她什么时候回来，准备让她给我带点吃的，得知她已经在路上了，她说让我去车站接她就给我买点吃的。还得知爸爸刚才也去六安了。</p><p>我继续开发DS Player，到下午4点50左右点收到妈妈信息让我去接她，我就骑着电瓶车去接了，到5点十几才把她接回来，帮她看店，她去给我买鸡排饭吃。</p><p><img src="https://files.yaohub.com/dayone/2026/04/3b3644c35b44a815e3d6c1a8c7b771cd.jpeg?oss_process=rt:fit" alt="3b3644c35b44a815e3d6c1a8c7b771cd.jpeg"></p><p>吃完晚饭，还是继续开发DS Player，主要是逆向LoginViewModel中的handleUrl，queryAll，setEnvirorment中的setKnownAPIs，也算是规范化Api Enumerator中的knownApi.getPath。做了单元测试和TestFragment，成功获取SYNO.API.INFO接口信息，得到了所有API信息。</p><p>晚上主要就是晚上HomeActivity中的updateTitle，DrawerLayout点击事件等。10点左右爸爸把奶奶从六安接回来了。12点多写个DayOne，我也准备入睡了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-16</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-16/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-16/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚又是通宵，早上7点多洗漱下楼，锅里有挂面，平底锅有一张半饼，询问得知还是昨天早上的饼，我又困又饿，也不讲究了，狼吞虎咽吃完饼。</p><p>吃完早餐，抽一支烟，喝点咖啡，废寝忘食继续开发DS Player。</p><p>中午的菜有香辣龙虾，炒青菜，咸鸭蛋等。龙虾虽然放了炒龙虾料，但是炒的时候没放啤酒，汤汁很少，没怎么进味。现在我也不怎么喜欢吃龙虾了，嫌剥壳麻烦。吃饭中妈妈拿出了之前答应我买的菠萝，但实际却是凤梨，说是没有菠萝了。吃完饭吃几块，感觉凤梨没菠萝好吃，虽然甜点但还是菠萝酸点好吃。</p><p>下午还是开发DS Player，主要完成了FileSongFragment。</p><p>下晚妈妈去了六安，晚上我就吃大半个馍，沾着龙虾汤吃。</p><p>十分困，8点左右就上床准备睡觉了。刷抖音看“别断我一连胜”的马超直播。到9点多才沉沉睡去…😴</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-15</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-15/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-15/</url>
+    
+    <content type="html"><![CDATA[<p>转眼半个月又过去了，这几天我的作息状态真是不好。</p><p>今天一觉醒来就是下午1点多了，没急着起来，躺在床上刷会抖音视频到2点多，洗漱下楼，楼下租客奶奶正在炸面叶。中午的菜有蒸肉丸，凉拌莴笋丝，青椒炒猪肝，炒青菜。我盛一碗饭，夹了两个肉丸，少许莴笋丝，用微波炉加热完就吃下去。</p><p>下午的时间就是继续开发DS Player，基本上创建完成了FileSongFragment以及相关依赖（FileSongListAdapter， StateManager）。这样一来一下午的时间就过去了。</p><p>下晚5点多，接近6点，抽半支烟，下楼吃晚饭。只有一个肉丸子了，吃的不是很痛快，</p><p>吃完晚饭，去后门阳台抽一支烟，喝点咖啡。之后打了两把王者，一赢一输，没什么意思，又是卸载了游戏。</p><p>现在写个DayOne，That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-14</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-14/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-14/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵开发DS Player，一下干到了今天早上9点左右，主要是实现了HomePagePinsFragment，相关网络请求（比如初始化SyHttpClient，WebAPI中的doRequest， 获取主页PinsItem信息），封面图CoverUriLoader，成功实现HomePagePins视图，只是HomePagePins GridItem点击事件没有连贯。</p><p>早上9点多下楼，没看到有什么早餐可吃，父母应该是吃蛋炒饭的。我只好忍着饥饿上楼继续开发工作。有点废寝忘食的状态。</p><p>中午12点左右下楼吃饭，没什么菜，有卤菜（卤千张和干子），莴笋炒木耳，当时是又困又饿，精神恍惚，机械般的吃着饭。</p><p>吃完饭，喝着咖啡抽支烟，难受。下午4点多实在是困的熬不住了，在隔壁房间准备小躺一会，衣服也没脱就直接昏睡过去。</p><p>到晚上接近9点多醒，可能是妈妈把我喊醒的，晚上吃的是韭菜煎饼和小黄米粥，我吃了剩的一张半饼和一碗粥，吃的有点撑。</p><p>吃完饭，刷会视频，继续投入的工作中。到12点多才躺下休息，但还是睡不着，在床上躺着看短视频。就是这样。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-13</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-13/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-13/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚凌晨十分下载了《三角洲行动》，打了一两个小时直到手机低电关机。到凌晨3，4点才入睡，一觉睡到中午12点左右，洗漱下楼吃饭，桌子上有早上妈妈盛起来的一大碗疙瘩汤，菜有买的凉菜（凉拌海带丝），以及莴笋炒木耳。我重新煮热疙瘩汤，配点海带丝吃完满满一大碗疙瘩汤。</p><p>吃完饭上楼，冲一壶咖啡，又打起了《三角洲行动》，没一会儿，李从荣到我家来，喊我去外面逛逛，我无法推脱，随他一起去了，从北门绕到东门，最后还是去了大润发超市，给我买了一瓶可乐。回来时又给我吃了一块面包。</p><p>从外面回来后就在房间喝着可乐，打了几把游戏。没看到妈妈，想必又是去姥爷家摘茶了。晕晕转转到下午4点多了。</p><p>晚上还是中午的饭菜还是中午的，我按部就班吃完一碗饭。吃完饭忍不住又下回来《王者荣耀》，在此过程中我一直在开发DS Player，游戏下好了也不想玩，就这样通宵开发DS Player。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-12</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-12/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-12/</url>
+    
+    <content type="html"><![CDATA[<p>今天星期天，一觉睡到上午11点多。</p><p>中午的菜有芹菜肉丝炒木耳，炒小青菜，莴笋炒木耳和蒸猪耳。我到吃饭已经是12点多了。</p><p>下午妈妈去了姥爷家炸猪油和摘茶。我继续开发DS Player，打通PinManager和PinAdapter，补全HomePagePinsFragment。接下来就是准备实现CacheManager和网络请求方面了。</p><p>晚上已经是中午的菜，胃口挺好，吃了一碗半。吃完饭抽支烟刷会视频，有点头晕和困。下楼看到妈妈正在吃饭，买了一袋香蕉，我吃了两根。</p><p>晚上8点多，早早脱掉衣服准备睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-11</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-11/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-11/</url>
+    
+    <content type="html"><![CDATA[<p>早上被7点闹钟叫醒，想再睡1个小时，定个8点闹钟，8点再次被闹钟叫醒，又睡过去，到9点10几分才醒，从梦中醒来。</p><p>洗漱下楼冰一瓶啤酒，煎个鸡蛋煮方便面吃。到10点左右才喝着啤酒吃上饭。</p><p>马不停蹄继续开发DS Player，主要是HomePagePinsFragment。</p><p>中午的菜有青椒肉丝和莴笋炒木耳。不饿，忙到下午2点多，抽一支烟，有点饿，但还是没有吃。</p><p>又是忙一下午，晚上多了一锅紫菜汤，到6点左右才最后吃完饭，很饿，吃了一碗半，很香。</p><p>忙到晚上11点多。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-10</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-10/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-10/</url>
+    
+    <content type="html"><![CDATA[<p>早上一觉睡到9点多，看到妈妈的微信消息，得知父母去了合肥。</p><p>没有早餐可吃，无所事事，喝一瓶牛奶，刷刷视频。</p><p>中午12点多煮一锅挂面放点干虾米吃，没有酱料，非常难吃，没吃几口剩一大碗不想吃了。</p><p>下午躺大半下午，没干什么事。4点多问妈妈什么时候回来，她说最早也要到晚上8点多了。让带点吃的也拒绝。只好拿点现金去买吃了，还是去了大润发买两袋方便面和一瓶可乐与啤酒。顺便买了一包小苏烟。</p><p>买完东西回来，首先喝点可乐，抽一支烟，感觉又不是怎么饿了。5点左右下楼煮一包面吃，喝着可乐。吃完没一会儿，收到李从荣的微信消息，问我在不在家，让我陪他去大润发买吃的，散散步。给我买了一瓶绿茶，吃几块面包和一支荷花烟。买完东西继续去毛小方向逛，在世纪华联那位置买点小炸，不知为什么他给我一点吃，我始终坚持不吃。</p><p>晚上7点多回来了，抽一支荷花烟。接近9点父母回来了，果然没带什么吃的。</p><p>就是这样。晚间睡不着刷刷视频抽半支烟，打开投影仪看看哆啦A梦到凌晨3点左右，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-09</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-09/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-09/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚基本上还是到接近凌晨2点才入睡。当时窗外雷声大作，风雨交加。一觉睡到了今天11点多。</p><p>起床上个厕所，洗漱完就下楼基本上直接就是吃午饭了，中午的菜有炸鸡柳和炒包菜，没什么胃口，菜不下饭，鸡柳干巴巴的。没什么兴致的吃完一碗饭就上楼了。</p><p>下午的时间就是按照昨晚的计划，更新个Windows，更新docker code-server包，关闭Synology NAS，清理个磁盘空间，重启电脑（它已经工作18天多了），清理个Gradle缓存（直接全部清空了）。然后就是启动NAS，恢复服务。没想到WebStation重启竟然会恢复server.webstation-vhost.conf，幸好我之前备份过了，直接覆盖即可。</p><p>下午4点多，有点饿了，下楼跟妈妈说晚上我想吃面，她说饭已经淘洗过了准备煮，可是晚上还是没什么菜，她就给我下疙瘩头吃了。我把前天洗澡的衣服丢进洗衣机洗一下。</p><p>现在我吃完晚饭，写个DayOne，看会视频，继续DS Player的开发。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-08</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-08/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-08/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚几乎是失眠了，看个嗨氏直播三角洲到凌晨2点左右，还是睡不着又是刷视频，直到清晨5点左右，带着耳机听音乐昏睡过去。</p><p>一觉睡到上午接近十点，洗漱下楼，没看到妈妈，想必她又是到了姥爷家摘茶了。自然没有早餐可吃，我感到有点无所适从。在楼上楼下晃来晃去。</p><p>中午12点多，爸爸依旧是一个菜都不做，煮点饭，蒸个腊货就准备应付午餐。我就只好依旧煮一锅疙瘩汤吃，虽然这次面糊没和那么稀，但煮出来还是就像浆糊，依旧是老几样调料，放点辣椒面，配一截香肠吃完。结束午餐。</p><p>下午我就继续开发DS Player，看官方DS Audio反编译代码，补Fragment，layout布局，搞得焦头烂额，眼睛涩疼。干到晚上11点多算是做了一半HomePage效果。</p><p>晚上6点左右妈妈回来，忙，没给我做晚饭，我也不想继续吃疙瘩头。吃了不少香蕉，干吃一些锅巴继续投入到DS Player开发中。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-07</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-07/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-07/</url>
+    
+    <content type="html"><![CDATA[<p>转眼清明节假期已经结束，今天早上7点关掉闹钟又继续睡下去了，直到9点多才醒，洗漱下楼，没发现妈妈，想必是又去姥爷家摘茶了。自然是没有早饭可以吃了。</p><p>打扫个房间，磨个咖啡豆，下楼做吃的，还是简单吃个疙瘩汤，这次面和的比较稀，吃起来就像浆糊了。调料没什么特别的，多加了点醋，没有辣味，吃起来很不爽。吃饱喝足就马不停蹄去洗了个澡，洗完澡就是到下午1点多了。冲个咖啡，喝着咖啡，坐在床上下载个快手，刷刷视频，耗费一个多小时时间。接着还是无所事事的刷抖音，干到下午4点多了。</p><p>写个DayOne，补齐这几天的Entry，又是过去了一个多小时。肚子有点饿。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-06</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-06/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-06/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到9点多，磨磨蹭蹭洗漱下楼就到接近10点了。奶奶把早上他们没用完留的面糊做成疙瘩汤给我吃，调味方面没有火锅底料酱，没有辣味，就是简单的椒盐，南德，鸡精等。也挺好吃。早餐就以吃完疙瘩汤结束。</p><p>中午的菜有青椒炒鱿鱼，煎牛肉排。吃完午饭，创建Android 项目，命名DS Player。抽完最后一支红皖烟。</p><p>一整个下午都在开发DS Player。简单实现个音乐列表，播放器，利用LyricViewX实现歌词滚动和拖动快进音乐效果。</p><p><img src="https://files.yaohub.com/dayone/2026/04/77307710c29c2ce4a165aae3c5fa43a6.jpeg?oss_process=rt:fit" alt="77307710c29c2ce4a165aae3c5fa43a6.jpeg"></p><p>下晚4点多，奶奶和牛牛去回六安了，爸爸应该也是去送了。晚餐还是中午的饭菜，无需多言。</p><p>吃完晚饭继续开发DS Player，一直忙活到晚上10点多，看看明眸直播到11点，困得受不了了，直接睡觉，这也是这几天睡最晚的一天了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-05</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-05/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-05/</url>
+    
+    <content type="html"><![CDATA[<p>早上7点多被妈妈叫醒，让我送奶奶和牛牛去姥爷家摘茶，我翻身不予理会，继续睡下去，一觉睡到10点左右，洗漱下楼，发现妈妈竟然也去了姥爷家。自然没有早餐可吃，吃一个芒果，然后把药吃下去。躺在床上刷刷视频过了一上午。</p><p>中午爸爸没有烧一个菜，菜有昨日烧好的牛肉锅子烫火锅丸子等。</p><p>下午2点多妈妈和牛牛回来，牛牛前几天生日没有给他买蛋糕，父母就答应带他去万佛湖玩，今天爸爸又说带他去嵩寮岩玩了，我也跟着去了。今天气温高达30摄氏度，我在爬山过程中嗓子干的难受。穿着短袖，热的受不了，汗如雨下。</p><p><img src="https://files.yaohub.com/dayone/2026/04/fd77f1bdca2bbf6e592d3ddfc77bc3e9.jpeg?oss_process=rt:fit" alt="fd77f1bdca2bbf6e592d3ddfc77bc3e9.jpeg"></p><p>晚上妈妈终于买了一袋面粉，吃的是疙瘩汤。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-04</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-04/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-04/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到上午9点左右，没什么早餐可吃，吃一个沃柑，把药喝下就回到床上躺着了。感冒期间，没什么活力。</p><p>中午的菜有红烧牛肉锅子烫了火锅丸子，让奶奶学妈妈之前做的浇汤锅巴，结果端上桌的时候让我直接浇牛肉汤汁了事，我去，这还算是一道菜么，让她继续做点汤汁浇在上面，结果洋葱在牛肉锅子中用完了，汤汁也没怎么勾芡，比较稀的，没什么咸味，浇在锅巴上的汤汁也比较多还没什么味，远没有上次妈妈做的好吃。</p><p>基本上又是躺半下午，没做什么事，就是刷刷抖音视频。头还是时不时的痛。</p><p>晚上还是中午的饭菜，只是浇汁锅巴这种菜只能一顿吃完，到晚上就毫无口感了，虽然本来就不好吃。</p><p>就是这样。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-03</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-03/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-03/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到清晨5点多，不知什么原因，我完全调整了我的睡眠姿势，半个身子都滑落到床下。迷迷糊糊再度入睡，到上午7点左右被妈妈喊醒。感冒症状中的咽喉肿痛似乎有所缓解，但头还有压迫神经般的痛。</p><p>洗漱下楼，看到厨房有一锅炒饭，没有任何胃口吃，倒一杯水，吃一个沃柑就上楼继续躺着。</p><p>上午9点多，奶奶从菜市场给我带了一份酱香饼算作早餐，我吃了一大半不想吃了，感冒吃起来油都有点发苦，还有白开水喝起来发酸。</p><p>带两个沃柑上楼继续躺着，头疼，让妈妈买药。到中午12点40几分下楼，看到桌子上有妈妈买回来的三九感冒灵和阿莫西林胶囊，吃个药和一个沃柑。早饭吃的比较迟，加之中午没有什么合胃口的菜就没吃，中午的菜有青椒炒火腿肠，炒竹笋等。</p><p>又是上楼躺了大半下午。</p><p>药还是有点效果，头疼有点减轻，晚上我想吃切面但是直到现在5点半左右我还没有说。</p><p>继续打起了王者巅峰赛，两连跪，毫无作用，头还是疼，不舒服。不想冲赛季初关羽省50了，直接卸载了游戏，不玩了。</p><p>晚上吃的是鸡蛋疙瘩汤，面粉还是奶奶从租客奶奶那里要的。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-04-02</title>
+    <link href="/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-02/"/>
+    <url>/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-02/</url>
+    
+    <content type="html"><![CDATA[<p>今天清晨6点左右醒来，被尿憋醒，上个厕所，感冒症状依旧没有好转，还是咽喉肿痛，流鼻涕。</p><p>上午7点多牛牛到我房间问我吃什么早餐，我想吃肉馅饼的，但是他说太远了。就给我带了两个肉包。感冒没什么胃口，早餐就吃了一个肉包子和一碗小米稀饭。</p><p>上午时间不是躺着刷视频就是打打游戏。</p><p>虽然感冒但是我的食欲还算可以。中午也按时吃饭，中午的菜有昨日的酸菜鱼还有蒜苗炒肉，豆干（只是不是袋装的，不好吃），有蒸红薯。吃了一多碗饭。</p><p>下午还是抽支烟，打打游戏，巅峰打两连胜到1354分，排位也是5连胜到星耀1，2颗星。</p><p>晚上还是中午的饭菜，没什么好说的，头疼加重，早早躺床上了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>四月首记-2026-04-01</title>
+    <link href="/2026/04/%E5%9B%9B%E6%9C%88%E9%A6%96%E8%AE%B0-2026-04-01/"/>
+    <url>/2026/04/%E5%9B%9B%E6%9C%88%E9%A6%96%E8%AE%B0-2026-04-01/</url>
+    
+    <content type="html"><![CDATA[<p>今天是2026年四月首日，愚人节。清晨6点多从梦中醒来，昨晚喝了一袋板蓝根，似乎挺有效果，喉咙咳出一大团黄浓痰，急忙起身去厕所吐掉。</p><p>回到床上已经睡不着了，想到今天王者赛季更新，就打开游戏更新一下，打了几把游戏到早上8点多。</p><p>洗漱下楼，看到厨房没有什么早餐可吃，虽然有点饿，但也因为感冒不舒服没什么胃口吃了。倒一杯水和带一袋板蓝根上楼，喝下一袋板蓝根，之后抽支烟，难受。</p><p>继续打起了游戏，10点多脑袋昏昏沉沉的，喉咙还是比较肿疼，去隔壁房间，衣服也没脱，躺下没一会儿就迷迷糊糊睡着了。</p><p>一觉睡到中午12点40几，下楼吃午饭，爸爸去六安接清明节放假的牛牛和奶奶了。中午的菜有酸菜鱼（还是之前的做法，烫了豆芽，豆皮和香菜，可惜感冒没吃出什么味来），蒸虾米，凉拌香菜和莴笋。由于早餐没吃，有点饿，加之饭菜比较合胃口，即使感冒也吃了1碗半饭。</p><p>吃完饭，喝一袋板蓝根，头还是晕沉沉的，脱掉衣服，躺在床上，写个DayOne，听到楼下牛牛他们应该回来了。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>今日小记-2026-03-31</title>
     <link href="/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-31/"/>
     <url>/2026/03/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-03-31/</url>
