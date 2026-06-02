@@ -6,7 +6,7 @@
   <link href="https://hexo.yaohub.com/atom.xml" rel="self"/>
   
   <link href="https://hexo.yaohub.com/"/>
-  <updated>2026-05-01T00:51:56.456Z</updated>
+  <updated>2026-06-02T07:18:10.595Z</updated>
   <id>https://hexo.yaohub.com/</id>
   
   <author>
@@ -17,40 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>四月末记-2026-04-30</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E5%9B%9B%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-04-30/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E5%9B%9B%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-04-30/</id>
-    <published>2026-04-29T19:57:00.000Z</published>
-    <updated>2026-05-01T00:51:56.456Z</updated>
+    <title>五月尾声-2026-05-31</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BA%94%E6%9C%88%E5%B0%BE%E5%A3%B0-2026-05-31/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BA%94%E6%9C%88%E5%B0%BE%E5%A3%B0-2026-05-31/</id>
+    <published>2026-05-31T12:29:00.000Z</published>
+    <updated>2026-06-02T07:18:10.595Z</updated>
     
-    <content type="html"><![CDATA[<p>本日是2026年四月的最后一天，马上就是五一小长假了。昨天晚上9点多就上床睡觉，结果没睡到几个小时到凌晨2点多就醒了，上个厕所结果继续还是睡不着，就这样刷刷手机，看一集柯南就到早上6点左右了。</p><p>洗漱下楼没看到妈妈，想必又是去早起散步了。我随即就倒杯水上楼唤醒电脑，打开Android Stuido和项目。没一会儿肚子饿的咕咕叫，下楼看到妈妈正在吃炒饭，早饭就是一碗咸菜炒饭配酱和一碗豆浆。</p><p>吃饱喝足上楼抽一支烟，继续开发DS Player，一上午主要就是解决PlaylistFragment下Playlist Container Item点击事件无法正常响应触发进入对应的ContainerFragment。经过一通排查发现是其父类ContentFragment的mContainerClickCallback被绑定到了默认的sDummyCallback，是当时急着恢复在onCreate以下代码的添加的原因。</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">if</span> (!::mContainerClickCallback.isInitialized) &#123;<br>    mContainerClickCallback = sDummyCallback <br>&#125;<br><br></code></pre></td></tr></table></figure><p>修复这个问题后顺利进入ContainerFragment又是发现lateinit变量mContainerClickCallback没有赋值就引用的崩溃，是newInstance中ContainerFragment()，没有传入callback参数。在此之后就是优化一下项目代码update visibility calls from raw integers to View constants，修复HomeActivity中handelBack和showPlayerChooser bug。</p><p>上午11点多下楼准备吃午饭，看到桌子上没什么菜，一盘炒青蚕豆和青椒炒白豆干。都没有我爱吃的菜，不想吃了。上楼，想这三天的DS Player改动，git commit改怎么拆分，有点无所适从。看天气温度虽然有20摄氏度，我还穿了毛衣，依然有一股寒意裹挟着身体，有点困又冷，脱掉衣服，想着躺一会。</p><p>不知怎么就睡着了，一觉睡醒，半天才想起是下午睡着了，看看时间和日期是30号晚上接近9点。</p><p>明天就开始五一长假了，我上个厕所下楼，妈妈在外面忙，爸爸想必是接奶奶回来了。来到厨房，没什么吃的，还是中午的饭菜。找到一箱旺旺大礼包。过年的时候还在感叹现在过年送的礼好像都没有这个了。</p><p>拿一包螺旋形像薯条的零食和一瓶果冻就上楼了。接下来几个小时到凌晨零点半都是在分步提交DS Player改动并push到github远程仓库，一点点add -p实在是太折磨了，以后开发可要开发或修改完一个模块就commit。最终分成6个commit。</p><p><img src="https://files.yaohub.com/dayone/2026/04/d137541780cd84de2696832ab9d733ef.jpeg?oss_process=rt:fit" alt="d137541780cd84de2696832ab9d733ef.jpeg"></p><p>晚上10点多奶奶回来了，零点半之后看会抖音视频，抽一支烟就脱掉衣服准备睡觉了，结果不出所料就是睡不着，听一个多小时的音乐到4点左右起床上厕所。写起了DayOne。</p><p>That’s it.</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-29</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-29/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-29/</id>
-    <published>2026-04-29T12:02:45.000Z</published>
-    <updated>2026-04-29T20:02:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>四月接近尾声，今天早上6点半左右洗漱，想喝咖啡，磨完咖啡豆才下楼。</p><p>早餐是妈妈散步回来带的一个青菜馅包子和大米粥，吃一个包子和一碗稀饭粥，半饱不饱。</p><p>吃完早餐，感觉血糖急速上升，一阵晕眩，发困。烧一壶水，冲咖啡。之后就是喝着咖啡抽一支烟。继续开发DS Player，正式开始替换DS Audio默认歌词滚动组件DynamicLyricListView/Adapter为LyricViewX，首先就是创建lyricviewx_fragment布局，之后我有分心看看Google Search Console关于我的网站收录情况。又是唤醒台式电脑，打开音箱听音乐，嗯，有低音炮听张国荣的《拒绝再玩》、《暴风一族》带感多了。在此之后顺便同步下载一下备忘录中记录的音乐到NAS，这次直接使用酷我音乐和GD音乐台网站下载歌了，而不是KWMusicDownlaoder，有几首flac格式音乐。这样一上午的时间就过去。</p><p>中午的菜是爸爸烧的，有西红柿鸡蛋肉片汤（酸酸的还挺好喝，如果鸡蛋花打漂亮一点，不放肉片，我肯定直接喝一碗），黄瓜炒火腿肠，咸肉炒千张皮（有点咸了），昨晚的龙虾。总体滋味还不错，挺下饭的。</p><p>吃完午饭，抽一支烟，继续开发DS Player，创建PhonelyricViewXFragment，照葫芦画瓢，之后为配置DaggerInjector…… 在LyricViewX不显示问题上卡了很久，最后还是发现PhonelyricViewXFragment在loadLyric成功后没更新modeLyricView，导致一直不显示。忙到下午5点多，吃晚饭，吃的是鸡蛋皮手擀面，吃的挺香。</p><p>到晚上7点多，算是基本实现了DS Player替换默认的歌词组件，也支持拖拽滚动歌词快进了。发现了PlaylistFragment点击PlaylistItem无法进入二级菜单了，不知怎么回事。找时间再做修改。</p><p>8点多花个半个小时写个DayOne，马上抽支烟，睡觉了。</p>]]></content>
+    <content type="html"><![CDATA[<p>转眼一个月又过去了，今天是5月最后一天，星期天，我的作息又糟糕起来，一觉睡到中午12点多接近1点，是牛牛上来将我弄醒的，说是给我一个蛋挞吃，随后我就起来洗漱下楼，直接吃午饭了。</p><p>中午的菜有土豆丝，烤鸭（不是之前的那家了，没有那个蘸汤，不怎么好吃），炒苋菜等。循规蹈矩吃完一碗饭，吃完才感觉没怎么吃饱。上楼到房间把床单铺一下，套个被套然后就去洗澡了。</p><p>洗完澡坐在床上吹着电风扇，吃个蛋挞，刷刷短视频真是惬意。之后的时间就是继续玩塞尔达了。</p><p>下午4点多奶奶和牛牛就回六安了。晚上依旧是中午的菜，还是不必多说。</p><p>晚间时间到凌晨2点依旧是打塞尔达，进度就是打完风神殿，获得蓝图，普尔亚平板功能全部得到等。</p><p>到凌晨2点多睡觉了。</p>]]></content>
     
     
       
@@ -71,40 +44,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-28</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-28/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-28/</id>
-    <published>2026-04-28T11:26:00.000Z</published>
-    <updated>2026-04-28T19:26:00.000Z</updated>
+    <title>今日小记-2026-05-30</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-30/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-30/</id>
+    <published>2026-05-30T05:02:00.000Z</published>
+    <updated>2026-05-30T13:02:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天晚上9点多就在隔壁房间上床睡觉了，结果睡眠又过饱和，睡了3个多小时到12点就醒了，继续也是睡不着了，回到自己房间抽半支烟，刷刷视频，</p><p>到早上7点多洗漱下楼，妈妈正在炒饭，我问他早上吃什么，她给我一碗玉米糊，我比较饿还有点困，没什么推脱就加点咸菜和龙虾酱还有一个肉丸子吃下去了，饱腹感很差，吃完还有点想吐。</p><p>吃完早餐上楼抽一支烟，打开电脑，清理一下缓存垃圾，以及修改一下虚拟内存，继续开发DS Player，首先是优化Gradle依赖包，Glide和Fresco图像加载包同时存在，我简单分析一下看到只有SongListActivity中使用Glide，于是决定就保留Fresco，之前使用Glide修改歌曲cover改为使用`CoverUriLoader().with(xx).load(songItem)的方式。</p><p>兜兜转转到中午11点左右，妈妈上来喊我问我去不去姥爷家吃饭，我感到疑惑没什么事为什么去姥爷家吃饭，她说不忙，顺便送菜籽，爸爸开车带我们去。我犹豫思考了一下就跟去了。在路上买了一份烤鸭到那里吃。</p><p>在姥爷家吃完饭到下午1点多就回来了，没什么好说的。从姥爷家回来我就极其的犯困，定个30分的闹钟，想简单睡个午觉到结果就一觉睡到晚上9点多了。</p><p>在下午妈妈答应我晚上做手擀面也没做，是煮的饭吃的，菜有炒青菜，龙虾等。我不太想吃，让妈妈给我下一锅疙瘩头吃，她都准备睡觉了，自然没有答应，我只好自己做，刚开始还挺好的，结果不知怎么搞得我犯贱想吃水煮蛋，结果鸡蛋没怎么煮熟，软不拉几的，蛋壳也不好剥。连带着心急下面，煮成一锅浆糊。加点调料，吃上几口，不想吃了。气的我也不收拾了，剩的疙瘩汤就直接放在桌子上，锅里的也不盛了。</p><p>10点左右外出买香烟，来回走了几趟，还是没有中南海点5，无奈还是选一包普皖。回来继续开发DS Player，实现了SongListActivity下使用CoverUriLoader动态加载歌曲Cover，PlayerActivity也迎来改进，支持直接从SongListActivity选取歌曲并播放，而不是之前固定的@raw/song.mp3的资源,使用loadLyric加载动态歌词，playMusic通过url播放歌曲。</p><p>凌晨一点多，抽一支烟，睡觉了，但还是睡不着，刷刷视频，看一集《名侦探柯南》，放大音量从4点多5点多听了一个多小时的音乐。又通宵到清晨了。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-27</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-27/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-27/</id>
-    <published>2026-04-27T04:00:00.000Z</published>
-    <updated>2026-04-27T12:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨晚感觉是熬穿了，24小时没睡，到深夜11点多还是睡不着，测试之前的2 Port VGA Switcher笔记本和台式电脑公用一个显示器方案（其实就是省了来回用一根VGA线连接这两者），唤醒台式机，打开音箱听听音乐。</p><p>到12点多才入睡。一觉睡到中午12点多，结果睡眠作息没调整过来，又回到原点了，白熬一白天没睡。</p><p>醒来后就起床洗漱下楼，喝水，吃两个橘子，直接吃午饭了，菜有蒸肉丸子，酸辣土豆丝和西红柿炒鸡蛋，还有前天的咸菜。都是我爱吃的菜。盛一碗饭，夹点菜，还有一点炒龙虾酱（这次酱是甜鲜的，没什么辣味），用微波炉加热后就吃完了午餐。</p><p>吃完饭上楼，喝喝咖啡抽一支烟。DS Player的开发到了一个里程碑，下一步就是修复部分Fragment下返回逻辑bug，补全SongItem 二级操作菜单实际逻辑，比如评分和下载，还有默认DS Audio Lyric Fragment转为LyicViewX实现。</p><p>我决定init一个git仓库并上传到Github，于是接下来就是修改local.properties，添加NAS登录信息，在Common.kt中的getSID等方法使用BuildConfig.NAS_SID替代之前的直接写的静态常量值。然后就是创建git仓库、github仓库，让ChatGPT帮我生成一份README，提交并推送到目前进度的所有源代码到Github上。今天并没有其他实际开发工作。计划优化dependencies，比如当前同时使用了Fresco和Glide图像加载库。</p><p>下午5点下楼吃晚饭，妈妈正在煮疙瘩汤，我疑惑明明有菜却不吃饭，她说她们忙没来得及煮饭。疙瘩汤里还有后面奶奶给的馄饨，但我并不吃。</p><p>疙瘩汤里我后来还是放了龙虾酱，很好吃，吃了一碗半，很撑。</p><p>吃完上楼，抽一支烟，这几天电脑高强度运行，今天关个机，让它休息一下，我就看看明眸直播抽支烟。到隔壁房间继续看。有点发困，下楼拿个苹果和橘子上来吃。看直播到9点左右，直接睡觉了。</p><p>睡到半夜就醒了。刷刷抖音，写个DayOne。</p>]]></content>
+    <content type="html"><![CDATA[<p>五月也是快要来到末尾了，早上7:20被闹钟准时叫醒，洗漱下楼，吃早餐，是红米粥配昨日的蒸虾米（还剩一点鱿鱼丝），我感觉红米粥远没有白粥或稀饭好吃。</p><p>吃完早饭就上楼，花个40几分钟写前两天的DayOne手记，到8点20几分。</p><p>接下来的上午时间基本上都是打开Switch玩起了《塞尔达-王国之泪》公主之花Mod，上午10点左右，奶奶和牛牛从六安坐公交车回来了。中午的菜是奶奶烧的，有红烧牛肉烫香菇和千张（没有我早上和妈妈说的豆腐泡），奶奶从六安带回来的熏烤小黄鱼（没什么腥臭味，炸过头了，有点焦苦味），至于早上说的炸香菜卷也没有。吃了一碗半饭，胃口还挺好。</p><p>一下午的时间基本上都是在打游戏了，上午10点多看到移动的30G日包流量快要过期了，赶紧兑换用掉用于获得下月10G月包流量（事后我才发现下个月已经有个100G的月包了，根本用不掉）。在玩塞尔达的过程中使用流量全量下载了《王者荣耀》，刚好又是星期六，玩了几把小号，手机发热和掉电严重，没玩几把就不想玩了。又是卸载了游戏。至此到下午1点30分左右。在此期间，牛牛给我买个大布丁雪糕吃。之后都是打塞尔达了。通过攻略找到了“真.魔王之怒”宝箱（余料1500攻击），然后又是开启金手指，复制这些材料，提高武器耐久，把高攻击力材料余料到断-大鼓隆之剑上，遇到怪直接就是一刀的事。</p><p>晚上依旧是中午的菜，没有什么好说的。奶奶买了一个西瓜给我们吃，这还是我今年第一次吃上西瓜呢。但是我急着打游戏，挖上几口吃吃就上楼打游戏了。</p><p>这样就玩到了凌晨2点左右，睡觉了。</p>]]></content>
     
     
       
@@ -125,40 +71,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-26</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-26/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-26/</id>
-    <published>2026-04-25T21:41:54.000Z</published>
-    <updated>2026-04-26T05:41:54.000Z</updated>
+    <title>今日小记-2026-05-29</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-29/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-29/</id>
+    <published>2026-05-29T00:27:00.000Z</published>
+    <updated>2026-05-29T08:27:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>今天是星期天，昨晚依旧是通宵开发DS Player，新增(Abstract)RemoteControllerService修复了App下播放器音量之前只有dialog而没有实际调整的问题。</p><p>早上7点多洗漱下楼，奶奶已经做好了早餐，有炒饭，豆浆和摊韭菜鸡蛋煎饼。我喝了一碗半豆浆，又吃了一大块煎饼（调味用了南德和昨天烤鸭的蘸汤），算是结束早餐。</p><p>上楼冲一壶咖啡，喝着咖啡，照例饭后抽一支烟，快哉快哉。</p><p>有点困，精神萎靡，但还是强打起精神，熬一天来调整作息。缓缓神继续开发DS Player，目前需要处理的是LyricFragment，歌词高亮不起作用，反复调试PlayerFragment，PhoneLyricFragment及DynamicLyricListView和DynamicLyricListAdapter，还有LyricUtils，都找不出一个所以然来，还冒出一个新问题，Common下getDSaudioAppFolder在歌曲播放中被反复调用，一秒三四次，不知怎么脑子抽了把Common.kt替换为原版反编译得到的Common.java，问题还是依旧，通过调用堆栈可以看出是PlayingStatusManager中saveStatus不断写入当前播放进度信息的问题，还有PlayerFragment中PlayingStatusManagerProvider.get()每次调用都返回一个新单例。找到问题原因就很好解决了。</p><p>到11点多下楼吃饭，菜有炒龙虾，炒青菜，咸菜，鲫鱼汤，昨日的烤鸭等。龙虾没怎么进味，也不辣不太好吃。</p><p>下午继续熬着开发DS Player，搞一下午，终于解决了LyricFragment歌词不高亮的问题，原来是PlayerFragment中loadLyric onComplete setAdapter ChatGPT当时给我转的时候误以为是setter，写成了.adapter = xx 导致根本就没有调用这个方法，自然也就无法正常工作了。在这期间GPT带我走了不少弯路，最后还是我返璞归真一步步看链路调用才找到调用的。</p><p>晚上爸爸送奶奶和牛牛回六安，我又是最后吃饭，虽然没什么我喜欢吃的菜，但架不住饥饿，还是加点龙虾酱就吃完一碗饭。</p><p>刷刷抖音视频，不知忙了些什么。就到深夜10点多了，困，头疼欲裂。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-25</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-25/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-25/</id>
-    <published>2026-04-24T21:22:00.000Z</published>
-    <updated>2026-04-25T05:22:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨晚通宵开发DS Player到今天上午7点多，上个厕所洗漱。感到十分饥饿，打个电话给妈妈，问她什么时候回来，得知还要一个小时到家，牛牛和奶奶也要回来，想让她带早餐也不现实了。</p><p>下楼，发现小桌子上有爸爸买回来剩的一个韭菜粉丝馅饼和茶叶蛋，微波炉大热饼就吃吃下去，真是舒坦。</p><p>吃完早餐上楼，抽一支烟，发困，头晕。想到今天是星期六，就强忍着睡意，又下回来王者，玩起了小号，体验关羽皮肤，拿了几把金牌和顶级。</p><p>一直打到中午11点多，妈妈给我发信息让我下去吃饭。中午的菜有烤鸭和凉拌海带丝，还有炒莴笋片，基本上都是我爱吃的。</p><p>吃完午饭又打起了游戏，渐渐的觉得没有意思。</p><p>下午1点左右，奶奶让我骑车带她八角塘砍竹子，我头晕站都站不稳别说骑车了，就不答应。去后门阳台抽一支烟。也改变主意想去八角塘玩玩，睡睡吊床，看看书，晒晒太阳，调整作息。给她说喊李从荣让他带你去，我一个人骑车跟去。</p><p>结果我换好衣服等了很长时间李从荣都没来，我又犯困了，衣服都没脱在隔壁房间躺下就睡过去。</p><p>晚上8点左右在梦中醒来，又梦见了弈，语文课上我在写日记，同桌杨鑫诚说他可以让我打喷嚏，刚说完我就打个打喷嚏，我感到神奇，问他怎么回事，他示意我看弈，我转头看去，看到弈正在抿嘴偷笑，杨鑫城说弈想我了让我打喷嚏（有这么一说）。我感到快活极了。——大致就是这么一个梦境，真是温馨。又想到初二那一次高放和我就眼镜一事看到弈偷笑的一事。唉，时光一去不复返。</p><p>醒来起床穿衣下楼，吃完饭，还是中午的菜没什么好说的。</p><p>晚9点左右，开启了一晚的工作，继续开发DS Player</p>]]></content>
+    <content type="html"><![CDATA[<p>昨晚睡得倒是挺早，下晚6，7点就睡了，但是一觉睡到12点多就醒来睡不着了，躺在床上刷刷抖音，刷到一个视频说是关于DeppSeek API，我就起身，衣服都没穿打开电脑找free API，找到了OpenRouter，注册账号和申请API Key，使用deepseek-v4-flash:free模型，接入Claude Code才发现不可用，呵呵，免费。到头来还是到官方DeepSeek Platform下过实名认证，充值3元。写个TestDeepSeek.py测试终于可以快速流畅回答输出了。但是在接入Claude Code却发现格式不兼容，明明我使用的是Authropic API，但是数据包中的role中的“system”值不支持。无奈接入iFlow，顺利总结项目信息和git状态。之后又是处理Bing web master禁止收录hexo blog站点下的内容。提一个TODO，计划给Hexo Blog添加noindex。然后还添加Windows Screen Saver自动锁屏，避免ScreenTimeTracker在息屏期间依然记录前台窗口应用使用时间，</p><p>之后到清晨6点多，我再次移除了百度网盘的右键菜单，通过注册表看到百度网盘安装路径下的YunShellExtV164.dll,引发了我的兴趣，打开IDA Pro逆向一通，没多大收获。</p><p>7点多洗漱下来，妈妈正在吃早饭，我的早餐是所剩无几的稀饭和半个大饺子（类似油炸韭菜盒子）。一点都没有吃饱，8点半左右就饿了。</p><p>吃完早饭，继续使用IDA Pro逆向分析YunShellExtV164.dll，爸爸上来架起来一床被子，之后就顺便帮我整理房间，说要清理我的那些瓶瓶罐罐和书籍，我正忙着在，急忙阻止，发了脾气。</p><p>到9点多，我又开始玩起了游戏（在此之前又把之前移除的塞尔达-王国之泪的更新包和公主之花放回来了），是《潜水员戴夫》，在前一晚主线通关后，现在都是一些支线任务，帮鲛人村民跑腿一类的任务。玩到中午12点多，实在是饿了，妈妈正在忙，爸爸先炒了两个菜，是炒土豆片和空心菜，到接近1点多，妈妈才开始炒鱿鱼，我直到下午1点才吃上午饭。</p><p>下午的时间基本上还都是在打游戏，不过是玩上了塞尔达，就是开开鸟望台，地底树根之类的，开几个衣服宝箱。</p><p>到晚上6点左右吃上了晚饭，依然是中午的菜，多了一个蒸虾米，吃的挺香，还是饿极了。接下来的时间到晚上11点多都是在玩游戏，地底树根开了不少，拿到了塞尔达的精灵服。</p><p>到凌晨12点多睡觉了……</p>]]></content>
     
     
       
@@ -179,40 +98,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-24</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-24/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-24/</id>
-    <published>2026-04-24T00:25:00.000Z</published>
-    <updated>2026-04-24T08:25:00.000Z</updated>
+    <title>今日小记-2026-05-28</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-28/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-28/</id>
+    <published>2026-05-28T11:39:03.000Z</published>
+    <updated>2026-05-28T19:39:03.000Z</updated>
     
-    <content type="html"><![CDATA[<p>在虚幻的梦境中醒来，忽然想起此刻我正在六安三十一楼的书房床上，天色还未大亮，急忙拿起手机想看看现在的时间，殊不知手机已经低电关机，从口袋取出充电器，却怎么也找不到插座，无奈只好猜测着当前的时刻，估摸着已经是清晨5点有余了。无法继续入睡，在床上辗转反侧着。</p><p>又过去了十几分钟，屋外传来叽叽喳喳的鸟叫声，也有不知什么机器的轰鸣声，我更加肯定已经是清晨了。不久听到隔壁房间妈妈也已经醒来了。我穿衣起身，穿好鞋子。去大厅看到刚好快到6点钟，给手机充电，随即去厕所洗漱。</p><p>6点20左右，奶奶起来烧水，父母也起来了。由于爸爸急着回家并顺便去跑滴滴，我和他早饭都没吃就出发了。坐在车上才想起我的眼镜忘记带了，在爸爸接上货物就马不停蹄的回去，让妈妈送来眼镜，拿上后就回毛坦厂了。</p><p>8点半左右回到家，早饭是爸爸给我带的一个韭菜粉丝包。回到楼上房间，刷刷视频，抽两支烟，开始继续开发DS Player，SeekBar的种种问题（始终无法触发onMetadataChanged 设置SeekBar max值，进度异常），SongDetails在切歌后不更新，没什么头绪，只能继续翻反编译代码，一遍遍比对，我有点倦了。</p><p>中午12点多下楼，桌子上有爸爸炒的两盘菜，西红柿炒鸡蛋和大辣酱炒莴笋，没什么胃口。不知不觉到下午1点多，有点困了，想着浅浅睡个午觉，定一个一个半小时的闹钟，结果一觉就睡到了5点多……</p><p>起来感到十分饥饿，给妈妈打个电话问她什么时候回来，得到明天早上才回来的答复，想让她给我带点吃的计划也落空了。下楼煮一锅疙瘩头吃，还有酸菜鱼调料中的酸菜，虽然没有火锅底料酱，但吃起来味道也不错。</p><p>吃完晚饭，时间就快到7点了，抽支烟。继续为努力处理DS Player的已知问题，一点点补充之前遗漏的HomeActivity中的初始化逻辑，主要是PlayerControlHelper中的setControlPanel, bindControl。又是循环相互调用，多次setControlPanel导致App卡死。ChatGPT一步步给我处理方案……解决一个问题又冒出新的问题。</p><p>我不眠不休死磕着，发现PlayerFragment可能在onDestoryView后，PlayerHelperControl还是旧的playerFragment，我在onDestoryView中释放并在PlayerHelperControl重新new PlayerFragment，这样以来在切歌后也可以正常更新底部Main_Control的歌曲信息。还是决定补全Dagger，比如PlayerFragment本来是DaggerDiagFragment，当时为了方便快速实现与测试就改成DialogFragment，还有ContentFragment本来继承DaggerFragment，我就改成了Fragment。现在改好后，终于解决了SeekBar进度异常和FileSongFragment下SongDetails不更新的问题了。</p><p>凌晨3点多继续全面转向Dagger，App转为DaggerApplication，配置DaggerApplicationInjector，在各个Service，Fragment中inject PlayingStatusManager，PlayingQueueManager等等。</p><p>忙活到25号7，8点，又是一个通宵！</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-23</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-23/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-23/</id>
-    <published>2026-04-23T01:01:00.000Z</published>
-    <updated>2026-04-23T09:01:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨晚依旧通宵开发DS Player，晚上11点多，我感到十分饥饿，对香烟的渴望无法抑制。不知什么一股力量驱使着我穿鞋下楼，冒着饥寒和小雨骑着电瓶车去超市买两袋方便面和一包普皖。</p><p>买完东西回到家，烧一壶水，泡一包方便面吃，抽一支烟。继续开发着DS Player，有了不小的进展，完成了PlayerFragment，首次实现App内在音乐列表下点击播放NAS上的歌曲。我想这也是我愈战愈勇，想趁热打铁，填饱肚子，抽抽烟，通宵开发的原因。</p><p>时间过得很快，不知不觉到了今天上午7点多，发现DS Player SeekBar和底部MainControl SongDetails更新有若干问题。</p><p><img src="https://files.yaohub.com/dayone/2026/04/7798aeb24efc19b01753c97ceedbca47.png?oss_process=rt:fit" alt="7798aeb24efc19b01753c97ceedbca47.jpeg"></p><p>洗漱下楼，早餐有妈妈做的疙瘩汤，她说和后面奶奶学的，很像胡辣汤，上面还有鸡蛋花，卖相不佳，不怎么想吃，但是架不住饥饿，放点南德调味料和龙虾酱就开吃，真是饿了，这疙瘩汤滋味还不错，我吃完一碗又吃一碗，吃饱了肚子才心满意足的上楼。</p><p>想接着解决上面提到的DS Player问题，但经过不断的埋点调试，我始终找不到解决方案，PlaybackService和AndroidService东拼西凑不少，根本就不完整，反编译Kotlin协程代码复原也不是很容易。我感到困了。</p><p>11点多到隔壁房间重新安装上王者荣耀，打了几把，一路连胜4，5把上到了最强王者，又开了两把巅峰赛，最后一把被暴打，气得我又不想玩了，又是卸载了游戏</p><p>下午1点多，熬不住了，躺下睡觉。一觉睡到晚上6点左右被妈妈喊醒，告诉我他们要去六安了，晚餐是疙瘩汤放在桌子上。不知怎么的，我就喊住妈妈说我也要去。她也答应让我去了，于是我就急忙穿衣起床，收拾个东西，不过也就是带个手机，充电器，耳机，打火机和香烟。下楼吃个疙瘩汤就随他们出发了。</p><p>一路上聊聊天，8点左右就到了六安。牛牛和奶奶已经睡觉了，妈妈帮我在书房铺好被褥，9点多我就躺下，准备睡觉了。</p>]]></content>
+    <content type="html"><![CDATA[<p>昨晚折腾到凌晨3点多才睡，今天竟然没有一觉睡到中午，而是9点多就醒了，洗漱下楼，早餐是妈妈拿起来的韭菜盒子（大饺子），仅此而已，只能是充饥。</p><p>吃完早餐，一上午也没干什么事，就是窝在床上刷刷抖音，不知不觉就到中午了，中午的菜有凉拌黄瓜（放有蒜末、花生，酸酸咸咸，少许小米辣提供的辣味，还挺好吃）、炒基围虾，炒包菜。由于没有什么下饭的菜加之一大早吃了油炸的韭菜盒子，没什么胃口，午餐就吃了一点凉拌黄瓜。</p><p>下午的时间就是尝试安装个Codex，但还是因为没有订阅，没怎么用就卸载了。打开Android Studio和项目，计划处理个DS Player自动缓存问题，没怎么修改就忙别的事了，房间太闷热，电脑有点烫。还是躺在床上刷刷抖音。</p><p>晚上依旧是中午的菜，让妈妈下一碗挂面吃，没有酱，调料就是简单的南德和味精，就着中午的凉拌黄瓜和之前剩的几块红烧肉，饿了，吃的挺香。</p><p>晚6，7点，晚饭后刷刷抖音，有点犯困，索性洗洗睡了。</p>]]></content>
     
     
       
@@ -233,40 +125,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-22</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-22/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-22/</id>
-    <published>2026-04-22T01:29:00.000Z</published>
-    <updated>2026-04-22T09:29:00.000Z</updated>
+    <title>今日小记-2026-05-27</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-27/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-27/</id>
+    <published>2026-05-26T17:43:00.000Z</published>
+    <updated>2026-05-27T01:43:00.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>只是因为在人群中</p></blockquote><blockquote></blockquote><blockquote><p>多看了你一眼</p></blockquote><blockquote></blockquote><blockquote><p>再也没能忘掉你容颜</p></blockquote><blockquote></blockquote><blockquote><p>梦想着偶然能有一天再相见</p></blockquote><blockquote></blockquote><blockquote><p>从此我开始孤单思念</p></blockquote><p>一觉睡到上午11点左右，起床洗漱下楼看到妈妈正在烧中饭，看到有白豆腐干，猪肉，芹菜等食材。倒杯水上楼，不知干些什么事。12点多直接就是吃午饭了，菜有三河小炒，韭菜炒豆腐，还有袋装的酱油干，由于没什么辣味的菜，我吃的不是很香。</p><p>下午的时间就是写写DS Player，没什么大的进展，不过也一直在忙。</p><p>晚上依旧是中午的饭菜，没什么好说的，因为忙着没有及时吃完饭，轮到我最后吃时，基本菜都是渣子了。</p><p>晚上还是通宵。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小記-2026-04-21</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%A8%98-2026-04-21/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%A8%98-2026-04-21/</id>
-    <published>2026-04-21T13:39:52.000Z</published>
-    <updated>2026-04-21T21:39:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨晚通宵，凌晨3点左右翻来覆去睡不着，索性穿衣起来继续开发DS Player，一日未睡，寫完DS Player 5個Fragment。</p><p>早上接近9点下楼，没给我留什么早餐，用微波炉打热两个半蒿子粑粑，加点南德料和龙虾酱吃掉。</p><p>上午的时间还是继续开发DS Player，虽然很困，都强忍着不睡。</p><p>中午没什么菜，只有一盘包菜之类和前日的梅菜扣肉，早餐吃得迟，没有胃口就没有吃了。一天废寝忘食的开发着DS Player，加入补全多个Fragment（ContainerFragment， HomePageDefaultGenreFragment， RadioFragment等等）修改FileSongListAdapter，在FileSongFragment中音乐列表中的音乐Cover有之前统一的R.drawable.icon_music图标转为各自的cover，还设置了圆角，好看多了。</p><p><img src="https://files.yaohub.com/dayone/2026/04/75d3b0bba0886f8555f2ab790624837e.png?oss_process=rt:fit" alt="75d3b0bba0886f8555f2ab790624837e.jpeg"></p><p>感觉还剩MediaBrowserHelper，Player播放器逻辑及相关Fragment就大致完成了。</p><p>下午4点多给妈妈打电话，说晚上我想吃面或疙瘩头，她说学后面租客奶奶做的疙瘩头，我不知道什么样子，随她做了。</p><p>晚上5点多下楼吃饭，疙瘩头简直就是一锅面糊，极其粘稠没有汤，上面还打了鸡蛋，哎，真是难吃，吃的不痛快。</p><p>晚上9点左右，又困又饿，睡觉了。</p>]]></content>
+    <content type="html"><![CDATA[<p>8点半左右醒来，梦到了弈，QQ动态相关元素，照片中她穿一袭裙子和她一位好友，好似在大学校园中的长椅上躺下，呈对称构图，又是打开QQ搜索。看看我的王者视频战报，到9点多。</p><p>洗漱下楼，早餐是煎饼配烤鸭蘸料。</p><p>吃完早餐有点困倦，躺在床上刷刷抖音短视频就睡着了，一觉就睡到下午1，2点，午饭自然就是错过了，当然早餐吃得迟，也不是很饿。下楼看看中午的饭菜，有炒土豆丝（上次才和妈妈说土豆丝要炒一顿吃一顿，结果这次还一下子炒了两盘，她说一盘放不下），土豆丝很油，闻着有没锅气，不香。还有一盘炒空心菜，洋葱炒鸡蛋等。看起来就没有胃口，不想吃了。</p><p>上楼，电脑自动更新了Windows系统，开始菜单有了新变化，有点Windows 10 应用磁贴的效果了。下午的时间基本上就是刷刷抖音，项目没什么进展，本来是准备修复SettingsFragment下自动下载缓存未记录的问题，但是有点头晕眼花，房间又闷热，电脑风扇呼呼扇着，就不想继续写了。躺在床上，吹着电风扇，刷着不用动脑筋的短视频。</p><p>下午4点半多和妈妈说晚上我想吃面，到5点多下楼一看，确实是面不错，但面中却混有韭菜末，简直想浆糊一样，一瞬间不想吃了，忍着饥饿上楼，有点腹胀，去上个大号厕所。由于晚上我和爸爸都没有吃那个韭菜面导致剩了一大锅面，妈妈和爸爸开始争吵起来，说我和爸爸都挑食一类。</p><p>最终妈妈买了5个小馒头，我在7点多下楼，就着南德料和一些空心菜和土豆丝吃下三个馒头。有点寡淡但还是吃饱了。</p><p>之后就是上楼准备洗洗睡了，躺在床上刷抖音，到12点多就是睡不着，打开投影仪，看看之前阿里云上存的一些影片，比如周杰伦的MV，之后又是手机抖音投屏听听音乐，折腾到凌晨3点多，沉沉睡去💤</p>]]></content>
     
     
       
@@ -287,40 +152,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-20</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-20/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-20/</id>
-    <published>2026-04-20T03:11:00.000Z</published>
-    <updated>2026-04-20T11:11:00.000Z</updated>
+    <title>今日小记-2026-05-26</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-26/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-26/</id>
+    <published>2026-05-26T10:47:35.000Z</published>
+    <updated>2026-05-26T18:47:35.000Z</updated>
     
-    <content type="html"><![CDATA[<p>一觉睡到了下午1点，洗漱下楼直接就是吃午饭了，中午的菜有昨日的梅菜扣肉，芹菜豆干等，盛一盘子饭夹点菜微波炉打热就吃下去。</p><p>下午的时间就是在刷视频和开发DS Player中度过。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-19</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-19/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-19/</id>
-    <published>2026-04-19T03:10:00.000Z</published>
-    <updated>2026-04-19T11:10:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>又到了星期天，由于昨晚睡的迟，准确来说应该是今天清晨6点多才睡，一觉醒来看时间已经是中午12点左右了。</p><p>中午的菜有梅菜扣肉，以及一两个炒菜。</p><p>下午继续开发DS Player，4点多牛牛和奶奶坐公交车回六安了。晚上我吃的是手擀切面，加点梅菜与肥肉，还有龙虾酱还是很好吃的，吃了两碗面，有点撑。</p><p>晚上依旧到凌晨1，2点才睡。</p>]]></content>
+    <content type="html"><![CDATA[<p>早上7:20被闹钟叫醒，还是困的又睡过去。睡到11点40几接到妈妈电话，问我中午去不去姥爷家吃饭，菜有烤鸭，卤牛肉等。可是他们已经在姥爷家了，我要骑电瓶车一个人去，我说算了吧。</p><p>随即洗漱下楼，锅里有早上的父母剩的排骨汤挂面，有点像泔水。我准备去超市买螺蛳粉和雪碧，顺便要去买包利群和中南海烟。想想还是算了。</p><p>打开电脑，中饭也没什么吃的，就开始打起了游戏，还是昨日的Switch 王国之泪-公主之花的Mod，打怪得到一个单发弓，去空岛打个方块人，兑换几个左纳乌能源，然后去时之神庙顶部扭蛋机获取到几个浮空石，接下来就是去拿塞尔达的天体服了，顺便把她的祭祀服也拿了。</p><p>下午1点左右妈妈回来，在此之前给她打个电话让其带冷冻水饺回来也没带，让做疙瘩汤又说忙。于是我一下午就是打游戏也没吃。去城堡地下准备打盖侬，结果这个Mod，打盖侬前有一堆怪，数值还贼高，打个半天发现四地区异变没做还要统一打完四个boss。我有点厌倦了。</p><p>晚上吃的是切面，还有妈妈下午带回来的烤鸭。吃的很香也撑。</p><p>吃完晚饭，不想打游戏了。去床上躺躺，刷会短视频。写个DayOne。</p><p>晚8点多，又是饿了，想让妈妈给我买馄饨吃，她不答应也不做疙瘩汤。今天是她的生日，这也就解释了为什么中午父母去姥爷家吃饭。</p><p>无奈晚上我想外出买馄饨吃顺便买烟。其实中午就想出去买的，最终把念头压下去，心情极差，拆开一瓶酒，下酒菜就是一些烤鸭，喝两三口就喝不下去了，难喝，发苦。倒掉酒，睡觉去了。</p>]]></content>
     
     
       
@@ -341,40 +179,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-18</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-18/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-18/</id>
-    <published>2026-04-17T16:22:19.000Z</published>
-    <updated>2026-04-18T00:22:19.000Z</updated>
+    <title>今日小记-2026-05-25</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-25/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-25/</id>
+    <published>2026-05-25T11:04:00.000Z</published>
+    <updated>2026-05-25T19:04:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>今天是星期六，昨天周五晚上爸爸把奶奶和牛牛从六安接回来了，早上9点多牛牛就到我房间把我给吵醒了。看看时间，就穿衣起身洗漱下楼。</p><p>早餐是两张韭菜煎饼，加点酱还是挺好吃的，还有一碗豆浆，可是不知是不是水放少了，豆浆成了豆渣糊。</p><p>吃完早餐，照例抽一支烟，肚子有点疼，去上个厕所。想到今天是周六，又下回来王者荣耀，用小号体验生日皮肤，用马超打了几把黄金局。没什么意思。</p><p>中午的菜倒是挺丰盛的，但是感觉都不太好吃，有芹菜豆干肉丝，西红柿炒鸡蛋，排骨汤等，菜都是奶奶做的，我不能接受的是西红柿炒鸡蛋里竟然放了韭菜。早上吃的迟，又比较多，中午没什么胃口，就不吃了，吃点牛牛的零食，薯条和妈妈从六安带回来的半个菠萝。</p><p>下午的时间还是继续开发DS Player。晚上依旧吃的是中午的菜。没什么好说的。</p><p>晚间12点左右关灯准备入睡，但就是睡不着，刷刷抖音和YouTube，然后就是听音乐，折腾到清晨5点多才入睡。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-17</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-17/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-17/</id>
-    <published>2026-04-17T09:39:16.000Z</published>
-    <updated>2026-05-01T00:42:55.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天熬了一天，晚上9点终于算早的入睡了，是在隔壁房间睡的，一觉睡到早上8点左右，被楼下大姨和爸爸的谈话声吵醒。拉拉扯扯菜。躺在床上刷刷抖音磨蹭到9点左右洗漱下楼。</p><p>妈妈昨天下午到六安去了，爸爸在忙，自然没有早餐吃了。小桌子上还有几块凤梨，把它们吃了。忍受不住饥饿，决定下挂面吃，调料有香辣龙虾酱，南德，鸡精。香料有花椒等。配有早上大姨送来的腌蒜头。</p><p>吃完早餐，看着王者马超教学视频抽一支烟。投入到工作中，迟迟进入不了状态，大早上的就有点犯困了，还有VPN的问题。索性就喝喝茶，下个云王者，打几把训练营，也都是玩的马超。</p><p>中午爸爸依然没炒什么菜，连饭都没煮，不知道吃什么的。上楼抽一支烟，继续刷视频，重新下回来王者，打一把马超排位，不会任何操作被打成0-8，没意思，气得我直接刚下回来又卸载了。</p><p>接下来的时间就是继续开发DS Player，补全DataSource Vo。</p><p>下午4点多打妈妈电话，问她什么时候回来，准备让她给我带点吃的，得知她已经在路上了，她说让我去车站接她就给我买点吃的。还得知爸爸刚才也去六安了。</p><p>我继续开发DS Player，到下午4点50左右点收到妈妈信息让我去接她，我就骑着电瓶车去接了，到5点十几才把她接回来，帮她看店，她去给我买鸡排饭吃。</p><p><img src="https://files.yaohub.com/dayone/2026/04/3b3644c35b44a815e3d6c1a8c7b771cd.jpeg?oss_process=rt:fit" alt="3b3644c35b44a815e3d6c1a8c7b771cd.jpeg"></p><p>吃完晚饭，还是继续开发DS Player，主要是逆向LoginViewModel中的handleUrl，queryAll，setEnvirorment中的setKnownAPIs，也算是规范化Api Enumerator中的knownApi.getPath。做了单元测试和TestFragment，成功获取SYNO.API.INFO接口信息，得到了所有API信息。</p><p>晚上主要就是晚上HomeActivity中的updateTitle，DrawerLayout点击事件等。10点左右爸爸把奶奶从六安接回来了。12点多写个DayOne，我也准备入睡了。</p>]]></content>
+    <content type="html"><![CDATA[<p>昨晚还是凌晨2，3点才睡，就一直睡到今天中午时分，洗漱下楼就直接是吃午饭，中午的菜有红烧肉，韭菜香干等，我就吃了一个早上的韭菜鸡蛋饼和三块红烧肉（肉块比较长），然后大姨娘到我家来了。</p><p>吃完午饭我就上楼，继续玩Switch游戏，昨日主线通关了潜水员戴夫，我就决定装塞尔达王国之泪公主之花的Mod，这个去年11月份就想玩，但是当时装完就是启动不了，又是换固件的。这次受到潜水员戴夫金手指的启发，我意识到是游戏版本问题，于是先安装了1.2.1版本的王国之泪更新包后再安装Mod，顺利进入游戏。</p><p><img src="https://files.yaohub.com/dayone/2026/05/c0d4a3230abe7e63397b9d357405230e.png?oss_process=rt:fit" alt="c0d4a3230abe7e63397b9d357405230e.jpeg"></p><p>新开一个存档打算重新玩一下，这个Mod加上去感觉焕然一新，也有合并帧率Mod和去雾，感觉流畅些，有很多新武器，数值很高，但是怪物血量更厚，打起来很刮痧，无奈又加了无敌的金手指。就这样玩到凌晨2点多，算是下了初始空岛，开了几处鸟望台和树根。</p><p>晚上的菜多了一个土豆丝，我最后在6点左右吃的，都是剩菜，土豆丝不脆了还很油，但架不住饿，吃了一大碗饭。</p><p>That’s it.</p>]]></content>
     
     
       
@@ -395,40 +206,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-16</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-16/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-16/</id>
-    <published>2026-04-15T16:27:00.000Z</published>
-    <updated>2026-04-16T00:27:00.000Z</updated>
+    <title>今日小记-2026-05-24</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-24/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-24/</id>
+    <published>2026-05-24T14:14:00.000Z</published>
+    <updated>2026-05-24T22:14:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>昨晚又是通宵，早上7点多洗漱下楼，锅里有挂面，平底锅有一张半饼，询问得知还是昨天早上的饼，我又困又饿，也不讲究了，狼吞虎咽吃完饼。</p><p>吃完早餐，抽一支烟，喝点咖啡，废寝忘食继续开发DS Player。</p><p>中午的菜有香辣龙虾，炒青菜，咸鸭蛋等。龙虾虽然放了炒龙虾料，但是炒的时候没放啤酒，汤汁很少，没怎么进味。现在我也不怎么喜欢吃龙虾了，嫌剥壳麻烦。吃饭中妈妈拿出了之前答应我买的菠萝，但实际却是凤梨，说是没有菠萝了。吃完饭吃几块，感觉凤梨没菠萝好吃，虽然甜点但还是菠萝酸点好吃。</p><p>下午还是开发DS Player，主要完成了FileSongFragment。</p><p>下晚妈妈去了六安，晚上我就吃大半个馍，沾着龙虾汤吃。</p><p>十分困，8点左右就上床准备睡觉了。刷抖音看“别断我一连胜”的马超直播。到9点多才沉沉睡去…😴</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-15</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-15/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-15/</id>
-    <published>2026-04-15T12:17:44.000Z</published>
-    <updated>2026-04-15T20:17:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>转眼半个月又过去了，这几天我的作息状态真是不好。</p><p>今天一觉醒来就是下午1点多了，没急着起来，躺在床上刷会抖音视频到2点多，洗漱下楼，楼下租客奶奶正在炸面叶。中午的菜有蒸肉丸，凉拌莴笋丝，青椒炒猪肝，炒青菜。我盛一碗饭，夹了两个肉丸，少许莴笋丝，用微波炉加热完就吃下去。</p><p>下午的时间就是继续开发DS Player，基本上创建完成了FileSongFragment以及相关依赖（FileSongListAdapter， StateManager）。这样一来一下午的时间就过去了。</p><p>下晚5点多，接近6点，抽半支烟，下楼吃晚饭。只有一个肉丸子了，吃的不是很痛快，</p><p>吃完晚饭，去后门阳台抽一支烟，喝点咖啡。之后打了两把王者，一赢一输，没什么意思，又是卸载了游戏。</p><p>现在写个DayOne，That’s it.</p>]]></content>
+    <content type="html"><![CDATA[<p>今天星期天，依旧一觉睡到下午时分。洗漱下楼，中午的菜有红烧牛肉烫粉丝，芹菜香干和韭菜炒香干一类。看到有早上剩的一个韭菜鸡蛋饼，我就用微波炉打热，加点粉丝和牛肉吃掉。</p><p>下午和晚上的时间基本上都是玩潜水员戴夫，总算主线通关了。</p><p>晚上吃的是疙瘩汤。在下午4点多，爸爸去送奶奶和牛牛他们到六安了。</p><p>That’s it.</p>]]></content>
     
     
       
@@ -449,40 +233,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-14</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-14/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-14/</id>
-    <published>2026-04-14T12:26:00.000Z</published>
-    <updated>2026-04-14T20:26:00.000Z</updated>
+    <title>今日小记-2026-05-23</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-23/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-23/</id>
+    <published>2026-05-23T05:31:00.000Z</published>
+    <updated>2026-05-23T13:31:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>昨晚通宵开发DS Player，一下干到了今天早上9点左右，主要是实现了HomePagePinsFragment，相关网络请求（比如初始化SyHttpClient，WebAPI中的doRequest， 获取主页PinsItem信息），封面图CoverUriLoader，成功实现HomePagePins视图，只是HomePagePins GridItem点击事件没有连贯。</p><p>早上9点多下楼，没看到有什么早餐可吃，父母应该是吃蛋炒饭的。我只好忍着饥饿上楼继续开发工作。有点废寝忘食的状态。</p><p>中午12点左右下楼吃饭，没什么菜，有卤菜（卤千张和干子），莴笋炒木耳，当时是又困又饿，精神恍惚，机械般的吃着饭。</p><p>吃完饭，喝着咖啡抽支烟，难受。下午4点多实在是困的熬不住了，在隔壁房间准备小躺一会，衣服也没脱就直接昏睡过去。</p><p>到晚上接近9点多醒，可能是妈妈把我喊醒的，晚上吃的是韭菜煎饼和小黄米粥，我吃了剩的一张半饼和一碗粥，吃的有点撑。</p><p>吃完饭，刷会视频，继续投入的工作中。到12点多才躺下休息，但还是睡不着，在床上躺着看短视频。就是这样。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
-    
-    
-    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今日小记-2026-04-13</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-13/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-13/</id>
-    <published>2026-04-13T12:37:00.000Z</published>
-    <updated>2026-04-13T20:37:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨晚凌晨十分下载了《三角洲行动》，打了一两个小时直到手机低电关机。到凌晨3，4点才入睡，一觉睡到中午12点左右，洗漱下楼吃饭，桌子上有早上妈妈盛起来的一大碗疙瘩汤，菜有买的凉菜（凉拌海带丝），以及莴笋炒木耳。我重新煮热疙瘩汤，配点海带丝吃完满满一大碗疙瘩汤。</p><p>吃完饭上楼，冲一壶咖啡，又打起了《三角洲行动》，没一会儿，李从荣到我家来，喊我去外面逛逛，我无法推脱，随他一起去了，从北门绕到东门，最后还是去了大润发超市，给我买了一瓶可乐。回来时又给我吃了一块面包。</p><p>从外面回来后就在房间喝着可乐，打了几把游戏。没看到妈妈，想必又是去姥爷家摘茶了。晕晕转转到下午4点多了。</p><p>晚上还是中午的饭菜还是中午的，我按部就班吃完一碗饭。吃完饭忍不住又下回来《王者荣耀》，在此过程中我一直在开发DS Player，游戏下好了也不想玩，就这样通宵开发DS Player。</p>]]></content>
+    <content type="html"><![CDATA[<p>今天是星期六，昨晚又是一个通宵，虽然晚上7，8点多早早的躺在隔壁床上准备睡觉，但刷刷抖音又是到12点多没有睡着，索性就不睡了，打开DS Player项目，修复上上次提交代码检查中的IDE报错，主要是UiHelpPreference.kt等中R.styleable引用，解决方式就是在attrs.xml 中加入declare-styleable字段。然后就是打了一个下半夜的游戏，依然是Switch《塞尔达-王国之泪》。主要内容就是通关之后去地底水下竞技场打五个人马拿到面具，然后跑跑图，强化武器之类的。</p><p>一直玩到早上7点多下楼，厨房中并没有任何早餐可吃，倒一杯水，上楼了，又困又饿。过一会儿又下楼一趟，桌子上多了两个包子和一个茶叶蛋，我吃了一个豆腐包和一个茶叶蛋，算作早餐，吃完就不饿了，真是舒坦。上楼，困意袭来，我不想再撑了，在隔壁房间沉沉睡去。</p><p>睡梦中听到奶奶的声音说我怎么光着身子（穿了一个裤衩）睡觉，我才意识到周末奶奶和牛牛回来了，而奶奶中午要睡午觉，我是在隔壁房间睡的，占了床。我只好起来，看看时间是下午1点左右。穿上衣服洗漱下楼，中午的菜有炒龙虾，炒苋菜，西红柿鸡蛋汤以及芹菜炒香干（本来我和妈妈说想吃三河小炒的，这个菜中的香干条都连在一起，一看就是糊任务，后来得知是奶奶炒的），没什么胃口，不想吃。</p><p>上楼打开Android Studio和DS Player项目，开始提交昨晚的代码差异改动，然后还有DataAccesser中use getColumnIndexOrThrow() for safer database access。</p><p>之后就是打游戏了，我想玩潜水员戴夫并且开启金手指，但是之前已安装的版本没有更新，市面上也没有这个版本的金手指，于是我下载UPD v1.0.511更新包，sudachi死活安不上，猜测是固件问题，又是更新固件，（使用百度网盘下载固件的功夫就是玩塞尔达）又是安装Ryujinx，使用22.0.0固件可以安上但是打开也是报错闪退了。最后还是回归原来的本体，下载1.0.377版本和对应的金手指，终于可以启动，且金手指有效了。</p><p>下午5点多，下楼吃完饭，下午我和妈妈说想吃面条，她就搞了刀削面（虽然样子一点都不是），没怎么吃饱。</p><p>吃完晚饭之后就是玩着潜水员戴夫到凌晨2点多，睡觉了。</p>]]></content>
     
     
       
@@ -503,13 +260,13 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-12</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-12/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-12/</id>
-    <published>2026-04-12T12:23:08.000Z</published>
-    <updated>2026-04-12T20:23:08.000Z</updated>
+    <title>今日小记-2026-05-22</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-22/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-22/</id>
+    <published>2026-05-22T05:59:18.000Z</published>
+    <updated>2026-05-22T13:59:18.000Z</updated>
     
-    <content type="html"><![CDATA[<p>今天星期天，一觉睡到上午11点多。</p><p>中午的菜有芹菜肉丝炒木耳，炒小青菜，莴笋炒木耳和蒸猪耳。我到吃饭已经是12点多了。</p><p>下午妈妈去了姥爷家炸猪油和摘茶。我继续开发DS Player，打通PinManager和PinAdapter，补全HomePagePinsFragment。接下来就是准备实现CacheManager和网络请求方面了。</p><p>晚上已经是中午的菜，胃口挺好，吃了一碗半。吃完饭抽支烟刷会视频，有点头晕和困。下楼看到妈妈正在吃饭，买了一袋香蕉，我吃了两根。</p><p>晚上8点多，早早脱掉衣服准备睡觉了。</p>]]></content>
+    <content type="html"><![CDATA[<p>昨晚12点就睡了，但还是直到快要到中午11点左右醒来，做了几个梦，好像是关于倪小璐的，醒来后我就打开iPad相册，看看2022年9月的那张照片，她捧着一本《平凡的世界》，站在窗前，身穿蓝印花裙子，眼眸看着书……</p><p><img src="https://files.yaohub.com/dayone/2026/05/9b9209ef873ed015c13d2375d9de30e9.jpeg?oss_process=rt:fit" alt="9b9209ef873ed015c13d2375d9de30e9.jpeg"></p><p>醒来后没急着下楼，而是打开iPad Book应用看看Kotlin教程和《平凡的世界》，刷刷抖音。之后洗漱下楼，中午的菜有韭菜炒香干，西红柿鸡蛋汤等，妈妈正在吃饭，看我下来了，又去炒了一锅酸辣土豆丝。我和妈妈争论韭菜炒香干中的香干不是袋装的，她和我打赌，我输了中午就是由我来洗碗，结果确实是袋装香干。土豆丝是现炒的，很有锅气，吃的很香。</p><p>吃完中饭花了一个小时左右写了前两日的DayOne到下午接近2点，期间测试Emby外网连接观看视频，最后结果还是连接DS File，用VLC外部播放器播放视频加载最流畅，拖动体验最丝滑。然后下午的时间就是刷刷抖音，一晃神就到晚上吃晚饭的时间了。</p><p>晚上依旧是中午的菜，只是土豆丝没有中午的那么脆了，依旧吃的很撑。</p><p>吃完晚饭还是没有干什么事，就是刷抖音，基本上前半夜的时间都被其占据，刷到凌晨12点左右，还是睡不着，索性不睡了。</p>]]></content>
     
     
       
@@ -530,13 +287,256 @@
   </entry>
   
   <entry>
-    <title>今日小记-2026-04-11</title>
-    <link href="https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-11/"/>
-    <id>https://hexo.yaohub.com/2026/04/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-04-11/</id>
-    <published>2026-04-11T15:59:29.000Z</published>
-    <updated>2026-04-11T23:59:29.000Z</updated>
+    <title>今日小记-2026-05-21</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-21/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-21/</id>
+    <published>2026-05-21T04:52:00.000Z</published>
+    <updated>2026-05-21T12:52:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>早上被7点闹钟叫醒，想再睡1个小时，定个8点闹钟，8点再次被闹钟叫醒，又睡过去，到9点10几分才醒，从梦中醒来。</p><p>洗漱下楼冰一瓶啤酒，煎个鸡蛋煮方便面吃。到10点左右才喝着啤酒吃上饭。</p><p>马不停蹄继续开发DS Player，主要是HomePagePinsFragment。</p><p>中午的菜有青椒肉丝和莴笋炒木耳。不饿，忙到下午2点多，抽一支烟，有点饿，但还是没有吃。</p><p>又是忙一下午，晚上多了一锅紫菜汤，到6点左右才最后吃完饭，很饿，吃了一碗半，很香。</p><p>忙到晚上11点多。</p>]]></content>
+    <content type="html"><![CDATA[<p>凌晨4点半左右从六安书房床上醒来，翻身拿起手机看个时间，然后又是接着刷起了抖音，看看mac mini M4和mac mini M2 Pro的价格。直到接近6点，手机还有1%的电，我就关上手机，躺在床上，等着天色大亮，等待起床。</p><p>到6点20左右，奶奶打开书房的门，我也就起来了，给手机充个电，去上个厕所，洗漱。早餐是奶奶煮的馄饨，一个面包，以及一小杯昨晚外卖送来的古茗“云岭茉莉”奶茶，挺好喝，冰冰凉凉的，很清新的茉莉花香味（虽然很可能是香精）。</p><p>到7点30左右，父母和牛牛他们吃完早饭，我们就准备回去了，临走时奶奶给我星球杯零食。妈妈和牛牛坐电梯到1楼送他上学，我和爸爸直接去-2楼上车了。然后就是把妈妈接上回家了。一路上我依旧是看看风景听听音乐，还喝喝奶茶。</p><p>到早上8点半多到家，回到家我就坐在床上刷刷抖音，觉得有点困了，躺在床上，小咪一会。然后就开始处理昨晚定的TODO，解决内网穿透的NAS Video Station服务无法加载视频。经过测试我发现只有iOS/iPadOS移动端无法加载，无论是网页版还是DS Video，ChatGPT给出的解释是CloudFlare Tunnel 代理与视频解码问题。于是乎只好退而求其次，使用DS File用外部播放器（Infuse，VLC）播放视频，或直接使用Emby，接下来我就开始登录Emby Server添加Detective Conan TV和Home Video资源库，穿透Emby服务，同样可以播放。</p><p>之后就是给Emby配置代理，重新刮削修复一些之前错误影片NFO信息。搞到中午12点40多，并不觉得饿，不怎么想吃，但还是下去了。中午的菜有龙虾（我真是吃够了，一个都没有吃），炒包菜，昨日的豌豆香菇等，吃的一点都不香。</p><p>下午的时间我基本上都是在打王者，昨晚看到活动说5月20日到24日都是英雄和部分皮肤限免，等我安装上游戏才发现只是部分情侣英雄和皮肤，还好之前已经有关羽英雄了，但是没有马超，没办法，用关羽英雄，摩托车皮肤打了一下午，基本上把把金牌。</p><p>晚上吃的是刀削面，本来和妈妈说是要擀切面的，这个刀削面简直就是面片，不是月牙形状的，不过总比疙瘩头好吃，筋道多了。吃完晚饭继续打起了游戏，到深夜11点左右，从黄金段位打到了钻石四，越往后机制越明显，这是小号的唯一结局，没有意思，又是卸载了。到12点左右，睡觉了。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-20</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-20/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-20/</id>
+    <published>2026-05-20T09:34:09.000Z</published>
+    <updated>2026-05-20T17:34:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>又是一年情人节… 昨晚一夜未睡，基本上都是玩《塞尔达-王国之泪》，完成魂之贤者任务，克洛格森林任务，取回大师剑，然后去打盖侬，直接就通关了。这样就冲昨晚11点多晚到了上午9点多接近10点。</p><p>洗漱下楼，妈妈正在烧菜，是红烧鱼，她和我说马上和爸爸要去六安，问我去不去，我想先吃早饭，她就说你去马上在路上给我买两个包子吃。我就决定也去了。等我换好鞋，带上手机及充电线和耳机下楼准备出发时，爸爸又不打算去了，说我去他就不去。我十分气愤，又饿又困，上楼睡觉去了。</p><p>一觉睡到下午3点左右，下楼吃个午饭，中午的菜有红烧鱼，豌豆炒香菇肉丁等。我盛一碗饭，铺上一层菜，加点龙虾酱，用微波炉打热就吃下去了，饿极了，吃的很香。</p><p>到5点多，妈妈又喊我去六安，这一次是真的去了，一路上我就是听听歌，看看风景，没说几句话。到吾悦广场那里，爸爸带妈妈去买内衣了。我坐在车上，看看“王牌关羽”的直播。看了一个小时，父母终于回来了。到7点多才到六安小区。来到房间先吃一个面包，然后就点了一个外卖吃，是我好久未吃的隆江猪脚饭，到8点40左右才到，超时20多分钟，平台给我补偿一个16元的红包（隆江猪脚饭的价格）。</p><p>终于吃上了饭，我很饿，吃的狼吞虎咽，但是感觉没之前好吃，这是一个烤鸭和猪脚双拼的，感觉都是鸭肉。吃的很撑。吃完后，看到平台给我补偿的红包，有效期直到今天，给妈妈看，我不想占那个便宜，她怂恿我再买一份，最终我决定买一份古茗的“云岭茉莉”奶茶，原价22，实际只需付了1分钱。到9点40多送来了，我吃的很撑，让妈妈把其放到冰箱，明早喝。之后就去睡觉了。</p><p><img src="https://files.yaohub.com/dayone/2026/05/6e19d2afa66a5ffdbc6ac1d5556f97c7.jpeg?oss_process=rt:fit" alt="6e19d2afa66a5ffdbc6ac1d5556f97c7.jpeg"></p><p>躺在床上刷刷抖音，到接近12点多才入睡。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-19</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-19/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-19/</id>
+    <published>2026-05-19T08:29:21.000Z</published>
+    <updated>2026-05-19T16:29:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>早上7点05分被闹钟叫醒，正在梦境中被打断，有点怅然若失。醒来上个厕所，躺在床上拿起手机刷刷抖音。有点困了不想起床，闭上眼睛又睡过去。又是睡到8点40几分。是应该起来了，我起身到外侧房间透透气，看看光。结果又是倒在床上，睡了过去，这倒好一觉睡到下午1点多了，期间又做了另外一个梦。</p><p>洗漱下楼，看看桌子上的菜，一锅红烧牛肉烫粉丝和金针菇，一盘炒苋菜，昨晚的蒸猪耳朵和洋葱炒肉丝。没有任何食欲（这几天都是炒苋菜，红烧牛肉又是重油重盐），随即上楼，肚子有点胀，这几天看样子是有点积食了，去上个大号厕所。之后冲了一壶咖啡喝喝，到下午2点40几分，饿的实在扛不住，下楼盛一碗饭，加点菜和南德调料，用微波炉打热吃掉，只能是饱腹，吃的不香。</p><p>吃完上楼到4点左右了，喝喝咖啡，写个DayOne，到4点40了。</p><p>That’s it.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-18</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-18/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-18/</id>
+    <published>2026-05-18T08:08:00.000Z</published>
+    <updated>2026-05-18T16:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨晚12点左右准时睡觉，可还是一觉睡到了今天上午接近10点，是妈妈到我房间来将我喊醒的，问我去不去姥爷家吃午饭，她在家烧了酸菜鱼说带到那里一起吃，我不太想吃酸菜鱼也不太想去，就让她留点菜在家，中午我自己下面吃。</p><p>上午10点半左右洗漱下楼，桌子上有早餐买的两个锅贴（可能是爸爸带回来的），一个是肉馅的，一个是韭菜粉丝的。吃完后尝尝酸菜鱼中的酸菜，不怎么好吃，只有酸味而没有麻味。中午也不想下面条吃了。</p><p>随即上楼，唤醒电脑，重新获取一个VPN订阅，准备申请Genimi API for Android Studio，结果还是被拦截，我想应该是Google账号的问题了。有点饿，准备1点左右给妈妈打个电话让她带一包冷冻饺子回来我煮着吃。</p><p>然而刚到12点，我就听到楼下她的声音，她回来了，看样子饺子也吃不成了。最后她给我下一锅疙瘩汤吃，我又加了点酸菜鱼的酸菜，龙虾酱（油），从姥爷家带回来的一个腌大蒜头。最后成品比较重口味，重盐重油。是端到楼上房间吃的，到下午1点多才吃完午饭。</p><p>下午的时间依旧是没干什么事，浑浑噩噩的，在床上躺着一下午就过去了。</p><p>晚上的菜有西红柿炒鸡蛋，青椒炒土豆片，姥爷家带回来的烟熏猪耳朵。没什么食欲，我想吃水饺，买的馄饨，鸡排饭或过桥米线，方便面。可是妈妈根本就不答应给我买，发了不小脾气。躺在床上看马超直播，最后还是到晚上9点多，妈妈给我炒了一份蛋炒饭，难吃！</p><p>依旧是12点多睡觉了。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-17</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-17/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-17/</id>
+    <published>2026-05-17T08:01:14.000Z</published>
+    <updated>2026-05-17T16:01:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是星期天，昨晚睡迟了，直到早上接近10点多才醒。醒来没急着下去，打开平板看看抖音短视频，然后还打开了Delta，玩了一会NDS《刺客信条2》。到11点多才洗漱下楼。</p><p>下楼来到厨房，看到妈妈正在处理泥鳅，血淋淋的有点恶心。案板上还有切好的海带，听妈妈说准备凉拌。我觉得中午也没有我想吃的菜了。把妈妈留的早餐豌豆饼吃了，加点龙虾酱，吃掉3个豌豆饼，算作早饭也算作午饭。</p><p>吃完上楼，抽一支烟，刷刷抖音，打一把游戏。到12点多有点饿了，又下楼，父母和牛牛正在吃午饭。桌子上有一个大姨买来的临榆炸鸡腿，又坐下吃了三个豌豆饼（依旧是加酱）和一个炸鸡腿（很大一个鸡腿，孜然和甜面酱味的）。</p><p>房间还是闷热，不想做些什么事，下午的时间就是刷刷短视频，又下回来王者，打打游戏。下午1点多，让牛牛给我买个大布丁冰棒吃吃，看一集柯南《快递失窃案频发》。然后就还是打游戏到下午3点多。之后就是写个DayOne，补齐这几天的。</p><p>下午4点多爸爸送牛牛去六安了，晚上5点我和妈妈就早早吃完饭了，我的晚餐是疙瘩汤，依旧是加龙虾酱，有点吃腻了。</p><p>晚上刷刷抖音看看直播到12点多睡觉了。</p><p>That’s it.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-16</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-16/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-16/</id>
+    <published>2026-05-16T07:26:00.000Z</published>
+    <updated>2026-05-16T15:26:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天又是一个新的周六，9点左右醒来，按部就班洗漱下楼，早餐是豆浆和爸爸买的馅饼，我的是肉馅的，很好。</p><p>上午还是没干什么事，想到之前的SendyDynamic项目是SwiftUI开发的，就打开iMac，项目Target添加Mac Catalyst，重新构建运行，成功在mac上运行SendyDynamic。然后就是打开《塞尔达-王国之泪》，玩了一会儿，然后就是看看抖音短视频，房间很是闷热。</p><p>中午的菜有肉丸子，苋菜以及西红柿鸡蛋汤，前两个菜与昨日无异，没什么有锅气的炒菜，吃的一点也不香。</p><p>下午不知怎么的，不想干什么事，就是打游戏，下载个《空洞骑士-丝之歌》，Switch模拟器就是打不开。与此同时还重新安装上Steam和《地铁-最后的曙光》，大半下午就是打New mission, 一些小任务，之前通关了主线还没发现这个。玩了几个小时，晕3D的厉害，一阵想吐。下午5点多，牛牛一个人从六安回来了。晚上我是最后一个吃的，没剩下什么菜了，只有小半个肉丸子和一些苋菜，饭里加点龙虾酱，吃的不是很香。</p><p>吃完晚饭继续打《地铁》，实在忍受不住晕3D，其中一个任务打的云里雾里，不想玩了，又是直接卸载了。之后就是刷刷抖音，打打王者，都是练的马超。感觉有点起色。</p><p>到晚上11点多接近零点，又打开一个小号体验马超皮肤打到凌晨1点左右，沉沉睡去……</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-15</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-15/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-15/</id>
+    <published>2026-05-15T07:46:00.000Z</published>
+    <updated>2026-05-15T15:46:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨晚睡得比较早，今天清晨还没到6点就醒了，7点多洗漱下楼，早餐是妈妈做的油炸豌豆饼，加点龙虾酱还是很好吃的，饼有点韧性。其实还有小黄米粥但是我当时并没有看见就没有吃。吃完早饭到后门阳台抽一支烟，阳光很温和……</p><p>上午着手把最近几日的DS Player的开发修改分成几个commit，提交并push，通过ChatGPT的推荐安装上Gitbutler，体验不是很好，还默认新增gitbutler/workspace等分支，我还是按照老方法描述修改差异，提供git status，让ChatGPT帮我生成commit message，然后我手动add，commit和push的。</p><p>中午的菜有一大盘的芹菜香干炒肉丝和胡萝卜炒肉片，还有一锅的排骨汤。炒菜虽然锅气十足，闻起来很香，但是缺点了辣味，吃的也就没那么香了。</p><p>下午的时间没干什么事，再次拾起了Switch，打起了《P5R》，往后推进了10几天，这样一下午的时间就过去了。</p><p>晚上早早到隔壁房间躺下准备睡觉，看看直播，That’s it.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-14</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-14/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-14/</id>
+    <published>2026-05-13T22:45:00.000Z</published>
+    <updated>2026-05-14T06:45:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近作息又有点懈怠，一觉睡到9点40几分还是被妈妈喊醒的。</p><p>起床洗漱下楼，早餐是早上剩的一碗疙瘩汤，里面竟然放了排骨汤，重新加热一下，加点南德调味料和龙虾酱就吃下去，早餐就完事了。</p><p>上午也没干什么事，看看DS Player项目，打一把游戏就到中午了。</p><p>中午的菜有土豆丝（比较油，不够脆），蒸面筋肉丸子（肉是妈妈在家自己灌的，非常咸），还有一盘炒苋菜等。</p><p>吃完午饭上楼抽一支烟，房间闷热，我到隔壁房间吹着风扇，刷着抖音短视频。到两点左右又是困了，躺在床上睡了接近两个小时。</p><p>晚上的菜与中午无异，不过我加了点龙虾酱，很香很下饭。</p><p>吃完晚饭，继续开发DS Player项目，修复PlayerChooserActivity中注入的classProvider为null的问题，原因一方面是ActivityBindingMandule没有加入PlayerChooserActivity，一方面是其继承的TestRendererActivity没有继承DaggerAppCompactActivity。</p><p>忙完这些到晚上8点，想调整作息，早早脱了衣服到隔壁房间睡觉了，躺在床上看看“别断我一连胜”的马超直播到10点左右，睡觉了。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-13</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-13/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-13/</id>
+    <published>2026-05-13T12:05:53.000Z</published>
+    <updated>2026-05-13T20:05:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>五月快要过半，天气炎热起来。昨天晚上我们一家来到了六安，到房子那已经是9点多了，我有点饿，花10几元点了一份外卖，是老乡鸡的卤肉盖浇饭和一个蒸蛋，吃的很撑。吃完饭在躺椅上躺一会，还是决定在书房睡觉，把杯子铺在地板上就睡觉了，有点热又有点渴，打开了窗户，喝一点牛奶。刷刷手机到12点左右就入睡了。</p><p>一觉睡到清晨5点左右，迷迷糊糊听到奶奶的声音，还是又热又渴，还有点困，索性起来倒水喝了，但是奶奶正在烧水，没有水喝。于是就去洗漱了。</p><p>昨晚吃的太撑，早上起来没什么胃口，奶奶说给我搞疙瘩汤吃我也拒绝了，吃了两个肉松小面包算作早饭。</p><p>早上8点左右从六安出发回来，一路上看看风景，听听歌，闭目养神。9点多就回到家了。抽一支烟，继续开始开发DS Player，修复PlayerChooserActivity中classProvider为null的问题，但是一时半会还修不好。</p><p>中午的菜有买的酸菜鱼（妈妈又自己加了点千张煮）和一盘胡萝卜炒肉片，没什么辣味，就加点龙虾酱的辣油，吃一盘饭。</p><p>下午房间闷热，笔记本电脑发热严重，我碰都不想碰，没干什么事情，就是更新个Windows系统，下回来王者，打打游戏，刷刷视频。到下午2点左右，又热又困，在隔壁房间睡了不到1个小时，醒来感觉精神焕发，之前我控制不住一下睡几个小时，结果反而还越睡越困，搞乱了作息。（这次也不知道怎么回事，睡了不到一个小时就行了）。醒来喝喝茶，打一把游戏。</p><p>晚上我吃的是疙瘩汤，本来和妈妈说是做面条吃的，不过她忙，就给我一个人做了疙瘩汤，调料就是南德和龙虾酱，饿了，吃的很香，吃完一大锅疙瘩汤又吃了半盘饭。</p><p>结束晚饭就是打开电脑，再次调整虚拟内存（之前设置系统自动管理所有分区盘方案还是不行，一下子全分到C盘了），然后就是打开NAS，重新安装个NVIDIA显卡驱动。现在写个DayOne，That’s it.</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Life" scheme="https://hexo.yaohub.com/categories/Life/"/>
+    
+    
+    <category term="Diary" scheme="https://hexo.yaohub.com/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今日小记-2026-05-12</title>
+    <link href="https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-12/"/>
+    <id>https://hexo.yaohub.com/2026/05/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-05-12/</id>
+    <published>2026-05-12T05:14:17.000Z</published>
+    <updated>2026-06-02T07:01:59.989Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨晚一晚没睡，我总结出作息规律了：在正常作息的最后一晚，可能沉迷于做某事（比如专注开发某一项目模块或打游戏），导致睡的比平时晚1，2个小时，第二天早上就迟起来一会，然后导致当天晚上又迟睡一会，积少成多，慢慢晚间就推迟到零点后了，错过睡眠窗口就不容易入睡了，越想睡越睡不着。索性通宵了。</p><p>昨晚就是听听歌想着换电脑的事，还计划着今天中午找爸爸谈话，想着谈话内容，还创建个备忘录：</p><div class="note note-info">            <p>电脑发热 烫不烫引出话题，陈述定位轻薄商务本，只能轻办公的事实，无法适应当前天气炎热，满足多IDE，虚拟机持续运行的要求。说明NAS当前用途，展示网页，内网穿透，CloudFlare，yaohub.com域名。<br>概述最近工作，展示当前反编译还原DS Player项目，以及与原版差异。加密混淆，Smali汇编 引出AI帮我翻译和转化 ChatGPT回答展示。展示之前AI生图。询问是否接触国内的豆包或DeepSeek。展示短信，阿里云模型欠费。观看抖音视频说明硬件需要。<br>展示github commit记录，以及AI生成commit message引出网络环境，代理，包括外网和公网IP。展示TODO List。我一整天腰酸背痛的，又伤脑筋，比你还累。<br>展示其他App，iOS与iPadOS App，借此引出iPhone，三四年了，外观还这么好看，握持顺手，操作流畅。要不考虑电池老化，正常再用个三年没有问题。给出我之前买的iPhone5s和汪东iPhone6例子，展示刷机越狱图片，说明刷抖音，Tiktok不成问题。只是目前硬盘和运存跟不上，引出当前国内App臃肿不堪，各种无用功能全塞于一体的问题，列出论证，比如抖音塞入商城，微信塞入视频号，支付宝和淘宝同样塞入短视频模块，电脑端同样如此，比如迅雷塞入浏览器引擎。而国际版却精简许多。<br>还有Apple生态，短信，电话，展示多设备图片粘贴复制，引出华为小米生态。<br>打开电脑配置单 说明配置情况， 想mac mini与中配Windows电脑共存，介绍配置。<br>说明当前Windows 7处境，32bit cpu。说明两个共存的目的，理工科和兼容性需要Windows，生态和XCode以及AI需要mac<br>陈述Apple 硬件软件系统一体，华为遥遥领先，芯片差异，产品定位（三折叠，折叠电脑）， XCode需要， VMWare虚拟机黑苹果可以开发但卡顿，显存问题。展示之前开发图片。<br>诺亚方舟 苹果VR眼睛， 脑机接口，生物电信号， 模拟感官， 5D电影<br>个人开发者 积累经验。孔乙己 宁做鸡头，不做凤尾 不上不下的。 进厂，打工，做生意，学手艺想都不用想。</p>          </div><p>想过去和未来的事，有幻想。再加上饥饿，就是睡不着。清晨4点打开窗户，有点凉爽，披上外套抽一支烟，然后就开始打起了游戏。</p><p>到早晨7点洗漱下楼，早餐是青菜疙瘩头，放了一点龙虾酱，这次酱是麻辣的，我还全放的是辣油，疙瘩头又烫又辣，吃的我满头大汗，嘴都有点辣肿了。</p><p>吃完早餐想洗个澡，但是早晨太阳能没水，我又很困，泡一杯茶先睡一会在说。</p><p>断断续续睡几个小时到上午10点多，起来洗个澡。就到11点左右吃午饭了，中午的菜有宫保鸡丁和红烧鱼，昨日的龙虾，不下饭，吃的不是很香。</p><p>吃完饭又有点困了，抽一支烟，在隔壁房间刷刷抖音，打几把游戏，写个DayOne。</p><p>下午的时间就是继续开发DS Player，着手DisplayPreferenceActivity实现，加上一些SettingsFragment，算是部分完成了设置页面模块。</p><p>忙活到晚上接近6点才吃晚饭，最后吃的，没什么饭菜了，没有吃饱。晚上7点多和父母去了六安，在此之前拾起之前NAS上的星空组网，实现家中设备的内网穿透与互联。</p><p>在去六安的一路上，打开车窗，偶有花香，凉风袭袭，带着耳机听着歌，惬意极了……</p>]]></content>
     
     
       
