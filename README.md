@@ -66,6 +66,10 @@ GitHub Actions deploys the site to GitHub Pages
 
 This repository exists only for deployment purposes.
 
+⭐ After June 30, 2026, embedded images within articles will no longer be copied to the source/images/DayOne-Export directory in the Hexo project. As a result, no new images will be generated under images/DayOne-Export during the static asset build process.
+
+Instead, all newly added images are hosted in an S3 bucket. Although this hosting approach has been in use since April 2025 (covering content published from January 2025 onward), this change formally deprecates images/DayOne-Export as the destination for newly generated assets. Any images placed in images/DayOne-Export after this date will not be referenced.
+
 🛠 Built With
 Hexo – Static site generator
 
