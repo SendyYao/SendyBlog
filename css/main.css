@@ -1,4 +1,4 @@
-.anchorjs-link {
+﻿.anchorjs-link {
   text-decoration: none !important;
   transition: opacity 0.2s ease-in-out;
 }
@@ -782,7 +782,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body p:not(#Song-Name):not(#Song-Artist) {
+body p:not(#Song-Name):not(#Song-Artist):not(ol > li > p) {
   text-indent: 2em;
 }
 body .note p:not(#Song-Name):not(#Song-Artist) {
