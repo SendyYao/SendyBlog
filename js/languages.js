@@ -446,7 +446,7 @@ var calLanguages = {
     dayOfWeekShort: [
       '日', '一', '二', '三', '四', '五', '六'
     ],
-    dayOfWeek: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+    dayOfWeek: ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
   },
   'zh-CN': { //Simplified Chinese (简体中文)
     months: [
@@ -455,7 +455,7 @@ var calLanguages = {
     dayOfWeekShort: [
       '日', '一', '二', '三', '四', '五', '六'
     ],
-    dayOfWeek: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+    dayOfWeek: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
     postsMonthTip: '查看yyyy年MM月的文章',
     titleFormat: 'yyyy年MM月'
   },
