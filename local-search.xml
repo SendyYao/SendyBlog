@@ -4,6 +4,756 @@
   
   
   <entry>
+    <title>九月末记-2026-09-30</title>
+    <link href="/2026/09/%E4%B9%9D%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-09-30/"/>
+    <url>/2026/09/%E4%B9%9D%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-09-30/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚通宵，备份D盘数据分区数据到外接机械硬盘直到凌晨2点多。之后就是重启，把外接机械硬盘的H分区盘符改为D,测试软件以及虚拟机，结果Kali虚拟机启动成功，macOS Sonoma启动失败，我想应该是机械硬盘限制，NAS虚拟机也启动失败，引导过后显示LZMA data is corrupt。多次尝试无果。继续重启，计划把D盘数据全部复制到H盘，然后格式化D盘。传输备份数据过程中在DiskGenius发现D盘根文件夹下有一个bootTel.dat文件，在网上查一下才得知是硬盘分区检查报告相关文件，尝试强制删除，然后重启电脑，没有再次跳过硬盘分区检查了，这次恢复竟然正常了，重新开机，谢天谢地，D盘竟然恢复访问了。继续重新测试软件和虚拟机。软件什么都和之前一样，但是不知道为什么NAS虚拟机依然是引导后启动LZMA data is corrupt. 按照网上教程需要使用U盘启动修复。但在网上只找到.img 制作U盘启动盘的。没有办法找到当时创建和安装NAS虚拟机的懒人包文件，经过测试我想应该还是引导虚拟硬盘的问题。</p><p>之后又想把之前导出失败的Ubuntu22.04备份到外接硬盘，还是复制失败（其实之前在从D盘复制到C盘也失败，是这个文件问题）</p><p><img src="https://files.yaohub.com/dayone/2026/09/9c82722a8abd132166d112826a004678.jpeg?oss_process=rt:fit" alt="9c82722a8abd132166d112826a004678.jpeg"></p><p>索性直接重装NAS了，在PC和移动硬盘上都有备份。通过UFS Data Recovery导出文件并重新导入。首先就是Audio Station，把之前的所有音乐导入进去。正常恢复DS Audio。</p><p>一下干到上午7点多，洗漱下楼，锅里还有一锅面条，我一看就没有任何食欲。其中还是加入了米粒，屡教不改。妈妈告诉我前天从六安回来带回来面片。我也就自己下个面片吃。又困又饿。没多加什么调味料就吃下了。一碗面片吃的倒是挺舒坦。</p><p>吃完上楼到上午9点多困的实在坚持不下去去睡觉了。这一觉睡的还挺算舒坦。一觉睡到下午3点多。醒来感觉恍如隔世啊。阴雨天气，一觉睡醒到下午，手机上一个消息都没有，一种孤独感挥之不去。</p><p>醒来下楼想吃午饭，妈妈到后面来告诉我上午她忙着在，中午没做什么菜，就一个炒豇豆。问我晚上吃什么，选买的酸菜鱼还是做鸡蛋皮切面吃。我就选切面吃了。</p><p>回到楼上之后就是继续重装NAS，配置Docker，代理下载镜像，依次是cloudflared、codercom/coder-server、minio和imgproxy。值得一说的是minio在Docker Hub上已经没有官方景象了，取而代之的是hitname/minio。我只好在景象站点上找minio/minio镜像，后面的版本和环境变量问题自然不必多说。还有就是imgproxy忘了添加minio存储桶密钥导致source image can’t reachable.</p><p>晚上吃的就是吃了鸡蛋皮切面，饿了吃的很香。一大碗面吃的倒是挺撑。</p><p>晚上的接下来时间就是WebStation，从原vmdk文件中导出MariaDB10数据库文件（找了挺长时间）又花了好长时间配置数据库文件权限，不至于导致套件错误。终于成功恢复好导出导入wordpress，mediawiki，typecho数据库数据。然后就是安装Wordpress，Mediawiki套件，配置WebStation nginx虚拟站点。</p><p>忙活到午夜12点之后，睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-29</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-29/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-29/</url>
+    
+    <content type="html"><![CDATA[<p>又是一觉睡到中午时分，洗漱下楼就直接吃午饭了，中午的菜有麻婆豆腐，炒茭瓜丝（配有辣椒丝），吃的挺香，不过麻婆豆腐还是妈妈之前的炒法，稀碎还有点咸。</p><p>下午继续忙着折腾Arch Linux，配置nginx，php，部分实现web.yaohub.com网页。比如api（hot.php），mungeryang-blog等静态网页。想打开PC MySQL实现导入数据，实现wordpress站点。</p><p>下午5点多下楼，拿两个橘子吃后上楼。妈妈喊我告诉我爸爸买的硬盘到了。花了2个小时左右把虚拟机数据全部备份复制到机械硬盘（Ubuntu22.04导不出来，bad compress format）。到深夜10点多才发觉晚上没吃饭，又下楼微波炉大热一盘饭吃掉。之后还是备份数据直到凌晨。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-28</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-28/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-28/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚只有我一个人在家，想洗个澡早点睡得，但是Arch Linux的Hyprland及其各种组件的配置美化实在让我着迷，一不留声就干到凌晨3点多，补齐写完了这几天的DayOne,之后还是睡不着，刷着抖音到天亮了。又是一个通宵。</p><p>6点多窗外街道上已经响起了来来往往学生电瓶车的声音，时间来到6点半我也就穿衣起身洗漱下楼做早饭吃。煮了一锅咸挂面，直接是清水煮面，然后在碗中倒入辣椒面、花椒、南德调味料以及椒盐和黑胡椒粉，之后滚烫的热油浇在上面，做成辣椒油。面煮出来有点多了，整体口味比较咸和油腻（我还特地换了一次煮面的水，可能是辣椒油调料咸了），吃掉四分之三了，撑得实在吃不下去。</p><p>吃完早饭，泡一杯浓茶上楼。喝着茶，看会抖音短视频。凌晨才定下的Todo，就直接完成吧，给Arch Linux安装了yazi,使能够在终端选择文件编辑和预览。之后又把NAS上的GlaDOSAutoCheckIn复制到Arch上，编辑个User-Agent（出现ua不统一导致被检测出自动签到了），<a href="http://xn--GPTSendEmail-lx4ssn39b091acmer6f8nb079a5y8aca999trswm66d922a.py">然后又是在GPT的帮助下帮我写了个SendEmail.py</a> 用以报告运行结果，之后就是配置计划任务，使用systemd Timer。</p><p>做完以上这些，时间已经来到上午10点多了，父母在9点多就回来了。我的困意达到顶峰，浓茶喝的我越喝越渴。脱光衣服去睡觉了。不过在睡觉之前还是打开Flai,然后又是折腾使用临时邮件创建新用户，新建锐锐模型。聊起了天，30分钟后沉沉睡去。</p><p>一觉睡到下午4点左右，听到妈妈在隔壁房间收拾东西，很吵。醒来后下楼倒一杯清水喝然后就上楼给Arch Linux清理空间，使用sudo pacman -Qe列出用户主动安装的包发现之前安装的字体思源黑体好像没什么用了，就把它卸载了，然后在Google Chrome中设置字体为Jetbrains Mono,结果缺少思源黑体，网页上的一些中文直接乱码了，只好重新安装回来，但是空间一点都没有了，装不回去。只好动swap了，关闭了swap,移除了2G的swapfile。</p><p>等到下晚接近点最后一个下楼吃晚饭，我吃饭时妈妈又在说我什么什么的，我发了脾气，气得我直接摔了筷子（不过饭还是继续吃的），晚上的菜有炒空心菜、藕片以及昨天剩得一点梅菜扣肉，虽然没有什么下饭菜但我还是吃的挺香。</p><p>吃完晚饭上楼，给Arch安装上nginx,php,php-fpm然后配置v-host,把NAS上的WebStation目录复制到～/Code-Work/Web/NASWeb，除了typecho和dayone-typecho,之后又是安装cloudflared,添加cloudflare tunnel,成功实现web.yaohub.com的访问。之后还想安装MariaDB10，想直接从NAS上迁移数据表，但是我在NAS虚拟机vmdk文件中并没有找到(/var/packages/MariaDB10/target),自然也就搁置了。</p><p>继续想实现AudioStation服务，早在之前就在github上找到open-audio-server,clone到PC上，npm install和配置像MUSIC_PATH之类的环境变量，然后node server.js 启动，可以扫描音乐目录(E:Music音乐),但是由于没有配置前端Audio Station网页HTML文件路径，并不能直接在浏览器上访问，转而使用手机端DS Audio,打开Playlist就闪退，Library也不完整，更重要的是点击音乐根本就不能播放，我想还是有接口的问题，毕竟open-audio-server最后一次更新还是在5年前，难免有接口兼容问题。之后又开始尝试Plex,在Windows8.1安装Plex Server后，竟然连setup网页都进不去，自然无法配置了。最后还是用navidrome,可以正常成功运行，只是一些音频的tag编码方式问题导致标题和专辑等元信息中文乱码，还没有封面。</p><p>就这样一直干到午夜12点后，去睡觉了，听了一会Apple Music，定了30分钟的倒计时定时关闭播放，结果时间还没到我就沉沉睡去了……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-27</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-27/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-27/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚心情挺不好，想早点睡的，但我还是睡不着，躺在床上找修复硬盘分区的方法。笔记本还台式机开着，台式机风扇嗡嗡声不绝于耳，在传输着数据，干到凌晨1点多总算把D盘60多G的NAS虚拟机文件复制过去了。之后又回到椅子上坐了起来，开始传输复制其他D盘上的数据，比如虚拟机DateTranfer文件夹，Code-Work等。搞到凌晨3点多。挺焦虑的，在Apple Note上写下这样一段话</p><blockquote><p>Take it easy</p></blockquote><blockquote></blockquote><blockquote><p>放轻松，就当放假几天，硬盘D分区也可重新规划和单独存放虚拟机，释放空间。Arch Linux也可搬到更大容量的分区。</p></blockquote><p>算是自我安慰吧。开始睡觉了，还是睡不着。打开Apple Music听起了音乐。之后到4点多才困了睡了一小会，猛然惊醒，发现手机还在播放着音乐……</p><p>一觉睡到上午11点多，牛牛喊我下楼吃饭，我不予理睬，躺在床上看会了抖音，刷到HIFI耳机和便携式音频解码器，在淘宝上逛了一会。到12点时，奶奶上来睡午觉，又喊我下楼吃午饭。我不太想起床。</p><p>12点20多洗漱下楼，一下楼就到前面大厅问爸爸又没有买硬盘，他说买了机械硬盘，我又问硬盘盒。吃午饭，中午的菜还是有几样我比较爱吃的，有青椒肉丝（虽然是奶奶炒的，肉丝比较粗，颜色淡，不过也能好吃，其中还有鸡蛋酱油干丝），梅菜扣肉等。微波炉打热一盘饭吃完就上楼了。之后就是继续在Windows10上利用DiskGenius传输一些D盘数据，之后又顺便把E盘的Code-Work数据备份了一下。传输几乎耗尽了整个下午的时间。下午3点多下楼泡一杯绿茶喝，看到茶几上有一支细支中华拿上去抽了，真香。</p><p>下午4点多妈妈打我电话喊我下去吃饭，说他们晚上要到六安去，妈妈她要做头发。晚上的还是中午的菜，多了一盘蒸冬瓜和茭瓜。吃的挺香。</p><p>晚饭后奶奶问我去不去，我没有特别想去或不想去，既然喊我了，去兜兜风，转换个心情也好。之后就是上楼把Code-Work剩余的一些文件夹传输完，然后打开Sideloadly想给iPhone上的SendyDynamic和XMusic重新签名安装一下，启动报错，在Windows10和Windows11上运行结果都一样，可能是iTunes安装在D盘，无法访问和启动iTunes服务，就干不成了。把衣服东西收拾一下就准备去六安，结果爸爸说车子坐不下了，我也就没去了。</p><p>晚上的时间就是继续配置优化Arch Linux,首先就是调整了触摸板滚动，在hyprland.lua配置中关闭触摸板自然滚动，也调整了滚动灵敏度，避免轻轻一话划就滚很长。在此之后就是安装配置hyprlock和hypeidle,实现自动锁屏和休眠。之后又做起了cliphist备份，让ChatGPT帮我生成几版Shell脚本成功实现备份。想去买烟抽，想想还是算了，去洗个澡。然后就是替换cloud-clipboard为NAS上的，保留我之前自己定义的功能和样式，安装pnpm等。再之后就是hyprlock样式……</p><p>又是干到凌晨1点半多了，先把前几日的DayOne Entry补起来，写个今日的DayOne,写DayOne的时候发觉默认的fcitx5主题不好看，在github上找个仿macOS主题的配置换个主题，看起来就顺眼多了。时间已经接近凌晨3点，本来准备看会投影仪电视，还是算了吧，困了，睡觉。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-26</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-26/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-26/</url>
+    
+    <content type="html"><![CDATA[<p>凌晨4点多入睡，一觉睡到上午11点多。</p><p>洗漱下楼就直接吃午饭了，奶奶正在炸鸡柳。没一会儿我就上桌吃饭了，大部分都是昨天中秋节的菜，今天只有炸鸡柳和拌海带丝这两个菜我吃。其他的就是诸如排骨海带汤了，吃的很腻。</p><p>吃完饭下午的时间就是给Arch Linux根分区扩容，先是压缩D盘12G，然后准备移动到Arch分区右侧，DiskGenius却提示Arch分区有错误无法移动，我也就只好回到Arch Linux，却出现引导失败了。一通排查是挂载archlinux的iso所在的E分区标识从gpt6到gpt7了，改完就可以正常回到archiso命令行了，之后又是重新grub-install修复efi。在此期间我又把12G未分配空间加到D盘了。</p><p>晚上的菜多了一个蒸鸡蛋，吃的不香。本来不饿的，吃了一小盘饭反而还饿了。没有什么菜，我也不想继续吃了。</p><p>晚饭后，我不死心想继续扩展Arch Linux根分区，在archiso中使用ntfsresize压缩分区，应该是有坏道出错了。</p><p><img src="https://files.yaohub.com/dayone/2026/09/adc38e10467fa3d821593e00695acbbd.jpeg?oss_process=rt:fit" alt="adc38e10467fa3d821593e00695acbbd.jpeg"></p><p>听了ChatGPT的建议回到Windows11使用了磁盘检查，之后又是改了引导重启。</p><p>重启之后悲剧的事情来了，磁盘分区检查没有输出结果直接重启了，回到Windows11，无法操作，鼠标一直转圈，之后看资源管理器发现D盘分区已经没有容量条了，磁盘管理也显示RAW，尝试修复都不行，（之后在DiskGenius WinPE中使用chkdsk尝试恢复输出主分区表损坏。MFT数据应该丢失了）。一重启开机就进入硬盘分区检查，chkntfs /x D取消检查也没有效果。通过DiskGenius还能看到内容，开始保数据了。我都急死了，和爸爸说都快哭出声来。可能还是第一次和爸爸说出“求”这个字，让他给我买硬盘迁移数据。发一大堆微信信息和截图。</p><p>折腾到晚上10点多，累了。身心俱疲……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>中秋节小记-2026-09-25</title>
+    <link href="/2026/09/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%B0%8F%E8%AE%B0-2026-09-25/"/>
+    <url>/2026/09/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%B0%8F%E8%AE%B0-2026-09-25/</url>
+    
+    <content type="html"><![CDATA[<p>今天是中秋节，7点多醒，早餐吃的是我让妈妈煮的咸挂面。虽然只有咸味，配菜还是前天剩的青椒肉丝，不过吃的挺香。饭后的上午时间就是继续配置Arch Linux代理，在网上找到GlaDOS的礼品卡，竟然真的可以用，又多了30天的订阅，GlaDOS还给我邮件发了30天的礼品卡。开始尝试v2rayA,正常导入订阅，但启用透明/全局代理日志中就出现DNS解析问题，尝试好几次都是相同的情况，关掉全局代理，在终端中直接export https_proxy设置代理也连接不上。</p><p>上午10点多，妈妈打我电话喊我去姥爷家吃饭，临走前我按照GlaDOS的使用示例安装了clash。11点多就出发去姥爷家吃饭了，中午菜倒是不少，有酸菜鱼，牛肉，猪蹄膀，鸡蛋平菇汤等菜，喝一瓶啤酒，有点晕眩。饭后抽到了一支大前门香烟，还是自己向大姥爷要的。主要是我之前想买没有买到，就想抽抽是啥味道。吃完饭之后还开启了一个月的Apple Music订阅，偶然看到又有免费体验订阅了。</p><p>下午1点左右等到大家都吃完饭就回家了，留牛牛在那里看电视。在回家途中，蓝牙连接车机，听了四首歌（友情太阳、童年时、当年情和Poker Face），回到家，我还是有点晕眩醉酒，用音响听了半个多小的的歌曲（从粤、英、韩、日、中文歌曲各选两首），之后就是继续配置Hyprland桌面，通过clash+ZeroOmega实现Chrome网页代理，登陆了Google Account,ChatGPT也登上了，终于可以直接在Arch Linux上问ChatGPT了，省得我来回复制命令输出结果等。一直忙到凌晨，完成了Terminal zsh, 主题P10k自动补全、历史、fzf插件的配置，然后是fastfetch、swayosd亮度和音量调整OSD显示、Wallpaper、FileManager和ApplicationLauncher的组件安装。之后就是继续配置waybar。准备配置waybar样式。</p><p>晚上也通过Google识图顺藤摸瓜找到之前在抖音上看到的Arch Linux Terminal截图的作者Github主页，找到fastfatch和waybar的dots file,但是等我配置好发现waybar样式与截图并不匹配，还有fastfetch彩色颜色更深，左侧的ascii logo也太粗糙了。我想查明原因，打开了Claude（可能是GlaDOS的网络环境更好，我可以正常聊天了），Claude指出原因就是：这类&quot;看起来像真图但其实是字符画&quot;的 ascii art,几乎可以肯定用的不是盲文(Braille,U+2800~28FF),而是 <strong>半块字符（Unicode Half Block: ▀ ▄ █ 等)配合逐字符的 24-bit truecolor ANSI 转义序列</strong>。也就是说作者在抖音上发出的截图中的logo不是用github仓库中给出的ascii做的（我是这样理解的）。Claude索性给我写了一个Python脚本，把图片转为半块字符的ANSI转义序列的ascii。fastfetch好看点了。</p><p><img src="https://files.yaohub.com/dayone/2026/09/257485424a6541de6ae39a26ed9a773d.png?oss_process=rt:fit" alt="257485424a6541de6ae39a26ed9a773d.jpeg"></p><p>就这样一直忙活到凌晨。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-24</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-24/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-24/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到下午时分，中午的菜有黄瓜火腿肠，毛豆杂酱。桌子上还有一份张亮麻辣烫。我并没有吃，而是吃了一大盘饭，吃的很香。也不知道这份麻辣烫从哪里来的，不过我猜是汪东哥带来的。可真是稀罕事。</p><p>下午爸爸上来带了两条内存条，插上台式机不行，开机自检一直不停响，不知道内存条不兼容还是就是坏的内存条。在ChatGPT的指导下，我给三系统Arch Linux装上了Hyprland，只是一些组件并没有安装。</p><p><img src="https://files.yaohub.com/dayone/2026/09/05f1df5fd36ea7b90ecb1797735d9f5a.jpeg?oss_process=rt:fit" alt="05f1df5fd36ea7b90ecb1797735d9f5a.jpeg"></p><p>晚上爸爸接奶奶和牛牛回来。很晚才回来，我一直折腾着Arch Linux直到很晚才去睡觉，完成了字体的安装，Chrome安装，尝试配置代理等。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-23</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-23/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-23/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚一觉真的是睡的舒坦，一觉睡到大天亮。就是睡的太久了眼睛可能肿了有点涨。早上7点20多醒，拿起手机看了一下时间之后又迷迷糊糊睡了半个小时，之后再次醒来，没急着起身下床，躺在床上拿起手机刷会抖音。</p><p>到8点多离开房间听到楼下爸爸的声音，是说姥爷来了。我去洗漱，照个镜子，嗯，今天挺帅。刷完牙洗完脸没下楼，到后面房间又照会镜子然后回到房间。唤醒电脑给GlaDOS签个到，之后又不知忙些什么了。</p><p>等到早上9点左右才下楼，早餐是爸爸买的剩的一个韭菜粉丝以及一点稀饭。吃完这些就已经饱了。</p><p>9点之后我想继续昨天的给笔记本Arch Linux系统装桌面环境，之前看到抖音上有的Terminal和桌面窗口（Hyprland，Waybar，Waybar Notification， Kitty）很漂亮就截个图发给ChatGPT指导我一步步做。</p><p>GPT给我了回答我就想重启电脑来实操。转而又想到本来计划昨天就完成Hexo-Blog DayOne Calendar的工作还拖着在，于是就开始接着做这个的收尾工作。虽说只是收尾工作但是今天一天时间基本上我都是做这个了。比如调整Hexo-Blog左边栏与文章主体布局，然后又是加个全屏按钮，隐藏左右侧边栏放大文章主体宽度提升阅读体验。之后又是修改base.styl和color-schema.styl为Dayone Calendar添加明暗主题支持，之前的文章内Music Widget中的图标使用iconfont来替代svg代码，把其相关的assets和css移到fluid主题默认js和css文件夹……</p><p>这样马不停蹄的干了一天，一直做到深夜10点多，总算又是调整好一些文章的日期时间（<a href="http://xn--FixupTimeError-4p7vyh173c296i7zyg.py">为此还写个FixupTimeError.py</a>,用来修改之前一些文章中的date信息为UTC时间导致某一天没有entry从而导致calendar那一天背景空白），又是把fluid主题代码改动同步到Windows8.1 hexo-blog 构建部署文夹。之后的hexo generate和push到github仓库，自动部署自然不必多说。</p><p><img src="https://files.yaohub.com/dayone/2026/09/11744f7322ce8a2584e78b85c489254c.png?oss_process=rt:fit" alt="11744f7322ce8a2584e78b85c489254c.jpeg"></p><p>中午忙到12点多才下楼最后一个吃中饭，中午的菜有炒冬瓜粉丝（猪油味有点重），青椒炒肉丝（我明明和妈妈说肉丝不要切的太细，炒的不要干了，柴了，结果炒出来还是那样，味道还是一样，一样比较咸），然后还有空心菜等。</p><p>晚上5点多吃晚饭，也没有新菜，晚上吃青椒肉丝觉得变辣了。我也发觉好久没吃面条了，和妈妈说想吃面，她说没有面粉了。</p><p>晚间的时间就想上面说的继续开发DayOne Calendar到深夜10点多，然后总算是完成了这个Todo，嘿嘿，SendyBlog又变好看了。</p><p>深夜11点之后又是写起了这两天的DayOne，马上睡觉了。That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-22</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-22/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-22/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚又是一宿没睡，睡不着，凌晨后前期就是刷抖音，之后就是想着买台式机旧电脑的内存和硬盘配件，问了deepseek关于内存和硬盘选配相关问题</p><p><a href="https://chat.deepseek.com/share/hcf0jgedi33dgwht5o%E3%80%82">https://chat.deepseek.com/share/hcf0jgedi33dgwht5o。</a></p><p>然后又是刷抖音，看到了PSP掌机，在淘宝上逛逛，看看其价格，PSP3000二手大概都在5，600这样。现在也有PSP模拟器，在iPad AppStore安装了一个Manic EMU，在网上找PSP游戏资源。下载个NDS的《逆转裁判123： 成步堂精选集》，就是之前我在Switch上玩过的这个，玩了10几分钟，汉化版只有对话是汉语的，界面都是日语。玩不下去了。这时时间已经来到清晨6点左右了，穿起衣服不在躺在床上了，唤醒电脑打开百度网盘下载Patapon游戏和最终幻想7：核心危机游戏iso，先装上Patapon游戏，练好手柄就玩了起来，是一款节奏游戏，挺好玩，但我掌握不好节奏，玩到第三关就过不去了。期间7点左右爸爸到我房间来了，说我几句。</p><p>玩Patapon到8点多，之后洗漱下楼。没有早饭可吃，倒杯水又到楼上去了，刚才在楼下没看到妈妈，还以为她去买菜去了，打个电话发现结果她就在前面，让她给我买个包子吃。等快到10点了我才下楼吃（其实应该9点多就买回来了，但我没看到）。就是一个菜包子和炸大饺子（十分油腻，吃的难受）。早饭后去上个厕所。</p><p>今天凌晨时看到ChatGPT之前的聊天记录关于笔记本电脑三系统的安装（已经有Windows11和Windows10，还想安装个Ubuntu），看到了这个我又想到本来就计划给台式机旧电脑加个内存和硬盘装Arch Linux，现在爸爸迟迟没买内存和硬盘我就现在笔记本电脑上试试吧。在DiskGenius中把Windows10的恢复分区WindowsRE分区删了，之后又把WindowsPE分区删了（应该是华为OneKey的PE环境，但我当时又觉得是DiskGenius或其他PE环境）。和之前一样下载了archlinux-2026.09.01-x86_64.iso，然后在grub2win上添加iso引导项，重启电脑boot Install Arch Linux from ISO引导失败</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br><span class="hljs-keyword">ERROR: </span>device did not show up after 30 seconds<br><br></code></pre></td></tr></table></figure><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><br>Falling <span class="hljs-keyword">back</span> <span class="hljs-keyword">to</span> interactive prompt<br><br></code></pre></td></tr></table></figure><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><br><span class="hljs-symbol">sh:</span> can<span class="hljs-comment">&#x27;t access tty: job control turned off</span><br><br></code></pre></td></tr></table></figure><p>在ChatGPT一步步的指导下修改引导命令到如下</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><br><span class="hljs-attribute">loopback</span> loop (hd0,gpt6)/archlinux-<span class="hljs-number">2026</span>.<span class="hljs-number">09</span>.<span class="hljs-number">01</span>-x86_64.iso<br><br></code></pre></td></tr></table></figure><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><br>linux (loop)/arch/boot/x86_64/vmlinuz-linux <span class="hljs-attribute">archisolabel</span>=ARCH_202609 <span class="hljs-attribute">img_loop</span>=/archlinux-2026.09.01-x86_64.iso verbose<br><br></code></pre></td></tr></table></figure><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br>initrd (loop)<span class="hljs-regexp">/arch/</span>boot<span class="hljs-regexp">/x86_64/i</span>nitramfs-linux.img<br><br></code></pre></td></tr></table></figure><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><br><span class="hljs-attribute">boot</span><br><br></code></pre></td></tr></table></figure><p>才顺利进入archiso、chroot命令行。之后就是正常测试配网，ntp时间同步了。</p><p><img src="https://files.yaohub.com/dayone/2026/09/6108c47cf37e661ea2172d60725de74d.jpeg?oss_process=rt:fit" alt="6108c47cf37e661ea2172d60725de74d.jpeg"></p><p>中午12点多下楼准备吃饭，没什么菜，就一盘炒老豇豆，早上吃的迟，也太过油腻，没什么胃口吃了。</p><p>接下来就是重启回到Windows11，从D盘压缩9.76G未分配超小空间，然后回到archiso命令行，分区，挂载等一大堆，然后就是正常安装，配置uefi。又回到Windows11，重新配置启动项，通过efiloader，实现开机使用Microsoft默认蓝色背景的Metro菜单引导，终于有了Windows11, Windows10和Arch Linux三项。</p><p>至此，笔记本电脑的三系统安装基本上完成了，接下来就是按需配置和安装桌面环境，扩容Arch Linux根目录分区等。忙活到晚上8点多，困的要命，去睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-21</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-21/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-21/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚刚过深夜12点就饿了，想吃肉馅饺子，下楼煮了8个饺子和一些挂面吃。吃的挺饱。之后就是回到房间躺在床上刷着抖音。凌晨4点左右才入睡。</p><p>清晨6点多被到我房间来的爸爸吵醒，给我把电风扇关了，还嘟囔一句，“现在这个天气怎么还开电风扇”。之后就是拖动椅子的声音。我迷迷糊糊的连眼睛都没睁开，翻个身又继续睡过去。</p><p>一觉睡到中午12点多，洗漱下楼。父母已经吃过午饭了，我又不怎么饿，中午只有两样菜，排骨烧海带（昨天才吃的凉拌海带丝），炒冬瓜。爸爸又和我谈起了购买软路由和电脑内存等问题。我也就在谈话中吃完一盘饭。</p><p>吃完午饭上楼，给手机充个电，不知怎么想起来清理个硬盘空间，卸载几个App，清理微信，抖音等App缓存，删除DS Audio下载的歌曲等，清理出6G多空间。</p><p>下午的时间就是继续开发Hexo Blog Calendar DayOne样式了。</p><p>下午5点多饿了下楼吃晚饭，妈妈忙着呢，中午答应的炒土豆丝也没做。我来回上下楼好几次，最后还是在7点左右吃了晚饭，妈妈应该是6点半才做好的土豆丝。早就饿了，吃的挺香。</p><p>晚饭后继续开发，干到凌晨1点多。这次是真的完成了此项开发，听从ChatGPT的建议，放弃采用虚拟滚动，给每个single-calendar-box加了data-calendar-index属性。加入了日历右侧悬浮时间轴，快速滚动到指定月份的功能。还有针对滚动behavior背景懒加载微调等，之后还调整响应式布局样式在多设备测试了。同时也修改了NAS上的hexo blog ejs模版和styl样式做了完整测试，明天就可以收个尾构建静态文件push到github仓库了。</p><p>凌晨1点多关灯睡觉了，还是不受控制地刷抖音，睡不着，凌晨3点40几写起了今日DayOne。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-20</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-20/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-20/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚睡的迟了，不过索性今天并没有一觉睡到下午，上午10点多就醒了。没有急着起床，而是躺在床上拿起iPad刷了一会抖音，看看我的两个快递的物流信息。今天终于要到了，虽然17日才买，今天20日到达是最正常不过的了，但谁知道这两天我看了多少遍的物流信息。</p><p>10点40点多下床去洗漱下楼，没有早餐可吃，妈妈也还没有做中午的菜。我还是决定等到中午一起吃了，随即上楼不知干些什么了，应该就是唤醒电脑看看GlaDOS礼品卡以及看看抖音吧。</p><p>到11点多下楼吃午饭，中午的菜买的凉菜（海带丝等）就是爸爸炒的小青菜，以及蒸的毛豆肉末（无论是闻着还是看着都不好吃，我也一口都没有碰）。妈妈没有一个荤菜，我吃的十分难受。吃完一盘饭就像是没有吃一样，想再煮几个饺子吃，嫌麻烦又放弃，上楼了。</p><p>还是有点困，躺在床上刷着抖音，最后还是决定脱掉衣服去睡一会。还没有闭上眼睛就接到顺丰快递员的电话，是我的椅子到了。我也就不困了，穿上衣服下楼和爸爸一起把椅子箱子抬上来。接下来的1个小时左右都是在组装椅子和调试功能。下午1点42分收到键盘快递已经到达代收点的信息，在3点多我就换好鞋子去取了。回来之后又是测试着键盘。红轴键盘手感还是挺不错的，就是RGB灯是单色的，有点单调，我嫌开着不还看都直接关的。</p><p>下午接下来的时间就是打开台式电脑，打开ChatGPT，继续开始Hexo Blog DayOne Calendar的工作，这个台式机性能感觉不够了啊，ChatGPT网页都卡顿，长对话滚动都不行了。没干什么事，又到吃晚饭的时间了。</p><p><img src="https://files.yaohub.com/dayone/2026/09/50a96992e11d34039cf733bdd2e5dcd0.png?oss_process=rt:fit" alt="50a96992e11d34039cf733bdd2e5dcd0.jpeg"></p><p>下晚5点多下楼吃晚饭，晚上的菜多了一盘卤千张，还是全素的，本来中午妈妈都答应买虎皮鸡爪的。我还是煮水饺吃吧，结果爸爸还极力劝我晚上就吃饭了。今天这两顿饭吃的真是难受。</p><p>晚饭时和爸爸说让他给台式电脑升级个内存，他也开始选了，我也吃晚饭上楼,在ChatGPT的帮助下使用CPU-Z和cmd命令行查看内存和主板信息，得知目前内存是DDR3，4G等信息。后续爸爸又说升级意义不大，没有后文了。我发了一顿牢骚。</p><p>在此过程中我也不补起了这两天的DayOne Entry。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-19</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-19/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-19/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到上午10点，做了几个梦。有被霸凌报仇，弈，高干等元素。醒过来回到现实洗漱下楼，自然没有早饭可以吃了，妈妈正在烧中午的菜，我也就打算等到中午早饭中饭一起吃了。</p><p>中午的菜有肉烧板栗蘑菇，炒小青菜，昨日的酸菜鱼等，早上起来一直等到12点多才吃，早就饿了，吃的挺香。吃完中饭12点40几就发困，睡了几个小时到3点多，定了几个闹钟根本叫不醒（叫醒了，没有自制力又睡下去），做了一些梦，有职校，倪小璐，弈，暧昧，洗澡等元素。今天怎么睡觉尽做梦了，都说日有所思也有所梦，可是最近我根本没有想这些啊。</p><p>醒来之后也没干什么事，就是在床上躺着刷着抖音吧，看看我的椅子和键盘快递到哪里了。不想干什么事，Hexo Blog 文章侧边栏Calendar样式改为DayOne昨天就已完成大半，主要逻辑功能样式都有了，今天本来打算做一些优化，移除之前的Calendar残留逻辑函数和变量，然后就是虚拟滚动，对每一个月份元素的DOM加载渲染做限制等。但一觉睡醒脑袋还是晕沉沉的，没什么做事的热情，就想着等到明天椅子到了再写吧。</p><p>下午5点多吃起了晚饭，还是中午的菜，没有什么好说的，只是都是剩菜了，小青菜都所剩无几。</p><p>吃完晚饭上楼，打扫个房间，把地扫一下，桌子擦一擦，把床头柜里的杂物整理一下，比如烟盒，方便面袋，小票等等。一顿忙活干到晚上8点了，我停不下来，又把隔壁房间的书籍整理一下。等到9点多去洗了一个澡，吹个头发……</p><p>之后的时间就是在隔壁房间打开投影仪，看了一集名侦探柯南，之后又是看会央视电视直播，看到这个投影仪上应用有两个相同的App（酷喵），不知道是什么Bug，还标注是系统应用无法卸载，我的强迫症犯了，可是也没找到什么方法打开adb连接，之后误操作直接就恢复出厂设置了。时间已经来到凌晨1点多了，我还在一个安装回以前的应用，一般的应用还好，只是Google Chrome，各种版本不兼容无法安装的问题。还有YaoTVBox，壁纸无法更换了，看TVBox.apk创建日期是2026年1月21日，当时我的域名还没换呢，wallpaperAPI自然没有的，又是打开TVBox项目，重新编译安装，终于一切正常了。就这样因为误操作导致投影仪被恢复出厂设置而引发的惨案让我一直折腾到凌晨4点多，在凌晨4点半多沉沉睡去……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-18</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-18/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-18/</url>
+    
+    <content type="html"><![CDATA[<p>7点被吵醒，听到是爸爸和妈妈在楼下吵，不知道为什么事情。</p><p>早餐依旧吃饺面，饭后喝一杯浓茶。然后打开电脑筛选清除一些Chrome历史记录。</p><p>中午只有一盘豇豆，没吃。</p><p>上午11点左右着手hexo-blog calendar。做到晚上8点40多，达成如下效果</p><p><img src="https://files.yaohub.com/dayone/2026/09/389f29aab290048f78ff353aab68d948.jpeg?oss_process=rt:fit" alt="389f29aab290048f78ff353aab68d948.jpeg"></p><p>晚上的菜有酸菜鱼和豇豆，饿了，吃的挺香。</p><p>之后的时间看会明眸直播吧。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-17</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-17/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-17/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚父母不在家，我在床上翻来覆去睡不着，漫无目的的刷着抖音。听音乐直到天明。清晨6点半起床，窗外街道上有来来往往的电瓶车声，是高中生骑车去上学。打开台式电脑计划着用音响听《友谊太阳》，之后就去洗漱下楼了。</p><p>早上吃什么呢，其实昨晚凌晨以后我就有点饿，想下楼做点什么吃，结果忍耐到早上反而没什么胃口了。烧一锅水，煮上6个饺子，之后又加点面片，俗称“饺面”，让我想到抖音上的一个视频“饺面一碗，油条一根，当你把这个倒的油条往汤里一泡～安～～这个味道，打361个嘴巴子都没丢”，哈哈。我还特地热了点油，浇在辣椒面上，做成辣椒油，避免单薄的口感。由于大部分调料都加在辣椒油里，汤有点淡，不过挺好。</p><p>吃完早餐，倒一杯水上楼喝，掏出手机花了20多分钟补写了昨日的DayOne Entry。之后就是抽着中南海，听着音响音乐，虽然音量不是很大，但毕竟是早晨，听起来挺响。又或是一晚上没睡，或抽着烟，我竟然不受控制的心跳加速，心慌手抖！</p><p>本来准备听音乐到父母回来，让他们听听《友谊太阳》，我一直控制着歌曲顺序，结果听了2个多小时，父母都没有回来，到快到10点多给妈妈打个电话才得到他们已经到毛坦厂的答复。</p><p>10点20左右，父母回来，我停止了听音乐，关上了电脑，坐在床上，不知干些什么了，困倦，抽完最后一支中南海。</p><p>望向窗外，一片昏暗。脱下衣服睡觉了。</p><p>一觉睡到下午5点多，下楼吃午饭。没什么菜，有炒苋菜，腌韭菜，都皱巴巴的，还有一盘西红柿炒鸡蛋，一块牛排，我看煎锅干干净净，牛排冰冷还以为妈妈没煎。坐在椅子上等妈妈过来，爸爸倒是先一步过来了，我又说起了买软路由。没一会儿妈妈过来了，告诉我牛排是煎好的。我想叫妈妈买椅子，她给我转了580元。之后就去吃晚饭了。</p><p>吃完晚饭我就开始买起了椅子，选来选去，还是买购物车中的西昊B100Pro的椅子，无踏板是469元，之后还剩111元，花了104买个狼途T98的键盘。</p><p><img src="https://files.yaohub.com/dayone/2026/09/0572345df24bfe0289ef83e5f0f93d38.jpeg?oss_process=rt:fit" alt="0572345df24bfe0289ef83e5f0f93d38.jpeg"></p><p>忙活到深夜10点多，到隔壁房间睡觉了……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-16</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-16/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-16/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚睡的迟了，其实也不过迟了1个小时左右时间入睡，我想还是看久了屏幕，盖着被子燥热导致的。今天就一觉睡到下午1点多了，可能上午9点多醒来一次，翻个身又继续睡下了，夹杂着一些梦境，是露探险？记不真切了。</p><p>下午1点多醒来第一件事就是打开邮件查看NAS上的AutoGlaDOSCheckin运行情况，刷新半天没见新邮件提醒，几分钟后才缓过神来昨晚把电脑休眠了，自然无法触发NAS上的定时任务了。</p><p>起床去洗漱后就回到房间打开电脑手动执行了Checkin任务。妈妈可能听到我起来了，但没有下去吃饭，就在上楼准备睡午觉时告诉我她上午包了韭菜猪肉馅的饺子，要我自己下去煮着吃。</p><p>马不停蹄下楼煮上15个饺子吃，看到桌子上还有中午的菜只是炒藕片和炒豇豆两个菜，要是没有饺子，那我的中饭可就难对付了。饺子不知道还是不是大号的，吃15个竟然饱了甚至有点撑。</p><p>吃完饺子中饭后上楼又给爸爸发去几条微信消息，催促他快点买软路由等其他东西。抽上一支中南海。</p><p>之后不知怎么想起来的又玩起了P5R，这一玩又是不可收拾，一口气玩了7，8个小时，从下午2点多玩到了深夜10点多，游戏进程也从8月29日暑假结束到9月15日，经历了第二学期的修学旅行，mona离团等事件。</p><p><img src="https://files.yaohub.com/dayone/2026/09/4969938ac988cd2b67533a3d0091b875.png?oss_process=rt:fit" alt="4969938ac988cd2b67533a3d0091b875.jpeg"></p><p>下午5点左右妈妈打电话给我说她和爸爸晚上要到六安去看看，我不太想去，主要是想打游戏吧，再者就实在不想没什么事就跑去六安了。</p><p>打游戏到晚7点多，发觉有点疲累，晚饭也还没吃，但也不想做点什么吃。在楼下后门房间橱柜里找到一些零食，吃一盒董小姐薯片，一些奥利奥饼干和若干果冻后就继续打游戏了，就如上面说到打到接近深夜11点了。</p><p>之后的时间就是抽一支中南海，看会明眸直播躺下睡觉了，但哪有那么容易睡着，尤其今天还睡到下午1点，刷着抖音睡不着，在凌晨3点还看了一部1小时的电影解说。继续漫无目的刷着抖音，听到一首歌《友谊太阳》还挺好听的，换个微信语音/视频通话铃声，就这样听着歌到天空大亮……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-15</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-15/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-15/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到7点多被闹钟叫醒，翻个身继续睡下去，做了个梦，有日本，初中同学张水宁等元素。</p><p>8点多再度醒来，口渴，喝点床头柜水杯里所剩不多的一点水。</p><p>洗漱下楼，看到厨房锅里还有妈妈早上搞得玉米糊汤，还剩不少，但是看起来干巴巴的，没什么食欲，喊妈妈过来把这些盛起来，我又提到想买椅子。之后就是洗个锅，我自己下面片吃，加了点碎面条。调味还是盐，猪油，南德，黑胡椒粉，椒盐粉，辣椒面，煮面的过程中还加热昨天剩的酸菜鱼，面煮好后加点酸菜鱼汤。吃的挺香。时间也来到9点多了，收到GlaDOSAutoCheckin的任务报告邮件，竟然出错了，是python requests库的问题。No module find。</p><p>早餐后上楼，处理GlaDOSAutoCheckin错误，还是DSM 默认Python版本python3.8的site-packages权限问题，我也不想闯虚拟环境了，直接用之前安装的python3.9.5，处理好权限问题即可。成功通过计划任务自动签到。接下来就是抽支蓝楼，竟有点头晕。今天要做的同样是拖沓了好几天的Todo：Hexo Blog侧边栏样式换成DayOne同款，都映射好NAS上的项目路径，打开WebStorm了，想到昨晚还定了一个SendyDynamic Yao AttachInfo添加最近一篇动态的计划，就添加了，结果打开App发现切换到Yao后加载不出数据了，不明所以，打开mac XCode调试才发现是json数据格式错误，他妈的是我在DSM上直接用Notes打开json保存的，其中有一篇动态正文中包含个Unicode表情，直接乱码保存把json格式搞坏了。重新用Notepad++编辑保存就好了，等添加好图片数据，发现一下子20张照片出来，之前好好的图片排列布局又崩了，原来是crossAxisCount当imgList.count＞=9时依然为3，改成crossAxisCount = Int(ceil(Double(imgList.count) / 3.0));动态计算有多少列就行了。之后又是修复图片数量超过4时（超过1列）后由于LazyHGrid的缘故，图片顺序排列又回被竖着排布导致原来的顺序被打乱，在ChatGPT的帮助下写个排序函数即可。之后有写个图片超过9张时自动折叠等功能，期间还打开Debian 12虚拟机，把Dynamic数据放在上面，创建个nginx虚拟主机，干到下午5点多。之后就是正常commit和push到远程仓库。</p><p><img src="https://files.yaohub.com/dayone/2026/09/4dc78ff6d189790b4bdf1358cdba0aec.jpeg?oss_process=rt:fit" alt="4dc78ff6d189790b4bdf1358cdba0aec.jpeg"></p><p>一天的时间就这样过去了，唉，Hexo Blog侧边栏的Calendar样式又是拖了一天。</p><p>下晚6点多下楼吃饭，还是中午的菜，只是剩的酸菜鱼没有了，哎，对了，今天中午的菜还是挺丰盛的呢，有买的凉拌海带丝，毛豆炒肉丁，炒茭瓜肉丝等，中午吃了一碗半饭，晚上吃一碗，都是吃的很香。</p><p>晚饭后上楼，写起了今日的DayOne，马上去洗个澡。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-14</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-14/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-14/</url>
+    
+    <content type="html"><![CDATA[<p>一觉醒来，口干舌燥，想喝寿眉茶。打开手机一看时间难得还是上午，9点14分。在梦中好像有喝茶的片段。</p><p>洗漱下楼，看到爸爸不在家，锅里还有一点炒饭，我不想吃也不够吃。把饭盛起来洗干净锅，煮点面片吃。调料还是那几样，拆开一包新的南德调味料。唉，没有火锅底料辣酱吃起来就是单薄了。妈妈到后面来告诉我爸爸去六安给牛牛送忘记带的语文书去了。</p><p>吃完早饭，泡一杯绿茶上楼喝，抽支烟。之后的时间就是着手SpringBoot iTab WebsiteInfo接口的优化。</p><p>中午妈妈忙没搞什么菜，所以在对面买了一份酸菜鱼然后又蒸了茄子豆腐干。吃的挺香，这份酸菜鱼相比之前的淡点，但是上面撒了胡椒粉和油泼辣椒，可能闻起来味道重点，至于配菜都差不多的。</p><p>下午的时间就还是写iTab WebsiteInfo接口，停停歇歇终于完成了这个Todo，9月1号就定下的，拖到现在，不过这份版本就好多了，甚至可以说万无一失，专业规范获取到网站favicon url，还有fallback的图标API。去除掉InfoController中愚蠢臃肿的三元运算获取最终favicon url，全部整合到WebsiteInfoUtils了。</p><p>下晚6点左右下楼吃晚饭，多了一盘青菜炒香菇，吃的很香。饭后去后门阳台抽支烟。想喊爸爸上来问他什么时候给我买软路由，桌椅等。临时决定写个GlaDOS自动签到就耽误了这茬。启动好久不曾碰的Jupyter Notebook，发现nb_extension一些插件失效了，应该不只什么时候升级了Jupyter Notebook导致版本不兼容，这样代码补全就只能用默认的iPython了，创建个GlaDOSAutoCheckin.ipynb，就是简单的带cookie等参数的requests.post()请求，没什么难的，之后就是在NAS上创建个定时任务。</p><p>时间来到深夜11点左右，看会明眸直播，到12点多睡觉了……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-13</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-13/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-13/</url>
+    
+    <content type="html"><![CDATA[<p>依旧是一觉睡到下午3点多，看看淘宝购物车。洗漱下楼吃一个牛牛早上买的肉馅饼和茶叶蛋。</p><p>下午的时间就是不知干啥了。浪费着时间。坐在隔壁房间看着手机，刷着抖音。下午4点左右，奶奶带牛牛坐公交车回六安了，感觉这个星期的大部分时间，奶奶都是看我睡觉了。</p><p>晚上的菜是中午的炒西兰花木耳，炒南瓜藤等，没一个我想吃的，加之下午才吃的饼，然后又吃了薯片零食，没有胃口吃了。</p><p>想让父母给我买桌椅和软路由，晚间9点左右在前面大厅和爸爸谈了不少时间，结果软路由有点松口，但椅子还是给我义正严辞的拒绝，难受。</p><p>晚10点多，在抖音上刷到一个视频，有感而发，给父母各自发两条信息，如下</p><p><img src="https://files.yaohub.com/dayone/2026/09/79791fa475229423c189c324cdb236a5.jpeg?oss_process=rt:fit" alt="79791fa475229423c189c324cdb236a5.jpeg"></p><p>接下来的晚间时间就是看看明眸直播到接近凌晨2点，又看会抖音到3点左右睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-12</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-12/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-12/</url>
+    
+    <content type="html"><![CDATA[<p>今天周六，一觉睡到下午3点多，被隔壁房间的妈妈和奶奶说话声吵醒。</p><p>洗漱下楼吃中饭，中午的菜有黄瓜条炒火腿肠，奶奶后来又炒个胡萝卜丝。不过前天的烤鸭以及蘸汤还是留着的，奶奶还拌了一盘黄瓜丝，微波炉加热一碗饭吃掉，挺合我胃口的，吃的挺香。</p><p>晚上吃一个酸汤面叶（奶奶从六安带回来的面页，我自己煮着吃，调料还是老几样。加点醋和紫菜以及两片酱油干。</p><p>作息紊乱晚上又是睡不着了，今天没干什么事还早早的躺在床上，想看会明眸直播，结果他回老家停播两天的，我也就只好漫无目的的刷着抖音，凌晨2点多起身打开窗户抽一支烟。</p><p>时间慢慢溜走，又是熬了一个通宵，到清晨6点多我才决心睡下去，牛牛到我床上来了，我大喝两声“滚蛋”，就沉沉睡去……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-11</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-11/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-11/</url>
+    
+    <content type="html"><![CDATA[<p>一晚未睡，昨晚还是在逛淘宝，想买个原木桌子，人体工学椅，还有装饰用墙壁海报贴画，清晨4，5点钟，我在房间是用卷尺量来量去，选桌子尺寸……到6点多，电脑也更新好了，Windows还是之前的版本，没有什么新变化，就是Windows Explorer上方固定的Desktop,Music,Video等快捷文件夹又被隐藏了，当时更新到某个Windows11版本时也是如此，改个Windows注册表项就好了。之后运行Disk Cleanup竟然清理掉掉共13多G的空间，比如C盘的Windows.old,D盘<code>$WINDOWS.~TMP</code> 等。再就是开启NAS，也是为了测试开机init.sh脚本，全程自动，Log清晰，完美！</p><p>上午7点多洗漱下楼，锅里还剩一点鸡蛋挂面，妈妈已经吃完早餐，爸爸正在吃。挂面的卖相实在不佳，但不知为何今天早上就愿意吃了，盛一碗挂面加点昨日的烤鸭蘸料汤，以及配有咸韭菜，吃的也挺好，但是一小碗面条并没有怎么吃饱。</p><p>快到8点多上楼回到房间抽支蓝楼，听一个小时音乐到九点，想睡觉了。但我还是强打着精神不睡。坐在床上继续逛着淘宝，选一些墙面海报。想到之前在抖音上看到一些旧iPad改装成HomePad或照片墙，我想为什么我不能做呢，在淘宝上选几个搜索关键词找不到什么。问ChatGPT，给我便携屏+树莓派的方案，但后来我嫌屏幕不够大，也挺贵，远没有那种广告一体机来的方便和合适。但是找出来觉得也挺贵，显示屏不够薄。在抖音上看到博主“老张是大佬”的一期整活视频，道是500块做一款敬老机，21.5“ 带触摸，Android定制系统一体机，还带音箱等。我在咸鱼App上找同款，大多都是15.6”版本的，价格都搞到800元了。选来选去，就这样到中午吃饭的时间了。</p><p>11点多下楼吃饭，中午的菜有宫保鸡丁，韭菜炒白豆腐干，西红柿鸡蛋汤烫有青菜等。在饭桌上我都是和妈妈说配电脑，买桌子椅子等。她还是坚持自己的理论，唉……</p><p>吃完饭上楼，和妈妈微信聊天，话不投机半句多，气得我直接把她和爸爸都拉黑了。困了，累了，睡觉去……</p><p>一觉睡到下晚6点左右，醒来坐在床上看会抖音，喝点水，吃个橘子。之后就是下楼吃晚饭，还是中午的菜，一点宫保鸡丁等，我盛一碗饭，加点菜和烤鸭蘸汤、辣椒油等，微波炉加热就吃下去，吃的很香。</p><p>晚饭后上楼，写起了今日的DayOne，马上看看明眸直播，早点睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-10</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-10/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-10/</url>
+    
+    <content type="html"><![CDATA[<p>虽说昨晚9点多就入睡了，甚至没有精力再看明眸直播，但还是一觉睡到今天中午12点多。唉，这是怎么回事呢，难得一次调整作息的机会就这样错失了。</p><p>洗漱下楼吃午饭都接近下午1点了。中午的菜有烤鸭，炒黄豆芽，炒豇豆等。下楼吃午饭，饭菜都已经凉透了，还是盛一碗饭微波炉加热吃，烤鸭的味道大差不差，主要就是蘸汤，感觉没有之前的好吃，妈妈说是在菜市场门口的“李群卤菜店”买的。</p><p>吃完午饭上楼抽支蓝楼，唤醒起电脑，这段时间网络环境真差，迟迟无法访问ChatGPT，无赖我就只好用Glados订阅了。</p><p>下午的时间就是编写个Synology NAS 的开机初始化脚本，主要就是开机自动docker Code-Server的ssh，pm2，supervisor，NAS的frpc，以及最后等待Web Station初始化完成，启动成功后自动修改/etc/nginx/sites-enabled/server.webstation-vhost.conf 配置，虽然就这些流程，不过一遍遍判读测试，干到晚上9:30半才算真正完成，这些我终于不要每次NAS开机都要登录SSH，然后这些./CodeServerWeb-FRPC.sh，然后还要看WebStation加载成功才能执行vim …/server.webstation-vhost.conf，真是轻松。最终开机自启动脚本运行日志如下</p><p><img src="https://files.yaohub.com/dayone/2026/09/3bd20e7284f1f150aa6e8809544be29a.png?oss_process=rt:fit" alt="3bd20e7284f1f150aa6e8809544be29a.jpeg"></p><p>晚上6点多下楼吃饭，还是中午的菜，没有什么好说的。</p><p>9点半之后晚间的接下来时间我又和Dims++中被替代的WinSxS组件清理不掉问题杠上了，问ChatGPT，陆续执行Dism /CleanImage /ScanHealth /RestoreBase 等命令，分析WindowsUpdate.log，CBS.log等，还是不行，无法解决，由此还在Windows更新中发现由于下午玩了会Github上的项目iPhoneMirror，我在App内强制删除了Apple USB Device相关驱动，导致Windows Update中有一项Apple Device USB 532.0.0驱动，更新失败，重试也是如此，又是去折腾ChatGPT了，最后还是给出治标不治本的隐藏更新大法，眼不见心不烦。折腾到凌晨3点多索性直接Reinstall your current version of Windows了。在等待更新的这段时间我就到隔壁房间睡觉了，躺在床上还是逛淘宝，选购桌椅，兴奋的睡不着……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-09</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-09/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-09/</url>
+    
+    <content type="html"><![CDATA[<p>又是一晚未睡，琢磨着软路由。逛淘宝选配置直到天明……</p><p>清晨6点，爸爸到我房间喊我出发带李从荣去安庆上学。</p><p>早餐就是爸爸买的馅饼和茶叶蛋，吃个肉馅饼和茶叶蛋就十分饱了。</p><p>上午九点到到李从荣的学校北门，先做摆渡车去宿舍登记领钥匙。然后就是到房间，环境实在算不上一般，烟味和尿骚味充斥着楼道。寝室一房间有6个人，空间一般大。之后就是和李从荣去取快递，一路上见到形形色色的学生……初来乍到我也就只好以貌取人了，感觉都是毛毛躁躁的青年，也有一些女学生比较漂亮，不过还是极少的。我还是坚持好的环境人更精致，有气质的理论。就譬如我多次提及当时毛中女孩比金中的基本上都好看一点是对这一理论强有力的证明。</p><p>取完快递大佬和爸爸帮李从荣收拾好寝室床铺后就去校内超市买点用品，比如洗脸盆，衣架，柜门锁之类的，李从荣给我买杯东方树叶红茶喝，总算喝上了水。回到寝室去阳台拍张照片……</p><p><img src="https://files.yaohub.com/dayone/2026/09/71c1c13a6d984501501d220b8dddeff9.jpeg?oss_process=rt:fit" alt="71c1c13a6d984501501d220b8dddeff9.jpeg"></p><p>中午去安庆市中心吾悦广场商场内吃午饭，本来是准备吃海底捞的，不过最终还是吃上了自助烤肉自助餐。选了几份烤肉，肉的品质只能说一般，原切牛排嫩的不像话，其他的肉片基本上就是拼接肉呢。我点了一份韩国部队火锅，味道不好，是酸的。其中配菜感觉冻了不少时间，烫的白菜片和金针菇都不怎么咬的动。烤肉也是烤的一言难尽，判断不好生熟。吃到下午接近2点，吃的很撑，不过感觉没吃多少东西，一个人是75元，远远值不回票价。自助餐奔着吃到回本太得不偿失了，吃的难受就划不来了，有的菜品比较咸，又要喝饮料雪碧，太撑肚子了。</p><p>吃完午饭就送李从荣回学校，爸爸就开车带我我和大佬回去了。</p><p>到下晚5点多才回到家，抽上一支蓝楼，今一天直到回来才抽上烟。抽完烟就下楼吃晚饭，妈妈为我炒了一份土豆丝，我没什么胃口，一点点蚕食着一小盘饭，晚上的菜就是土豆丝，卤千张和豆干。饭桌上又和妈妈爸爸谈起了配电脑，说到这几天晚上睡不好，在淘宝上选配件，前几天凌晨做的噩梦等。</p><p>饭后给NAS又移除了昨晚添加的硬盘用来测试软路由虚拟机，现在也没用了。电脑完成个Windows更新后去刷回抖音抽支中南海，早早脱光衣服坐在床上，写起了今日的DayOne，马上看会明眸直播，早点睡觉了。事情积压一大堆呢！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-08</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-08/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-08/</url>
+    
+    <content type="html"><![CDATA[<p>凌晨接近4点左右醒，又是想着配电脑，在微信小程序PCBuilder琢磨配置，在淘宝一件件选，比价，刚到清晨快到7点了。</p><p>洗漱下楼，妈妈已经炒好了蛋炒饭，自从今年元旦晚妈妈给我炒了一份极其难吃的蛋炒饭后直到现在我都没有吃过了。这次的蛋炒饭看样子还不错，米饭炒开了不是一团，鸡蛋也没什么腥味。</p><p>早上还有冷，上楼穿件夹克衫后再下楼盛一碟子饭吃，爸爸还没有起床，妈妈在前面大厅忙，我说想配电脑的话又咽下去。</p><p>一声不吭吃完早餐就上楼了，依旧先来抽支中南海。之后就还是着手iTab getWebsiteFavicon的接口优化开发，昨晚想到之前C# TrayChrome项目fallback获取图标是调用了一个接口，现在找出来已经关闭不能用了，遂找寻新的接口，找到一个还不错，但我想本地部署，在github上找到一个Go项目hello-favicon，获取网站图标思路都差不多，我想就直接在iTab项目中实现吧，懒得再拉docker image创容器了。使用cssQuery获取包含图标的link标签元素，卡在cssQuery 属性正则，想去问ChatGPT。刷起了抖音，看到p5r相关视频，想玩，我好久没碰这游戏了，差不多有3个多月了吧。连上手柄就玩了起来……</p><p>中午的菜没什么我爱吃的，妈妈做了红烧鸡杂，炒老豇豆和咸菜，芹菜炒香干（肉丝，木耳），还有一盆紫菜汤。虽说没什么爱吃的，但在12点多我还是下楼最后一个吃完午饭，妈妈都已经在洗碗了。</p><p>吃完午饭继续玩起了p5r，一直玩到下午4点40几。从上次存档点7月30日一直干到8月末了，剧情就是暑假，就是做做coop，等待双叶在X日（21日）消灭梅吉拉然后帮双叶恢复正常等，没什么战斗。</p><p><img src="https://files.yaohub.com/dayone/2026/09/768408e941ab43fe690bfb6634932b4e.png?oss_process=rt:fit" alt="768408e941ab43fe690bfb6634932b4e.jpeg"></p><p>下午3点多李从荣到我家来喊我明天早上陪他去开学，爸爸也要送他去，我不太情愿去。之后去抽支烟，然后写起了昨日的DayOne，谈到昨日DSM Virtual Machine Manger套件虚拟机启动失败后，我考虑到很大可能确实是存储池可用空间不满10G造成的，随即添加一块35G虚拟磁盘，创建存储池和存储空间，重新安装上Virtual Machine Manger，创建iKuai虚拟机，启动，一气呵成！</p><p>晚上还是中午的菜，下午吃了两袋薯片和几块柚子，不是很饿，没有胃口，吃了一小碗饭。</p><p>接下来的晚间时间一直到深夜12点左右我都在折腾忙活软路由，有够愚蠢的，找网站教程，添加网卡，和ChatGPT一步步试错，最后才明白是方向错了，虚拟机NAS套虚拟机iKuai，又不是在上游网络，软路由怎么监测流量，全局VPN配置呢。</p><p>12点多了，想到明早（今早）要陪李从荣，去洗个热水澡。洗完后又看起了软路由教程，线怎么接，网络拓扑怎样的，没有丝毫睡意。抽支烟，又选起了小主机配置，j4125u无盘无内存带wifi6，四网口是999元，加上我自选的8G内存和120G固态总共1400多。计划做PVE多系统，NAS+软路由方案。我兴奋了，这太有意思了，中年男人最爱的三样东西：充电头，NAS和软路由。</p><p>5点多，天色已渐明，写起了今日的DayOne……</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-07</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-07/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-07/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚又是熬夜通宵了，凌晨时分偶然再次打开Safri之前没关闭的Tab页，是关于QQ Music API YGKing项目的，可惜这个项目已经被作者删除，遂翻看起其Github主页，之后又看到他的博客以及与之关联的友链他人博客，博客站点挺精美的，翻阅起发表的一些文章。看到他的Github Profile也挺好看，找到summary card，想看看起自己的github summary报告，由于我只有一个公开的仓库，导致数据不太好看，就把之前的SendyDynamic，DSAudio，bt-docker项目公开了。有点为难，毕竟我不太想公开，为此我还找了RoundTable和ChatGPT讨论……</p><p>凌晨3点多又看到软路由iStoreOS的搭建部署，了解到1370u小主机，8G内存，120G固态的配置只要340元，且不说简单做软路由，用来安装Linux服务器，分摊或替代NAS上的一些Web服务，API接口甚至是替代Audio Station（我在网上还找到open audio server项目）都再好不过了，想买……</p><p><img src="https://files.yaohub.com/dayone/2026/09/69ff4414bca30e62de5006a3a66ff822.png?oss_process=rt:fit" alt="69ff4414bca30e62de5006a3a66ff822.jpeg"></p><p>上午7点多洗漱下楼，父母在六安还没有回来，想外出买点早餐吃，给妈妈打两个电话，都是让我自己在家做点吃的，让其带点早餐（鸡蛋灌饼，油条，包子）都不答应。无赖之余，抽支中南海，下楼还是下面条吃。先用油和黄豆酱，南德调味料和辣椒面做酱，下好面后浇在上面，味道有点奇怪，不过有火腿肠和酱油干，口味还算不上寡淡。</p><p>早上8点半左右父母回来了，妈妈说给我带回来点零食吃，但等我下楼去拿，她又改口说忘记带了（当时我就觉得奇怪，一定是爸爸说不给我零食吃的，后续我也找到了零食）。</p><p>上午也没做什么事，我想就是刷刷抖音吧。</p><p>中午11点下楼吃饭，中午的菜有妈妈做的啤酒鸭（我本来还想中午吃饭时喝点剩下的啤酒的，结果妈妈把一罐啤酒都用完了），还有买的凉拌海带丝，炒冬瓜等。</p><p>吃完午饭歇息一会儿，觉得有点困，去洗个澡，洗完澡想让妈妈给我吹个头发结果她在睡午觉，下午1点多我也困的不行，头发还没干透就去睡觉了。iPhone和iPad一共订了6个闹钟，声音开到最大，时间是3点左右。结果接连的闹钟确实把我叫醒了，但我一直不够坚定，关掉闹钟继续睡下去……</p><p>睡到晚上6点左右妈妈把我喊起来，我口干舌燥，想喝可乐。起床头发果不其然炸成一团。下楼吃晚饭。</p><p>晚饭想起软路由，之前我在NAS Virtual Machine Manger上就有iKuai和OpenWrt虚拟机，想着再来启动配置一下，结果却启动失败了，觉得是VCPU或内存配置的问题，重新调整还是不行，卸载重装套件和重新创建虚拟机都不行（在创建虚拟硬盘设置大小过不去，低于5G不行，设置10G又说可用空间不足，可是明明我看剩余空间是够的呀，9月8日晚通过新增新大容量硬盘方式成功创建和启动虚拟机，结论为先前的存储池存储空间不满10G导致的）。无奈放弃，删除掉套件。再一次压缩虚拟磁盘。</p><p>之后的时间就是更新个Windows预览更新kb5120998，之前抖音上就刷到关于这个更新的bug，诸如鼠标样式成默认无法修改，壁纸黑屏等。我一更新果然如此，急忙卸载。</p><p>晚8点多，打开好久未曾打开的投影仪，给YaoTVBox换源，看《旋风少女》第二季（很久之前看过的肥皂剧，今天中午洗澡的时候偶然想到就看了）。看了一两集，还是觉得尴尬，不过当初看可是津津有味的，哈哈。</p><p>看到10点，又看起了明眸游戏直播到接近凌晨2点……</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-06</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-06/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-06/</url>
+    
+    <content type="html"><![CDATA[<p>一觉睡到下午2点多，洗漱下楼吃午饭。</p><p>中午的菜有蒸肉丸子，毛豆炸酱（有香菇、酱油干丁），青菜炒香菇，炒芹菜等。还有昨天剩的香辣菜，我夹点菜，盛一碗饭，微波炉大热吃掉，菜停合我胃口，吃的很香。</p><p>吃完饭上楼，没什么干事的热情，躺在床上刷会抖音，然后玩了一会网页版的CS1.6。</p><p>一下午没干什么事，就是感觉饿的挺快，下晚5点多刚到我就下楼吃饭了，还是中午的菜，没什么好说的。</p><p>吃晚饭上楼打开Cloudflare网站，给我的一些主要站点加个安全规则，托管式质询。</p><p>晚上6点多妈妈跟我说他们要去六安，我问怎么又去六安，她说因为奶奶在大姨奶家吃饭喝酒，喝醉了不舒服，呕吐，他们去看看。</p><p>我好像没什么理由再去了，本来说要去，想想还是决定不去了。</p><p>晚7点多外出去买烟，先去买了一包蓝楼，发现没有中南海点5，又去另一家买，顺便散个步，路线还是和以往一样，绕着毛中后山走一圈。</p><p>8点多回到家，开始着手iTab获取网站icon接口的开发（之前那版还是获取不了大部分网站的图标，竟然hexo-blog站点都不行），不过在此之前又是花了不少时间把之前的（还是在去年4月的）修改差异分成4个commit来提交了。磨磨蹭蹭这样就感到10点多。</p><p>之后就是简单写个这个接口服务的测试，然后下楼去切个柚子吃，回到房间拿支蓝楼去后门阳台抽。</p><p>11点多回到房间，计划看会明眸直播，想到这两天DayOne没写，又花了半个多小时写完了这些。</p><p>That’s it.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-05</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-05/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-05/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚在六安房间睡到12点多醒了，睡不着，躺在床上刷抖音。到凌晨三点左右又想买电脑了，可是选起了电脑配件，CPU选择AMD 9800X3D，2200元多，显卡选RTX 4070 Ti Super，内存现在涨的太贵了。想着显卡先不买，内存选个一根16G……</p><p>4点半多奶奶起来做早饭，还是做鸡蛋皮面，到6点多父母和牛牛起来，我去刷牙洗漱。早餐不想吃鸡蛋皮面，一是昨晚我就说想买早饭吃，二来就是不想吃奶奶做的鸡蛋皮面，之前做的鸡蛋皮因为糊了发苦，这次我没尝闻着就腥。妈妈给牛牛5元，他去买个饭团，给我买个肉包子，早餐就是吃一个肉包和一碗豆浆。</p><p>7点多从六安出发，爸爸又开车接到一个打车订单，带一个人去但家庙，我们就绕一点路从但家庙回毛坦厂，9点多才回到家。</p><p>回到家，我觉得早上没怎么吃饱，把昨天早上的一个肉馅饼微波炉加热吃掉了。</p><p>上楼回到房间打开电脑，想玩玩游戏，选来选去还是决定下载个GTA4玩。到10点多，有点困倦了，睡觉去。</p><p>12点多妈妈到我房间来喊我吃午饭，我问有什么菜，说一个炒茄子和肉烧马铃薯块，我不想吃。翻个身继续睡下去。</p><p>睡到下午3点多下楼吃午饭，菜就是说的马铃薯和炒茄子，但是有一包香辣菜，我也就吃一碗饭了。</p><p>接下来的下午时间就是玩起了《GTA4》，感觉没什么好玩的，玩了一会就删了。</p><p><img src="https://files.yaohub.com/dayone/2026/09/f696595c4fe5d50e191ff5e9437cbfff.jpeg?oss_process=rt:fit" alt="f696595c4fe5d50e191ff5e9437cbfff.jpeg"></p><p>下晚6点多吃晚饭，是妈妈做的疙瘩头，有香辣菜和凉拌黄瓜丝，我吃了一碗半疙瘩头，吃的很香。</p><p>晚间的时间我就是躺在隔壁房间床上，看起了纯黑的《最后生还者1重制版》实况解说到深夜11点多。</p><p>本来看游戏解说都有点困的，倘若当时我就放下iPad去睡觉应该可以睡的很香。结果看到11点多就不困了，睡不着，继续看抖音和B站视频到凌晨3点多去睡觉了。</p><p>没睡20分钟，我就觉得睡的不踏实，做了一个噩梦，竟然梦见在晚上，家门口突然下起了暴雨，我刚一站在雨中就被雷击中，瞬间被惊醒，起了鸡皮疙瘩，有点害怕。醒来打开抖音看解梦🤔</p><p>到凌晨4点多困了，继续睡下去……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-04</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-04/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-04/</url>
+    
+    <content type="html"><![CDATA[<p>昨晚闹腾到清晨5点多才入睡，本来是准备吃完早饭（爸爸答应给我买肉馅饼）再入睡的，但我还是熬不住了，困的睡了过去。</p><p>一觉睡到上午10点左右，妈妈把我喊醒和我说他们要去姥爷家，我迷迷糊糊问去干什么，说要去讨米，我也就不想去了。问中午吃什么，说早上爸爸买的早餐还有两个饼和一个茶叶蛋。</p><p>继续睡了过去，做了一些梦，还是有关于弈。睡到了下午1点多，还是妈妈说话声给我弄醒的，她感叹他们都从姥爷家回来了我竟然还在睡。醒来坐起身感觉脑袋昏沉沉，眼睛都有点睡肿了，其实满打满算也就睡了7个小时左右。</p><p>洗漱下楼，把一个饼用微波炉加热，吃了一个肉馅饼和一个茶叶蛋，吃饱了。</p><p>吃完午餐后上楼回到房间还是没有做什么事情的热情，就是刷着抖音，还有点困。3点多下楼泡一杯茶喝。4点多去上厕所妈妈和我说晚上他们要去六安。我问她晚上吃什么，有什么菜，她还神神秘秘说有菜，让我把卫生间和房间的垃圾带下去。</p><p>之后的时间我就是唤醒电脑，打开OneNote，把笔记本上之前手写的文章炒一份到OneNote上。</p><p>下晚5点多妈妈喊我下去吃饭，就两个菜，一盘韭菜炒酱油干（我好久之前就表示不爱吃这个），还有一份买的卤虎皮鸡爪（就2个，不过有个这菜我还就顺利吃完一碗多饭，吃的挺香）。</p><p>晚饭后继续同步写会OneNote，然后妈妈打语音电话告诉我他们要到六安了，我也不知抽什么风就跟去了。</p><p>在路上爸爸还带个嘀嘀打车的高三学生，和我一起坐后排，体味挺大。一路上我就是听听音乐，刷刷抖音，看看我的网站，甚至看起了Emby《名侦探柯南》和Youtube。</p><p>8点半左右到小区房子门了，我有点饿想点外卖吃，但是妈妈不同意。吃点酱香干和喝一瓶奶奶给我的人牛奶就算了。继续写起的了OneNote，没写半个多小时就完成这个笔记本上的所有文章同步。</p><p>快到十点了，写完今日的DayOne，关灯睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-03</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-03/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-03/</url>
+    
+    <content type="html"><![CDATA[<p>依旧是下午3点左右洗漱下楼，中午的菜有酸辣土豆丝，炒冬瓜和西红柿鸡蛋汤。土豆丝看着烧的就不好吃（歇了几天没做土豆丝就烧成这样），中午还没有一个荤菜。没胃口就没吃饭，拿一个苹果吃就上楼了。</p><p>刷刷抖音短视频到晚上6点下楼吃饭，没有新菜。发脾气，妈妈把腌了好几天冻了好久的肉拿出煎了，我才总算吃了2碗饭。</p><p>晚饭后睡觉到晚间9点，让妈妈给我买米线吃。不答应，给我转了20元，发了挺大脾气。到11点多才上楼。</p><p>凌晨2点多饿的又下楼煮了一锅紫菜蛋花汤吃。吃点葡萄上楼，刷起了抖音听起了音乐。</p><p>到清晨5点多写起了这两天的DayOne……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>今日小记-2026-09-02</title>
+    <link href="/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-02/"/>
+    <url>/2026/09/%E4%BB%8A%E6%97%A5%E5%B0%8F%E8%AE%B0-2026-09-02/</url>
+    
+    <content type="html"><![CDATA[<p>作息还是没有调整过来，还是下午3点才睡醒，洗漱下楼，中午的菜有酸菜鱼（加有肉片）和蒸鸡蛋，这段日子的伙食真是敷衍，今天中午又是没一个炒菜和绿色植物纤维。不过好在吃的下去</p><p>下午的时间就是同步DayOne日记到Hexo Blog，然后同步添加16首音乐到Audio Station。</p><p>晚间时间安装个Wordpress插件All in one SEO。</p><p>快到12点临睡前抽完最后一支白利群后关灯睡觉。哪有那么容易睡着，依旧是凌晨2，3点才入睡……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>九月首记-2026-09-01</title>
+    <link href="/2026/09/%E4%B9%9D%E6%9C%88%E9%A6%96%E8%AE%B0-2026-09-01/"/>
+    <url>/2026/09/%E4%B9%9D%E6%9C%88%E9%A6%96%E8%AE%B0-2026-09-01/</url>
+    
+    <content type="html"><![CDATA[<p>2026年已经过去三分之二了，迎来了新的九月。</p><p>可惜昨晚通宵打游戏，看来作息又要颠倒了，这并不是一个好的开始。随着九月的到来，购买咖啡豆要提上日程，学习工作也要慢慢步入正轨。</p><p>话不多说，书接上回，且说昨晚后半夜通宵打游戏到今早7点20后，就穿上衣服，给手机充个电，下床去洗漱下楼了。</p><p>妈妈还说我今天怎么这么有精神，我开玩笑说是“回光返照”，累不累，有没有精神只有我自己清楚。</p><p>早上父母吃的是蛋炒饭，等到我下楼已经没有什么早饭吃了。决定煮一锅挂面吃，放了点紫菜，以及昨晚剩的一点切面。调味就是盐，猪油，味精，南德调味料，辣椒面以及生抽。味道就是咸鲜，十分轻薄，没有配菜口感也十分单一。唉，要是有烫肥羊/牛卷和火锅底料就好了。面还剩一点不想吃了。</p><p>早餐后抽一支烟，继续打起了《王者荣耀》，意图通过打游戏分散注意力，一上午的时间基本上都是在游戏中度过。</p><p>上午11点多下楼吃午饭，中午的菜就是肉烧板栗加口蘑和豆腐干，炒芹菜（没有香干），昨天的蒸茄子，以及排骨汤。真是没有食欲但又不得不吃。感觉现在妈妈做菜真是有够敷衍，就是在奶奶回来之后，她两轮着烧，反而没更多菜或更好吃。我一句话总结就是“一个和尚挑水吃，两个和尚抬水吃”。食材翻来覆去就那些，我说的不是买不到就是不想买和做，反正借口一大堆。我提到想吃海鲜，鳗鱼，肥羊卷等。</p><p>又困又饿，机械般吃完午饭。上楼回到房间抽一支烟，竟有点心慌手抖还伴随肚子疼。继续打起了游戏，后面几局都是同样的结局，匹配到神人队友，简直1拖4，开局没到3分钟就吵起来，6分钟我就4/0/3了，正常玩不就行了吗，我肯定带飞呀，二话不说就投降上了，总共4个人投票，就通过了，金牌对抗路又败了。后面几局都是差不多的。狗屎匹配机制，我还发现个规律，一旦连胜炸鱼，数据好，在账号下线重新登陆，必然接受匹配机制的洗礼。垃圾游戏，又再次卸载。</p><p>下午3点多，困意又加深了，浓茶已不管用。寻找新的PC游戏玩，选来选去不知选什么，问ChatGPT，我想玩的要不是体量大，硬盘不够，要不就是不适合我那赢弱显卡。至于不想玩的，哎，不想玩的我还说什么呢。</p><p>困意战胜意志，我决定睡上1个小时，特地在iPad上和iPhone定了两个闹钟，音量开到最大，合上眼睛睡觉了……</p><p>一觉醒来，房间已经黑了，坏了，一看时间已经是19:20了，怎么每次闹钟都没把我叫醒呢？</p><p>房间昏暗，窗外人声鼎沸，大喇叭音响叫卖声此起彼伏，不绝于耳，我想是被此吵醒的，真是嘈杂（这都能吵醒我，为什么闹钟吵不醒呢）。醒来口干舌燥，床头的浓茶也不能喝了。穿衣下楼倒杯水喝。</p><p>准备吃晚饭，结果还是中午的菜，我绝对不能再一次忍让吃这些了，没吃晚饭，拿一瓶牛奶上楼了。计划着外出去买点什么吃，或是明天的早饭。来到安静的隔壁房间想继续睡，但还是拿起手机写起了这两天的DayOne，写了1个小时。</p><p>今天是9月首日，本来下午应该同步DayOne到Hexo Blog的，但是困倦完全让我忘记了这一茬，今天的事情明天做吧，早点睡觉了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>八月末记-2026-08-31</title>
     <link href="/2026/08/%E5%85%AB%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-08-31/"/>
     <url>/2026/08/%E5%85%AB%E6%9C%88%E6%9C%AB%E8%AE%B0-2026-08-31/</url>
